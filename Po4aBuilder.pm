@@ -174,14 +174,14 @@ sub ACTION_manpo {
     $self->depends_on('code');
     $self->make_files_writable("po/pod");
 
-    my $cmd = "PERL5LIB=lib perl po4a "; # Use this version of po4a
+    my $cmd = "sh -c 'PERL5LIB=lib perl po4a "; # Use this version of po4a
     $cmd .= "--previous ";
     $cmd .= "--no-translations ";
     $cmd .= "--msgid-bugs-address po4a-devel\@lists.alioth.debian.org ";
     $cmd .= "--package-name po4a ";
     $cmd .= "--package-version ".$self->dist_version()." ";
     $cmd .= $ENV{PO4AFLAGS}." " if defined($ENV{PO4AFLAGS});
-    $cmd .= "po/pod.cfg";
+    $cmd .= "po/pod.cfg'";
     system($cmd)
         and die;
 }
@@ -201,9 +201,9 @@ sub ACTION_man {
     my $manpath  = File::Spec->catdir( 'blib', 'man' );
     File::Path::rmtree( $manpath, 0, 1);
 
-    my $cmd = "PERL5LIB=lib perl po4a "; # Use this version of po4a
+    my $cmd = "sh -c 'PERL5LIB=lib perl po4a "; # Use this version of po4a
     $cmd .= $ENV{PO4AFLAGS}." " if defined($ENV{PO4AFLAGS});
-    $cmd .= "--previous po/pod.cfg";
+    $cmd .= "--previous po/pod.cfg'";
     system($cmd) and die;
 
     my $man1path = File::Spec->catdir( $manpath, 'man1' );
@@ -223,7 +223,7 @@ sub ACTION_man {
     }
     foreach $file (@{$self->rscan_dir('lib',qr{\.pm$})}) {
         $file =~ m,([^/]*).pm$,;
-        copy($file, File::Spec->catdir($man3path, "Locale::Po4a::$1.3pm.pod")) or die;
+        copy($file, File::Spec->catdir($man3path, "Locale.Po4a.$1.3pm.pod")) or die;
     }
     $self->delete_filetree( File::Spec->catdir("blib", "bindoc") );
     $self->delete_filetree( File::Spec->catdir("blib", "libdoc") );
@@ -249,7 +249,7 @@ sub ACTION_man {
                 my $command;
                 $command = "msggrep -K -E -e \"Po4a Tools\" po/pod/$lang.po |";
                 $command .= "msgconv -t UTF-8 | ";
-                $command .= "msgexec /bin/sh -c '[ -n \"\$MSGEXEC_MSGID\" ] ";
+                $command .= "msgexec sh -c '[ -n \"\$MSGEXEC_MSGID\" ] ";
                 $command .= "&& cat || cat > /dev/null'";
 
                 my $title = `$command 2> /dev/null`;
