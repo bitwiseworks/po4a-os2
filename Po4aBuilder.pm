@@ -210,7 +210,7 @@ sub ACTION_man {
       if ( $^O ne 'os2' ) {
         copy( $file, File::Spec->catdir( $man3path, "Locale::Po4a::$1.3pm.pod" ) ) or die;
       } else {
-        copy( $file, File::Spec->catdir( $man3path, "Locale::Po4a::$1.3pm.pod" ) ) or die;
+        copy( $file, File::Spec->catdir( $man3path, "Locale.Po4a.$1.3pm.pod" ) ) or die;
       }
     }
     $self->delete_filetree( File::Spec->catdir( "blib", "bindoc" ) );
