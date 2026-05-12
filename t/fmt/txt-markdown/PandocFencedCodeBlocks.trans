@@ -1,0 +1,73 @@
+~~~~~~~
+IF (A > 3) {
+  MOVESHIP(5 * GRAVITY, DOWN);
+}
+~~~~~~~
+
+~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+CODE INCLUDING TILDES
+LINE2
+~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+
+~~~~ {#mycode .haskell .numberLines startFrom="100"}
+QSORT []     = []
+QSORT (X:XS) = QSORT (FILTER (< X) XS) ++ [X] ++
+               QSORT (FILTER (>= X) XS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~haskell
+QSORT []     = []
+QSORT (X:XS) = QSORT (FILTER (< X) XS) ++ [X] ++
+               QSORT (FILTER (>= X) XS)
+~~~
+
+```````
+IF (A > 3) {
+  MOVESHIP(5 * GRAVITY, DOWN);
+}
+```````
+
+````````````````
+``````````
+CODE INCLUDING BACKTICKS
+LINE2
+``````````
+````````````````
+
+```` {#mycode .haskell .numberLines startFrom="100"}
+QSORT []     = []
+QSORT (X:XS) = QSORT (FILTER (< X) XS) ++ [X] ++
+               QSORT (FILTER (>= X) XS)
+`````````````````````````````````````````````````
+
+```haskell
+QSORT []     = []
+QSORT (X:XS) = QSORT (FILTER (< X) XS) ++ [X] ++
+               QSORT (FILTER (>= X) XS)
+```
+
+```diff
+- cODE BLOCK THAT INCLUDES BULLET-LIKE TEXT.
+- eNSURE THAT IT DOESN'T GET INTERPRETED.
+```
+
+tHIS FIRST PANDOC FENCED DIV IS NON-NESTED.
+
+::::: {#special .sidebar}
+hERE IS A PARAGRAPH.
+
+aND ANOTHER.
+:::::
+tHE SECOND PANDOC FENCED DIV IS NESTED.
+
+::: Warning ::::::
+tHIS IS A WARNING.
+
+::: Danger
+tHIS IS A WARNING WITHIN A WARNING.
+:::
+::::::::::::::::::
+
+sOME EXTRA TEXT.

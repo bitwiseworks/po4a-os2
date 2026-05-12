@@ -1,0 +1,1734 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the po4a package.
+# Shen-Ta Hsieh(BestSteve) <ibmibmibm.tw@gmail.com>, 2021.
+# taotieren <admin@taotieren.com>, 2022.
+# Ricky From Hong Kong <lamricky11@hotmail.com>, 2024.
+# ZW <roc_fe@users.noreply.hosted.weblate.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: po4a 0.63\n"
+"Report-Msgid-Bugs-To: po4a@packages.debian.org\n"
+"POT-Creation-Date: 2025-06-29 14:32+0200\n"
+"PO-Revision-Date: 2025-06-19 17:05+0000\n"
+"Last-Translator: ZW <roc_fe@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/po4a/po4a/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.12.1\n"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:233 ../../lib/Locale/Po4a/Man.pm:488
+#: ../../lib/Locale/Po4a/Org.pm:45 ../../lib/Locale/Po4a/Po.pm:225
+#: ../../lib/Locale/Po4a/RubyDoc.pm:72 ../../lib/Locale/Po4a/Sgml.pm:262
+#: ../../lib/Locale/Po4a/TeX.pm:1646 ../../lib/Locale/Po4a/Text.pm:238
+#: ../../lib/Locale/Po4a/Xml.pm:602 ../../lib/Locale/Po4a/Yaml.pm:104
+#, perl-format
+msgid "Unknown option: %s"
+msgstr "未知選項: %s"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:240
+#, perl-format
+msgid "Invalid compatibility setting: '%s'. It must be either '%s' or '%s'."
+msgstr "相容性設定無效：'%s'。它必須是 '%s' 或 '%s'。"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:309
+#, perl-format
+msgid "Unable to parse macro definition: %s"
+msgstr "無法解析宏定義：%s"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:356 ../../lib/Locale/Po4a/TeX.pm:1047
+#: ../../po4a:1087 ../../po4a:1180 ../../po4a:1449 ../../po4a-translate:284
+#, perl-format
+msgid "Cannot open %s: %s"
+msgstr "無法開啟 %s: %s"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:387
+#, perl-format
+msgid ""
+"Detection of two line titles failed at %s\n"
+"Please install the Unicode::GCString module (error: %s)."
+msgstr ""
+"在 %s 檢測兩行標題失敗\n"
+"請安裝 Unicode::GCString 模組 (錯誤：%s)。"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:564
+#, perl-format
+msgid ""
+"'%s' seems to be a two-lines title underlined with '%s', but the underlines "
+"are too short or too long compared to the title length. You may want to fix "
+"your master document."
+msgstr ""
+"'%s' 似乎是一個帶 '%s' 下劃線的兩行標題，但與標題長度相比，下劃線太短或太長。"
+"您可能需要修復主控文件。"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:748
+msgid ""
+"Po4a's tablecells mode only supports PSV formatted tables with '|' "
+"separators. Disabling tablecells and falling back to block mode for this "
+"table."
+msgstr ""
+"Po4a 的表格式化模式只支援帶有 '|' 分隔符的 PSV 格式表。禁用表單元並回退到此表"
+"的塊模式。"
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:1063
+msgid ""
+"It seems that you are adding unindented content to an item. The standard "
+"allows this, but you may still want to change your document to use indented "
+"text to provide better visual clues to writers."
+msgstr ""
+"您似乎正在向專案新增未縮排的內容。標準允許這樣做，但您可能仍然希望將文件更改"
+"為使用縮排文字，以便為作者提供更好的視覺線索。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:25
+msgid "Please provide a module name"
+msgstr "請提供模組名稱"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:54
+#, perl-format
+msgid "Unknown format type: %s."
+msgstr "未知格式型別：%s。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:55
+#, perl-format
+msgid "Module loading error: %s"
+msgstr "模組載入錯誤：%s"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:65
+msgid "List of valid formats:"
+msgstr "可用格式列表："
+
+#: ../../lib/Locale/Po4a/Chooser.pm:69
+msgid "asciidoc: AsciiDoc format."
+msgstr "asciidoc: AsciiDoc格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:71
+msgid "dia: uncompressed Dia diagrams."
+msgstr "dia：未解壓縮Dia表格。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:73
+msgid "docbook: DocBook XML."
+msgstr "docbook: Docbook XML."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:75
+msgid "gemtext: Gemini's native plain text format."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Chooser.pm:77
+msgid "guide: Gentoo Linux's XML documentation format."
+msgstr "指南：Gentoo Linux的xml文件格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:79
+msgid "ini: INI format."
+msgstr "ini: INI 格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:81
+msgid "kernelhelp: Help messages of each kernel compilation option."
+msgstr "核心幫助：每個核心編譯選項的幫助資訊。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:83
+msgid "latex: LaTeX format."
+msgstr "latex: LaTeX 格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:85
+msgid "man: Good old manual page format."
+msgstr "man：優秀的舊手冊格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:87
+msgid "org: document format for Org mode."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Chooser.pm:89
+msgid "pod: Perl Online Documentation format."
+msgstr "pod：Perl 線上文件格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:91
+msgid "rubydoc: Ruby Documentation (RD) format."
+msgstr "rubydoc：Ruby文件（RD）格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:93
+#, fuzzy
+#| msgid "pod: Perl Online Documentation format."
+msgid "simplepod: Perl Online Documentation format (new option)."
+msgstr "pod：Perl 線上文件格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:95
+msgid "sgml: either DebianDoc or DocBook DTD."
+msgstr "sgml：debian文件或docbook DTD。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:97
+msgid "texinfo: The info page format."
+msgstr "texinfo:資訊頁面格式。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:99
+msgid "tex: generic TeX documents (see also latex)."
+msgstr "tex:通用Tex文件（參見latex）。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:101
+msgid "text: simple text document."
+msgstr "text：簡單text文件。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:103
+#, fuzzy
+#| msgid "wml: WML documents."
+msgid "vimhelp: Vim help documents."
+msgstr "wml: WML 文件。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:105
+msgid "wml: WML documents."
+msgstr "wml: WML 文件。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:107
+msgid "xhtml: XHTML documents."
+msgstr "xhtml: XHTML文件。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:109
+msgid "xml: generic XML documents (see also docbook)."
+msgstr "xml: generic XML文件(參見 docbook)。"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:111
+msgid "yaml: YAML documents."
+msgstr "yaml: YAML 文件。"
+
+#: ../../lib/Locale/Po4a/Common.pm:106
+#, perl-format
+msgid ""
+"%s version %s.\n"
+"Written by Martin Quinson and Denis Barbier.\n"
+"\n"
+"Copyright © 2002-2022 Software in the Public Interest, Inc.\n"
+"This is free software; see source code for copying\n"
+"conditions. There is NO warranty; not even for\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+msgstr ""
+"%s 版本 %s。\n"
+"由 Martin Quinson 和 Denis Barbier撰寫。\n"
+"\n"
+"版權所有 © 2002-2022 公益軟體公司。\n"
+"這是免費軟體； 檢視複製原始碼\n"
+"條件。 沒有保修； 甚至沒有\n"
+"特定目的的適銷性或適用性。"
+
+#: ../../lib/Locale/Po4a/InProgress/Debconf.pm:172
+#, perl-format
+msgid "Translated field in master document: %s"
+msgstr "主文件中的翻譯欄位：%s"
+
+#: ../../lib/Locale/Po4a/InProgress/NewsDebian.pm:84
+msgid "Begin of a new entry before the end of previous one"
+msgstr "在上一個條目結束之前開始新條目"
+
+#: ../../lib/Locale/Po4a/KernelHelp.pm:93
+msgid "Syntax error"
+msgstr "語法錯誤"
+
+#: ../../lib/Locale/Po4a/Man.pm:505
+msgid ""
+"Invalid 'groff_code' value. Must be one of 'fail', 'verbatim', 'translate'."
+msgstr "'groff_code' 值無效。必須是 'fail', 'verbatim', 'translate' 之一。"
+
+#: ../../lib/Locale/Po4a/Man.pm:553
+msgid ""
+"The no_wrap parameters must be a set of comma-separated begin:end couples.\n"
+msgstr "NO_WRAP參數必須是一組逗號分隔的 begin:end 對。\n"
+
+#: ../../lib/Locale/Po4a/Man.pm:600
+msgid "Invalid 'unknown_macros' value. Must be one of:\n"
+msgstr "'unknown_macros'值無效。 必須是以下之一：\n"
+
+#: ../../lib/Locale/Po4a/Man.pm:666
+msgid ""
+"This file was generated with Pod::Man. Translate the POD file with the pod "
+"module of po4a."
+msgstr "這個檔案是用Pod :: Man生成的。 使用po4a的pod模組翻譯POD檔案。"
+
+#: ../../lib/Locale/Po4a/Man.pm:676
+msgid ""
+"This file was generated with help2man. Translate the source file with the "
+"regular gettext."
+msgstr "此檔案是用 help2man 生成的。使用常規 gettext 翻譯原始檔。"
+
+#: ../../lib/Locale/Po4a/Man.pm:685
+msgid ""
+"This file was generated with docbook-to-man. Translate the source file with "
+"the sgml module of po4a."
+msgstr "該檔案是使用docbook-to-man生成的。 使用po4a的sgml模組翻譯原始檔。"
+
+#: ../../lib/Locale/Po4a/Man.pm:695
+msgid ""
+"This file was generated with docbook2man. Translate the source file with the "
+"sgml module of po4a."
+msgstr "此檔案是使用docbook2man生成的。 使用po4a的sgml模組翻譯原始檔。"
+
+#: ../../lib/Locale/Po4a/Man.pm:705 ../../lib/Locale/Po4a/Man.pm:726
+#, perl-format
+msgid ""
+"This file was generated with %s. You should translate the source file, but "
+"continuing anyway."
+msgstr "此檔案是使用 %s 生成的。 您應該翻譯原始檔，但仍然繼續。"
+
+#: ../../lib/Locale/Po4a/Man.pm:716
+msgid ""
+"This file was generated with db2man.xsl. Translate the source file with the "
+"xml module of po4a."
+msgstr "此檔案是使用db2man.xsl生成的。 使用po4a的xml模組翻譯原始檔。"
+
+#: ../../lib/Locale/Po4a/Man.pm:740
+#, perl-format
+msgid ""
+"This file contains the line '%s'. You should translate the source file, but "
+"continuing anyway."
+msgstr "該檔案包含該行%s。 您應該翻譯原始檔，但仍然繼續。"
+
+#: ../../lib/Locale/Po4a/Man.pm:813
+#, perl-format
+msgid ""
+"Font modifiers followed by a command may disturb po4a.  You should either "
+"remove the font modifier '%s', or integrate a \\f font modifier in the "
+"following command ('%s'), but continuing anyway."
+msgstr ""
+"字母修飾符後跟命令可能會干擾po4a。 您應該刪除字型修飾符 \" %s \"，或在以下命"
+"令（\" %s \"）中整合\\ f字型修飾符，但仍然繼續。"
+
+#: ../../lib/Locale/Po4a/Man.pm:934
+msgid ""
+"The unshiftline is not supported for the man module. Please send a bug "
+"report with the groff page that generated this error."
+msgstr ""
+"MAN 模組不支援 unshiftline。請使用生成此錯誤的 groff 頁面傳送錯誤報告。"
+
+#: ../../lib/Locale/Po4a/Man.pm:994
+#, perl-format
+msgid ""
+"macro %s called without arguments. Even if placing the macro arguments on "
+"the next line is authorized by man(7), handling this would make the po4a "
+"parser too complicate. Please simply put the macro args on the same line."
+msgstr ""
+"在沒有引數的情況下呼叫了宏 %s。即使將宏引數放在下一行是由 man(7) 授權的，處理"
+"這一點也會使 po4a 解析器過於複雜。請簡單地將宏引數放在同一行。"
+
+#: ../../lib/Locale/Po4a/Man.pm:1026
+#, perl-format
+msgid ""
+"Escape sequence \\c encountered. This is not completely handled yet. Faulty "
+"input: %s"
+msgstr "遇到轉義序列 \\c。這還沒有完全解決。含錯誤輸入：%s"
+
+#: ../../lib/Locale/Po4a/Man.pm:1208
+#, perl-format
+msgid "Unbalanced '<' and '>' in font modifier. Faulty message: %s"
+msgstr "字型修飾符中的 '<' 和 '>' 不平衡。錯誤訊息：%s"
+
+#: ../../lib/Locale/Po4a/Man.pm:1249
+#, perl-format
+msgid "Unknown '<' or '>' sequence. Faulty message: %s"
+msgstr "未知的 '<' 或 '>' 序列。錯誤訊息：%s"
+
+#: ../../lib/Locale/Po4a/Man.pm:1403
+#, perl-format
+msgid "Unparsable line: %s"
+msgstr "無法解析的行：%s"
+
+#: ../../lib/Locale/Po4a/Man.pm:1486
+#, perl-format
+msgid ""
+"Unknown macro '%s'. Remove it from the document, or refer to the Locale::"
+"Po4a::Man manpage to see how po4a can handle new macros."
+msgstr ""
+"未知宏 '%s'。將其從文件中刪除，或參考 Locale::Po4a::Man 手冊頁瞭解 po4a 如何"
+"處理新宏。"
+
+#: ../../lib/Locale/Po4a/Man.pm:1694
+#, perl-format
+msgid "Cannot parse command arguments: %s"
+msgstr "無法解析命令引數：%s"
+
+#: ../../lib/Locale/Po4a/Man.pm:1824
+#, perl-format
+msgid "Unsupported font in: '%s'."
+msgstr "不支援的字型：'%s'。"
+
+#: ../../lib/Locale/Po4a/Man.pm:2246
+#, perl-format
+msgid ""
+"This page defines a new macro '%s' with '%s' (inline comment: %s), but you "
+"did not specify the expected po4a behavior when '%s' is used. You will get "
+"an error if this macro is actually used in your page.\n"
+"Add your macro to one of the '%s', '%s', '%s', '%s', '%s' or '%s' parameters "
+"to avoid issues.\n"
+"For example, passing '%s' to po4a will ensure that the defined macro remains "
+"hidden from translators.\n"
+"Please refer to the manpage of Locale::Po4a::Man for more info on these "
+"parameters.\n"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Man.pm:2269
+#, perl-format
+msgid ""
+"This page defines a new macro '%s' with '%s', but you did not specify the "
+"expected po4a behavior when '%s' is used. You will get an error if this "
+"macro is actually used in your page.\n"
+"Add your macro to one of the '%s', '%s', '%s', '%s', '%s' or '%s' parameters "
+"to avoid issues.\n"
+"For example, passing '%s' to po4a will ensure that the defined macro remains "
+"hidden from translators.\n"
+"Please refer to the manpage of Locale::Po4a::Man for more info on these "
+"parameters.\n"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Man.pm:2314
+#, perl-format
+msgid ""
+"This page defines a new macro with '%s'. Since po4a is not a real groff "
+"parser, this is not supported. The option '%s' gets these macros copied "
+"verbatim in the translated file, but it's not very robust. '%s' shows these "
+"macros to the translators, but groff macros are not user-friendly for "
+"translators."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Man.pm:2382
+msgid "The .ie macro must be followed by a .el macro."
+msgstr ".ie宏必須後跟.el宏。"
+
+#: ../../lib/Locale/Po4a/Man.pm:2410
+#, perl-format
+msgid ""
+"This page uses conditionals with '%s'. Since po4a is not a real groff "
+"parser, this is not supported by default. The option '%s' gets these macros "
+"copied verbatim in the translated file, but it's not very robust. '%s' shows "
+"these macros to the translators, but groff macros are not user-friendly for "
+"translators."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Man.pm:2470
+#, perl-format
+msgid ""
+"This page includes another file with '%s'. Do not forget to translate this "
+"file ('%s')."
+msgstr "此頁面包含另一個帶有'%s'的檔案。 不要忘記翻譯此檔案（'%s'）。"
+
+#: ../../lib/Locale/Po4a/Man.pm:2638
+#, perl-format
+msgid ""
+"This page uses the '%s' request with the number of lines in argument. This "
+"is not supported yet."
+msgstr "此頁面使用'%s'請求和引數中的行數。 目前尚不支援此功能。"
+
+#: ../../lib/Locale/Po4a/Man.pm:2658
+#, perl-format
+msgid ""
+"This page uses the '%s' request. This request is only supported when no "
+"argument is provided."
+msgstr "此頁面使用'%s'請求。 僅在未提供引數時才支援此請求。"
+
+#: ../../lib/Locale/Po4a/Po.pm:233
+#, perl-format
+msgid ""
+"Invalid value for option 'wrap-po' ('%s' is not 'no' nor 'newlines' nor a "
+"number)"
+msgstr ""
+"選項 'wrap-po' 的值無效（'%s' 既不是 'no' ，也不是 'newlines'，也不是數字）"
+
+#: ../../lib/Locale/Po4a/Po.pm:242
+#, perl-format
+msgid ""
+"Invalid value for option 'porefs' ('%s' is not one of 'full', 'counter', "
+"'noline', 'file' or 'never')"
+msgstr ""
+"選項 'porefs' 的值無效（'%s' 不是 'full', 'counter', 'noline', 'file' 或 "
+"'never' 之一）"
+
+#: ../../lib/Locale/Po4a/Po.pm:310
+msgid "Please provide a non-null filename"
+msgstr "請提供一個非空檔名"
+
+#: ../../lib/Locale/Po4a/Po.pm:330
+#, perl-format
+msgid ""
+"Invalid po file %s:\n"
+"%s"
+msgstr ""
+"無效的 po 檔案 %s：\n"
+"%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:339 ../../lib/Locale/Po4a/TeX.pm:949
+#: ../../lib/Locale/Po4a/TransTractor.pm:450
+#: ../../lib/Locale/Po4a/TransTractor.pm:651 ../../lib/Locale/Po4a/Xhtml.pm:137
+#, perl-format
+msgid "Cannot read from %s: %s"
+msgstr "無法讀取 %s：%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:379
+#, perl-format
+msgid ""
+"The file %s starts with a BOM char indicating that its encoding is UTF-8, "
+"but '%s' was detected."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Po.pm:381
+#, perl-format
+msgid ""
+"The file %s starts with a BOM char indicating that its encoding is UTF-8, "
+"but you specified '%s' instead."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Po.pm:404 ../../lib/Locale/Po4a/TeX.pm:1013
+#: ../../lib/Locale/Po4a/TransTractor.pm:495 ../../lib/Locale/Po4a/Xhtml.pm:144
+#, perl-format
+msgid "Cannot close %s after reading: %s"
+msgstr "讀取後無法關閉 %s：%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:469
+msgid "Messages with more than 2 plural forms are not supported."
+msgstr "不支援 2 個以上覆數形式的訊息。"
+
+#: ../../lib/Locale/Po4a/Po.pm:477
+#, perl-format
+msgid "Parse error at: -->%s<--"
+msgstr "分析錯誤位於：-->%s<--"
+
+#: ../../lib/Locale/Po4a/Po.pm:542 ../../lib/Locale/Po4a/Po.pm:682
+msgid "Cannot write to a file without filename"
+msgstr "無法寫入沒有檔名的檔案"
+
+#: ../../lib/Locale/Po4a/Po.pm:559 ../../lib/Locale/Po4a/TransTractor.pm:529
+#, perl-format
+msgid "Cannot write to %s: %s"
+msgstr "無法寫入 %s：%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:576
+#, perl-format
+msgid ""
+"msgmerge suffers some bugs when PO files are not encoded in UTF-8; Recoding "
+"%s to UTF-8 (was %s) to circumvent the issue.\n"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Po.pm:630
+msgid "Cannot write PO files with more than two plural forms."
+msgstr "無法寫入具有兩個以上覆數形式的 PO 檔案。"
+
+#: ../../lib/Locale/Po4a/Po.pm:643
+#, fuzzy, perl-format
+#| msgid "Cannot close %s after writing: %s"
+msgid "Cannot close %s after writing: %s\n"
+msgstr "寫入後無法關閉 %s：%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:664
+#, perl-format
+msgid "Cannot unlink %s: %s."
+msgstr "無法取消連結 %s：%s。"
+
+#: ../../lib/Locale/Po4a/Po.pm:671 ../../lib/Locale/Po4a/Po.pm:675
+#: ../../po4a:1947
+#, perl-format
+msgid "Cannot move %s to %s: %s."
+msgstr "無法將 %s 移動到 %s：%s。"
+
+#: ../../lib/Locale/Po4a/Po.pm:897
+#, perl-format
+msgid "Evaluating the provided filter failed: %s"
+msgstr "評估提供的篩選器失敗：%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:1004
+#, perl-format
+msgid ""
+"'%s' is the singular form of a message, po4a will use the msgstr[0] "
+"translation (%s)."
+msgstr "'%s' 是訊息的單數形式，po4a 將使用 msgstr[0] 轉換 (%s)。"
+
+#: ../../lib/Locale/Po4a/Po.pm:1014
+#, perl-format
+msgid ""
+"'%s' is the plural form of a message, po4a will use the msgstr[1] "
+"translation (%s)."
+msgstr "'%s' 是訊息的複數形式，po4a 將使用 msgstr[1] 轉換 (%s)。"
+
+#: ../../lib/Locale/Po4a/Po.pm:1228
+#, perl-format
+msgid "msgid defined twice: %s"
+msgstr "msgid 定義了兩次：%s"
+
+#: ../../lib/Locale/Po4a/Po.pm:1265
+#, perl-format
+msgid ""
+"Translations don't match for:\n"
+"%s\n"
+"-->First translation:\n"
+"%s\n"
+" Second translation:\n"
+"%s\n"
+" Old translation discarded."
+msgstr ""
+"翻譯與以下專案不匹配：\n"
+"%s\n"
+"-->第一個翻譯：\n"
+"%s\n"
+"第二個翻譯：\n"
+"%s\n"
+"舊翻譯已丟棄。"
+
+#: ../../lib/Locale/Po4a/Pod.pm:98 ../../lib/Locale/Po4a/Xml.pm:917
+#, perl-format
+msgid ""
+"The file %s declares %s as encoding, but you provided %s as master charset. "
+"Please change either setting."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Pod.pm:173
+msgid ""
+"A new SimplePod parser is now available.  Please consider using it instead "
+"of the current Pod module. If you encounter any bugs, your reports would be "
+"greatly appreciated.  To use it, add the following line at the top of your "
+"po4a configuration file: \"[po4a_alias:Pod] SimplePod\".  You can disable "
+"this message by setting the no-warn-simple option.  Sorry for the noise, and "
+"thank you!"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Sgml.pm:224
+msgid ""
+"The needed module SGMLS.pm was not found and needs to be installed. It can "
+"be found on the CPAN, in package libsgmls-perl on debian, etc."
+msgstr ""
+"找不到所需的模組 SGMLS.pm，需要安裝。它可以在 CPAN、Debian 上的 libsgmls-"
+"perl 包等中找到。"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:269
+#, perl-format
+msgid ""
+"Unknown debug category: %s. Known categories:\n"
+"%s"
+msgstr ""
+"未知除錯類別：%s。已知類別：\n"
+"%s"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:301
+msgid "msgid skipped to help translators (contains only an entity)"
+msgstr "跳過 msgid 以幫助翻譯人員(僅包含實體)"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:310
+msgid "msgid skipped to help translators (contains only tags)"
+msgstr "跳過 msgid 以幫助翻譯人員(僅包含標籤)"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:323
+msgid ""
+"msgid skipped to help translators (contains only opening or closing tags of "
+"marked sections)"
+msgstr "跳過 msgid 以幫助翻譯人員(僅包含標記部分的開始或結束標記)"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:411 ../../lib/Locale/Po4a/Sgml.pm:863
+#, perl-format
+msgid "Cannot close tempfile: %s"
+msgstr "無法關閉臨時檔案：%s"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:417
+msgid ""
+"Error while running onsgmls -p.  Please check if onsgmls and the DTD are "
+"installed."
+msgstr "執行 onsgmls-p 時出錯。請檢查是否安裝了 onsgmls 和 DTD。"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:430
+msgid ""
+"Trying to handle a XML document as a SGML one. Feel lucky if it works, help "
+"us implementing a proper XML backend if it does not."
+msgstr ""
+"嘗試將 XML 文件處理為 SGML 文件。如果可以的話，請感到幸運，如果不能的話，請幫"
+"助我們實現一個合適的 XML 後端。"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:449
+msgid ""
+"This file is not a master SGML document (no DOCTYPE). It may be a file to be "
+"included by another one, in which case it should not be passed to po4a "
+"directly. Text from included files is extracted/translated when handling the "
+"master file including them."
+msgstr ""
+"此檔案不是主 SGML 文件（沒有 DOCTYPE）。它可能是由另一個檔案包含的檔案，在這"
+"種情況下，它不應該直接傳遞給 po4a。處理包含文字的主檔案時，將提取/翻譯包含文"
+"本的檔案。"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:572
+msgid "DTD of this file is unknown, but proceeding as requested."
+msgstr "此檔案的 DTD 未知，但按請求繼續。"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:576
+msgid ""
+"DTD of this file is unknown. (supported: DebianDoc, DocBook). The prolog "
+"follows:"
+msgstr "此檔案的 DTD 未知。（支援：DebianDoc、DocBook）。序言如下："
+
+#: ../../lib/Locale/Po4a/Sgml.pm:674 ../../lib/Locale/Po4a/Sgml.pm:758
+#, perl-format
+msgid "Cannot open %s (content of entity %s%s;): %s"
+msgstr "無法開啟 %s（實體 %s%s；的內容）：%s"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:729
+#, perl-format
+msgid "unrecognized prolog inclusion entity: %%%s;"
+msgstr "無法識別的 prolog 包含實體：%%%s;"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:868
+#, perl-format
+msgid "Cannot run onsgmls: %s"
+msgstr "無法執行 onsgmls：%s"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:987
+#, perl-format
+msgid "Unknown tag %s"
+msgstr "未知標籤 %s"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:1025
+#, perl-format
+msgid "bad translation '%s' for '%s' in '%s'"
+msgstr "錯誤的翻譯 '%s' 對於'%s'（在'%s'中）"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:1081 ../../lib/Locale/Po4a/Sgml.pm:1166
+#, perl-format
+msgid "Closing tag for a translation container missing before %s"
+msgstr "%s 之前缺少翻譯容器的結束標記"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:1251
+#, perl-format
+msgid "Unknown SGML event type: %s"
+msgstr "未知SGML事件型別：%s"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:1265
+msgid ""
+"Warning: onsgmls produced some errors.  This is usually caused by po4a, "
+"which modifies the input and restores it afterwards, causing the input of "
+"onsgmls to be invalid.  This is usually safe, but you may wish to verify the "
+"generated document with onsgmls -wno-valid."
+msgstr ""
+"警告：onsgmls 產生了一些錯誤。這通常是由 po4a 引起的，它會修改輸入並在之後恢"
+"復它，從而導致 onsgmls 的輸入無效。這通常是安全的，但是您可能希望使用 "
+"onsgmls-wno-valid 來驗證生成的文件。"
+
+#: ../../lib/Locale/Po4a/Sgml.pm:1277
+msgid ""
+"To see the error message, rerun po4a with this additional argument:\n"
+"   -o debug=onsgmls"
+msgstr ""
+"要檢視錯誤訊息，請使用此附加引數重新執行 po4a：\n"
+"   -o debug=onsgmls"
+
+#: ../../lib/Locale/Po4a/SimplePod/Parser.pm:261
+msgid ""
+"An unexpected error has occurred.  Please report this issue to the po4a "
+"project."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TeX.pm:505 ../../lib/Locale/Po4a/TeX.pm:589
+#, perl-format
+msgid "un-balanced %s in '%s'"
+msgstr "不平衡的 %s 在 '%s' 中"
+
+#: ../../lib/Locale/Po4a/TeX.pm:520 ../../lib/Locale/Po4a/TeX.pm:608
+#, perl-format
+msgid "Error while checking the number of arguments of the '%s' command: %s"
+msgstr "檢查 '%s' 命令的引數數目時出錯：%s"
+
+#: ../../lib/Locale/Po4a/TeX.pm:794 ../../lib/Locale/Po4a/TeX.pm:896
+#, perl-format
+msgid "Unknown command: '%s'"
+msgstr "未知命令: %s"
+
+#: ../../lib/Locale/Po4a/TeX.pm:942
+msgid "Cannot read from file without having a filename"
+msgstr "沒有檔名就無法從檔案讀取"
+
+#: ../../lib/Locale/Po4a/TeX.pm:992
+#, perl-format
+msgid ""
+"Cannot find '%s' with kpsewhich. To prevent this file to be included, add '-"
+"o exclude_include=%s' to the options, either on the command line or in your "
+"po4a.conf file."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TeX.pm:1038
+#, perl-format
+msgid "kpsewhich cannot find %s"
+msgstr "找不到 %s 的 kpsewhich"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1084
+#, perl-format
+msgid "Cannot use an alias to the unknown command '%s'"
+msgstr "無法對未知命令 '%s' 使用別名"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1091
+#, perl-format
+msgid ""
+"You are using the old definitions format (%s).  Please update this "
+"definition line."
+msgstr "您正在使用舊的定義格式（%s）。請更新此定義行。"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1300 ../../lib/Locale/Po4a/TeX.pm:1553
+#, perl-format
+msgid "unknown environment: '%s'"
+msgstr "未知環境: %s"
+
+#. a begin may have been hidden in the middle of a translated
+#. buffer. FIXME: Just warn for now.
+#: ../../lib/Locale/Po4a/TeX.pm:1323
+#, perl-format
+msgid "unmatched end of environment '%s'"
+msgstr "環境 '%s' 的結尾不匹配"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1373 ../../lib/Locale/Po4a/TeX.pm:1482
+#, perl-format
+msgid "Wrong number of arguments for the '%s' command."
+msgstr "%s 命令的引數數目錯誤。"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1385 ../../lib/Locale/Po4a/TeX.pm:1494
+#: ../../lib/Locale/Po4a/TeX.pm:1580
+msgid "An optional argument was provided, but a mandatory one is expected."
+msgstr "提供了可選引數，但應為強制引數。"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1386 ../../lib/Locale/Po4a/TeX.pm:1495
+#, perl-format
+msgid "Command '%s': %s"
+msgstr "命令 '%s'：%s"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1442
+#, perl-format
+msgid "register_generic_command: unsupported format: '%s'."
+msgstr "register_generic_command：不支援的格式：'%s'。"
+
+#: ../../lib/Locale/Po4a/TeX.pm:1548
+msgid "The first argument of \\begin is mandatory."
+msgstr "\\begin 的第一個引數是必需的。"
+
+#: ../../lib/Locale/Po4a/Text.pm:269
+#, perl-format
+msgid "Option %s is only valid when parsing markdown files."
+msgstr "選項 %s 僅在分析標記檔案時有效。"
+
+#: ../../lib/Locale/Po4a/Text.pm:431
+#, perl-format
+msgid "Unrecognized section: %s"
+msgstr "無法識別的部分: %s"
+
+#: ../../lib/Locale/Po4a/Text.pm:623 ../../lib/Locale/Po4a/Yaml.pm:140
+#, perl-format
+msgid ""
+"Inline lists and dictionaries on a single line are not correctly handled the "
+"parser we use (YAML::Tiny): they are interpreted as regular strings. Please "
+"use multi-lines definitions instead. Offending line:\n"
+" %s"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Text.pm:648
+#, perl-format
+msgid ""
+"Proceeding even if the YAML Front Matter could not be parsed. Remove the "
+"'yfm_lenient' option for a stricter behavior.\n"
+"Ignored error: %s"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Text.pm:665
+#, perl-format
+msgid ""
+"Could not get the YAML Front Matter from the file. If you did not intend to "
+"add a YAML front matter but an horizontal ruler, please use '----' instead, "
+"or pass the 'yfm_lenient' option.\n"
+"Error: %s\n"
+"Content of the YFM: %s"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Text.pm:823
+#, perl-format
+msgid ""
+"Malformed fenced div block: Block starting at %s not closed before the end "
+"of the file."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:475
+#: ../../lib/Locale/Po4a/TransTractor.pm:667
+#: ../../lib/Locale/Po4a/TransTractor.pm:745
+#, perl-format
+msgid ""
+"Malformed encoding while reading from file %s with charset %s: %s\n"
+"If %s is not the expected charset, you need to configure the right one with "
+"--master-charset or other similar flags."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:487
+#, perl-format
+msgid ""
+"The file %s starts with a BOM char indicating that its encoding is UTF-8, "
+"but you specified %s instead."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:551
+#, perl-format
+msgid ""
+"Malformed encoding while writing char '%s' to file %s with charset %s: %s\n"
+"If %s is not the expected charset, you need to configure the right one with "
+"--localized-charset or other similar flags."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:561
+#, perl-format
+msgid ""
+"Malformed encoding while writing to file %s with charset %s: %s\n"
+"If %s is not the expected charset, you need to configure the right one with "
+"--localized-charset or other similar flags."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:570
+#, perl-format
+msgid "Cannot close %s after writing: %s"
+msgstr "寫入後無法關閉 %s：%s"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:658
+#, perl-format
+msgid "Cannot read po4a header from %s."
+msgstr "無法從 %s 讀取 po4a 頭。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:675
+#, perl-format
+msgid "First line of %s does not look like a po4a header."
+msgstr "%s 的第一行看起來不像 po4a 頭。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:680
+#, perl-format
+msgid "Syntax error in po4a header of %s, near \"%s\""
+msgstr "%s 的 po4a 頭中的語法錯誤，靠近 \"%s\""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:696
+#, perl-format
+msgid "Invalid argument in the po4a header of %s: %s"
+msgstr "Po4a 頭中的引數無效 %s: %s"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:702
+#, perl-format
+msgid "The po4a header of %s does not define the mode."
+msgstr "%s 的 po4a 頭未定義模式。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:709
+#, perl-format
+msgid ""
+"Mode invalid in the po4a header of %s: should be 'before', 'after' or 'eof'. "
+"Instead, it is '%s'."
+msgstr ""
+"%s 的 po4a 頭中的模式無效：應為 'before'、'after' 或 'eof'。相反，它是 %s。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:718
+#, perl-format
+msgid "The po4a header of %s does not define the position."
+msgstr "%s 的 po4a 頭未定義位置。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:722
+msgid "No ending boundary given in the po4a header, but mode=after."
+msgstr "Po4a 頭中沒有給出結束邊界，但 mode=after。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:726
+msgid "No position needed when mode=eof."
+msgstr "當 mode=eof 時不需要位置。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:730
+msgid "No ending boundary needed when mode=eof."
+msgstr "當 mode=eof 時，不需要結束邊界。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:770
+msgid "Cannot apply addendum when not given the filename"
+msgstr "如果未指定檔名，則無法應用附錄"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:773
+#, perl-format
+msgid "Addendum %s does not exist."
+msgstr "附錄 %s 不存在。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:809
+#, perl-format
+msgid "No candidate position for the addendum %s."
+msgstr "附錄 %s 沒有候選人職位。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:813
+#, perl-format
+msgid "More than one candidate position found for the addendum %s."
+msgstr "為附錄 %s 找到多個候選人職位。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:824
+#: ../../lib/Locale/Po4a/TransTractor.pm:846
+#, perl-format
+msgid "Addendum '%s' applied before this line: %s"
+msgstr "在此行之前的應用附錄 '%s'：%s"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:852
+#, perl-format
+msgid "Addendum '%s' applied after the line: %s."
+msgstr "在此行之後的應用附錄 '%s'：%s。"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:859
+#, perl-format
+msgid "Addendum '%s' applied at the end of the file."
+msgstr "在檔案末尾的應用附錄 '%s'。"
+
+#: ../../lib/Locale/Po4a/Wml.pm:89
+#, perl-format
+msgid "Cannot create a temporary XML file: %s"
+msgstr "無法建立臨時 XML 檔案：%s"
+
+#: ../../lib/Locale/Po4a/Xml.pm:116
+#, perl-format
+msgid "%s: Cannot read from %s: %s"
+msgstr "%s：無法從 %s 讀取：%s"
+
+#: ../../lib/Locale/Po4a/Xml.pm:125
+#, perl-format
+msgid "%s: Cannot close %s after reading: %s"
+msgstr "%s：讀取後無法關閉 %s：%s"
+
+#: ../../lib/Locale/Po4a/Xml.pm:159
+#, perl-format
+msgid "Cannot have more than one input charset in XML files (%s and %s)"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Xml.pm:231
+#, perl-format
+msgid ""
+"'po4a-id=%d' in the translation does not exist in the original string (or "
+"'po4a-id=%d' used twice in the translation)."
+msgstr ""
+"原始字串中不存在轉換中的 'po4a-id=%d' (或轉換中使用了兩次的 'po4a-id=%d')。"
+
+#: ../../lib/Locale/Po4a/Xml.pm:271
+#, perl-format
+msgid ">>> filename = '%s'"
+msgstr ">>> 檔名 = '%s'"
+
+#: ../../lib/Locale/Po4a/Xml.pm:754
+#, perl-format
+msgid "Internal error: unknown type identifier '%s'."
+msgstr "內部錯誤：未知的型別識別符號 '%s'。"
+
+#: ../../lib/Locale/Po4a/Xml.pm:906
+#, perl-format
+msgid ""
+"The file %s declares %s as encoding, but you provided %s as master charset. "
+"Please change either setting because they really are different encoding in "
+"Perl. See https://perldoc.perl.org/Encode#UTF-8-vs.-utf8-vs.-UTF8"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Xml.pm:978
+#, perl-format
+msgid ""
+"Bad document type. '%s' expected. You can fix this warning with a -o doctype "
+"option, or ignore this check with -o doctype=\"\"."
+msgstr ""
+"文件型別錯誤。需要 '%s'。您可以使用 -o doctype 選項修復此警告，或使用 -o "
+"doctype=\"\" 忽略此檢查。"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1074 ../../lib/Locale/Po4a/Xml.pm:1924
+#, perl-format
+msgid ""
+"Unexpected closing tag </%s> found. The main document may be wrong.  "
+"Continuing…"
+msgstr "找到意外的結束標記 </%s>。主文件可能有誤。繼續…"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1079 ../../lib/Locale/Po4a/Xml.pm:1929
+#, perl-format
+msgid "Unexpected closing tag </%s> found. The main document may be wrong."
+msgstr "找到意外的結束標記 </%s>。主文件可能有誤。"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1460
+#, perl-format
+msgid ""
+"%s: attribute '%s' is not defined in module option 'attributes' and\n"
+"....  is not translated for the attribute path '%s'"
+msgstr ""
+"%s：模組選項 'Attributes' 中沒有定義屬性 '%s'，並且。\n"
+"...  沒有為屬性路徑 '%s' 轉換"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1479
+#, perl-format
+msgid "%s: Bad attribute syntax.  Continuing…"
+msgstr "%s： 屬性語法錯誤。繼續…"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1481
+#, perl-format
+msgid "%s: Bad attribute syntax"
+msgstr "%s： 錯誤的屬性語法"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1604
+#, perl-format
+msgid ""
+"%s: translation option='%s'.\n"
+" *** the original translation option is overridden here since parent "
+"path='%s' is untranslated,"
+msgstr ""
+"%s： 轉換選項='%s'。\n"
+"*** 原始轉換選項在此處被重寫，因為父路徑='%s' 是未轉換的,"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1618
+#, perl-format
+msgid "%s: foldattributes setting ignored since '%s' is not inline tag"
+msgstr "%s：忽略資料夾屬性設定，因為 '%s' 不是行內標記"
+
+#: ../../lib/Locale/Po4a/Xml.pm:2076
+#, perl-format
+msgid ""
+"Invalid placeholder in the translation (the 'type' and 'id' must be present, "
+"in this order).\n"
+"%s\n"
+"\n"
+"Please fix your translation."
+msgstr ""
+"翻譯中的佔位符無效(必須按此順序提供 'type' 和 'id' )。\n"
+"%s\n"
+"\n"
+"請修改您的翻譯。"
+
+#: ../../lib/Locale/Po4a/Xml.pm:2163 ../../lib/Locale/Po4a/Xml.pm:2178
+#, perl-format
+msgid ""
+"The '%s' option is deprecated. Please use the translated/untranslated and/or "
+"break/inline/placeholder categories."
+msgstr "不推薦使用 '%s' 選項。請使用已翻譯/未翻譯和/或中斷/內聯/佔位符類別。"
+
+#: ../../lib/Locale/Po4a/Xml.pm:2341 ../../lib/Locale/Po4a/Xml.pm:2348
+#: ../../lib/Locale/Po4a/Xml.pm:2351 ../../lib/Locale/Po4a/Xml.pm:2354
+#: ../../lib/Locale/Po4a/Xml.pm:2359 ../../lib/Locale/Po4a/Xml.pm:2362
+#: ../../lib/Locale/Po4a/Xml.pm:2367
+#, perl-format
+msgid "Tag '%s' both in the %s and %s categories."
+msgstr "標記 '%s'（在 %s 和 %s 類別中）。"
+
+#. Argument checking
+#: ../../msguntypot:163 ../../msguntypot:165
+#, perl-format
+msgid "Mandatory argument '%s' missing."
+msgstr "缺少強制引數 '%s'。"
+
+#. Check file existence
+#: ../../msguntypot:164 ../../msguntypot:166 ../../po4a:1049
+#: ../../po4a-gettextize:565 ../../po4a-normalize:206 ../../po4a-translate:216
+#: ../../po4a-translate:217 ../../po4a-updatepo:287
+#, perl-format
+msgid "File %s does not exist."
+msgstr "檔案 %s 不存在。"
+
+#: ../../msguntypot:174
+#, perl-format
+msgid ""
+"The new and old POT files have different amount of strings (%d != %d). "
+"Something's seriously wrong here."
+msgstr "新的和舊的 POT 檔案有不同數量的字串 (%d != %d)。這裡出了嚴重的問題。"
+
+#: ../../msguntypot:192
+#, perl-format
+msgid "Found %d modified entries."
+msgstr "找到 %d 個修改過的條目。"
+
+#: ../../msguntypot:203 ../../po4a:1794
+#, perl-format
+msgid "Cannot create a temporary PO file: %s"
+msgstr "無法建立臨時 PO 檔案：%s"
+
+#: ../../msguntypot:208
+#, perl-format
+msgid "Handling %s"
+msgstr "處理%s"
+
+#: ../../msguntypot:213 ../../po4a-updatepo:326
+#, perl-format
+msgid ""
+"Could not run msgmerge: %s\n"
+"The command was: %s"
+msgstr ""
+"無法執行訊息合併：%s\n"
+"指令為：%s"
+
+#: ../../msguntypot:227
+#, perl-format
+msgid "msguntypot changed msgid \"%s\" to \"%s\" in %s\n"
+msgstr ""
+
+#: ../../msguntypot:234
+#, perl-format
+msgid "Modified %d entries in %d files."
+msgstr "修改了 %d 個檔案中的 %d 個條目。"
+
+#: ../../po4a:864 ../../po4a:868
+#, perl-format
+msgid "Option %s invalid. Directory %s does not exist (current directory: %s)."
+msgstr "選項 %s 無效。目錄 %s 不存在（當前目錄 %s）。"
+
+#: ../../po4a:1030
+#, perl-format
+msgid "failed to execute '%s': %s."
+msgstr "無法執行 '%s': %s。"
+
+#: ../../po4a:1033
+#, perl-format
+msgid "'%s' died with signal %d, with coredump."
+msgstr "'%s' 死於訊號 %d，帶有核心轉儲。"
+
+#: ../../po4a:1035
+#, perl-format
+msgid "'%s' died with signal %d, without coredump."
+msgstr "'%s' 死於訊號 %d，沒有核心轉儲。"
+
+#: ../../po4a:1038
+#, perl-format
+msgid "'%s' exited with value %d."
+msgstr "'%s' 退出，值為 %d。"
+
+#: ../../po4a:1041
+#, perl-format
+msgid "Error: %s"
+msgstr "錯誤：%s"
+
+#: ../../po4a:1065
+#, perl-format
+msgid "Specified destination language '%s' not found in the list of languages."
+msgstr ""
+
+#: ../../po4a:1101 ../../po4a:1189 ../../po4a:1459
+#, perl-format
+msgid "Unknown variable: %s"
+msgstr "未知變數: %s"
+
+#: ../../po4a:1110
+#, perl-format
+msgid "Syntax error: %s"
+msgstr "語法錯誤：%s"
+
+#: ../../po4a:1143 ../../po4a:1208
+#, perl-format
+msgid "'%s' redeclared"
+msgstr "重新宣告 '%s'"
+
+#: ../../po4a:1151
+#, perl-format
+msgid ""
+"Your POT file '%s' file name does not end with the 'pot' extension. This is "
+"unusual and will trouble the translators."
+msgstr ""
+"您的 POT 檔案 '%s' 檔名未以 'pot' 副檔名結尾。這是不尋常的，會給翻譯人員帶來"
+"麻煩。"
+
+#: ../../po4a:1158
+#, perl-format
+msgid ""
+"No PO file provided as subsequent parameters to '%s'. Your documentation "
+"will not be translated."
+msgstr "沒有提供 PO 檔案作為 '%s' 的後續引數。您的文件將不會被翻譯。"
+
+#: ../../po4a:1165
+#, perl-format
+msgid "Unparsable argument '%s'."
+msgstr "無法解析的引數 '%s'。"
+
+#: ../../po4a:1215
+msgid "The list of languages cannot be set twice."
+msgstr "語言列表不能設定兩次。"
+
+#: ../../po4a:1217
+msgid "The POT file cannot be set twice."
+msgstr "POT 檔案不能設定兩次。"
+
+#. Only display the message the first time we find the right directory
+#: ../../po4a:1232 ../../po4a:1254
+#, perl-format
+msgid "Using '%s' as a %s."
+msgstr "使用 '%s' 作為 %s。"
+
+#: ../../po4a:1234
+#, perl-format
+msgid "'%s' is not a directory (current dir: %s)"
+msgstr "'%s' 不是目錄 (當前目錄：%s)"
+
+#: ../../po4a:1239
+#, perl-format
+msgid "Cannot list the '%s' directory"
+msgstr "無法列出 '%s' 目錄"
+
+#: ../../po4a:1249
+#, perl-format
+msgid "Cannot list directory '%s' in '%s' "
+msgstr "無法列出目錄 '%s'（在 '%s' 中） "
+
+#: ../../po4a:1260
+#, perl-format
+msgid "Directory '%s' not found in '%s'."
+msgstr "在目錄 '%s' 中找不到 '%s'。"
+
+#: ../../po4a:1263 ../../po4a:1266
+#, perl-format
+msgid "Directory '%s' not found in '%s' nor in '%s'."
+msgstr "在目錄 '%s' 中找不到 '%s'或 '%s'。"
+
+#: ../../po4a:1270
+#, perl-format
+msgid "Directory '%s' not found in '%s' nor in '%s' nor in '%s'."
+msgstr "在目錄 '%s' 中均未找到 '%s'，'%s' 或'%s'。"
+
+#: ../../po4a:1281
+#, perl-format
+msgid "Language '%s' found twice in '%s' and '%s'."
+msgstr "語言 '%s' 在 '%s' 和 '%s' 中兩次被發現。"
+
+#: ../../po4a:1285
+#, perl-format
+msgid "Found language '%s' in the provided po_directory: %s"
+msgstr "在提供的 po_directory 中找到語言 '%s'：%s"
+
+#: ../../po4a:1289
+#, perl-format
+msgid "%s:%d: too many POT files: '%s' and '%s'."
+msgstr "%s:%d: 太多 POT 檔案：'%s' 和 '%s'。"
+
+#: ../../po4a:1293
+#, perl-format
+msgid "Found POT file '%s' in the provided po_directory."
+msgstr "在提供的 po_directory 中找到 POT 檔案 '%s'。"
+
+#: ../../po4a:1303
+#, perl-format
+msgid "No PO files found in '%s'/'%s'."
+msgstr "在 '%s'/'%s' 中找不到 PO 檔案。"
+
+#: ../../po4a:1306 ../../po4a:1309
+#, perl-format
+msgid "No PO files found in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "在 '%s'/'%s' 或 '%s'/'%s' 中找不到 PO 檔案。"
+
+#: ../../po4a:1313
+#, perl-format
+msgid "No PO files found in '%s'/'%s' nor in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "在 '%s'/'%s'、'%s'/'%s' 或 '%s'/'%s' 中找不到 PO 檔案。"
+
+#: ../../po4a:1317
+msgid "Your project will not be translated to any language."
+msgstr "您的工程不會被翻譯成任何語言。"
+
+#: ../../po4a:1323
+#, perl-format
+msgid "No POT files found in '%s'/'%s'."
+msgstr "在 '%s'/'%s' 中找不到 POT 檔案。"
+
+#: ../../po4a:1326 ../../po4a:1329
+#, perl-format
+msgid "No POT files found in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "在 '%s'/'%s' 或 '%s'/'%s' 中找不到 POT 檔案。"
+
+#: ../../po4a:1333
+#, perl-format
+msgid "No POT files found in '%s'/'%s' nor in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "在 '%s'/'%s'、'%s'/'%s' 或 '%s'/'%s' 中找不到 POT 檔案。"
+
+#: ../../po4a:1337
+msgid ""
+"Please create an empty file with the 'pot' extension (e.g. 'myproject.pot')."
+msgstr "請建立副檔名為 “pot” 的空檔案(例如，“myproject.pot”)。"
+
+#: ../../po4a:1350
+#, perl-format
+msgid ""
+"The master file '%s' was specified earlier in the configuration file. This "
+"may cause problems with options."
+msgstr "主檔案 '%s' 是在配置檔案的前面指定的。這可能會導致選項出現問題。"
+
+#: ../../po4a:1355
+#, perl-format
+msgid "The master file '%s' does not exist."
+msgstr "主檔案 '%s' 不存在。"
+
+#: ../../po4a:1408
+#, fuzzy
+#| msgid ""
+#| "Option 'master:file' is deprecated. Please use 'pot' instead for the same "
+#| "effect."
+msgid ""
+"Option 'master:file=' is deprecated. Please use 'pot=' instead for the same "
+"effect."
+msgstr "選項 'master:file' 已棄用。為了達到同樣的效果，請改用 'pot'。"
+
+#: ../../po4a:1431
+#, perl-format
+msgid "Unparsable argument '%s' (%s)."
+msgstr "無法解析的引數 '%s'（%s）。"
+
+#: ../../po4a:1434
+msgid "The translated and master file are the same."
+msgstr "翻譯後的檔案和主檔案是相同的。"
+
+#: ../../po4a:1476
+#, perl-format
+msgid "Translation of %s in %s redefined"
+msgstr "在 %s 中的翻譯被重新定義 %s"
+
+#: ../../po4a:1509
+#, perl-format
+msgid "Unparsable command '%s'."
+msgstr "無法解析的命令 '%s'。"
+
+#. don't care about error here
+#: ../../po4a:1515
+msgid ""
+"'po4a_paths' is not defined in the configuration file. Where are the POT and "
+"PO files?"
+msgstr "配置檔案中未定義 “po4a 路徑”。POT 和 PO 檔案在哪裡？"
+
+#: ../../po4a:1531
+#, perl-format
+msgid "Cannot parse option line (missing >%s<?): %s"
+msgstr "無法解析選項行（缺少 >%s<?）: %s"
+
+#: ../../po4a:1559
+#, perl-format
+msgid "Split mode, creating a temporary POT:"
+msgstr "拆分模式，建立臨時 POT："
+
+#: ../../po4a:1562
+msgid "Disabling --translate-only option, it is not supported in split mode"
+msgstr "禁用 --僅翻譯選項，在拆分模式下不支援"
+
+#: ../../po4a:1576
+#, perl-format
+msgid "Document %s kept for update (--translate-only)."
+msgstr ""
+
+#: ../../po4a:1579
+#, fuzzy, perl-format
+#| msgid "NOT updating %s as requested (--no-update)."
+msgid "Skip the update of %s as requested (--translate-only)."
+msgstr "未按要求更新 %s（-no update）。"
+
+#: ../../po4a:1599
+#, perl-format
+msgid "Languages skipped because of --translate-only: %s; kept languages: %s."
+msgstr ""
+
+#: ../../po4a:1636
+#, perl-format
+msgid "NOT updating %s as requested (--no-update)."
+msgstr "未按要求更新 %s（-no update）。"
+
+#: ../../po4a:1640 ../../po4a:1860 ../../po4a-updatepo:319
+#, perl-format
+msgid "Updating %s:"
+msgstr "正在更新 %s："
+
+#: ../../po4a:1644
+#, perl-format
+msgid "NOT creating %s as requested (--no-update)."
+msgstr "未按要求建立 %s（-no update）。"
+
+#: ../../po4a:1647 ../../po4a-updatepo:332
+#, perl-format
+msgid "Creating %s:"
+msgstr "正在建立 %s："
+
+#: ../../po4a:1705 ../../po4a:1761 ../../po4a:1900 ../../po4a-updatepo:297
+#, perl-format
+msgid "Cannot create a temporary POT file: %s"
+msgstr "無法建立臨時 POT 檔案：%s"
+
+#: ../../po4a:1715
+#, perl-format
+msgid " (%d entries)"
+msgstr " （%d 個條目）"
+
+#: ../../po4a:1719
+#, fuzzy, perl-format
+#| msgid "NOT updating %s as requested (--no-update)."
+msgid "NOT updating the POT file %s as requested (--no-update)."
+msgstr "未按要求更新 %s（-no update）。"
+
+#: ../../po4a:1722
+#, perl-format
+msgid "NOT updating the POT file %s because of --translate-only."
+msgstr ""
+
+#: ../../po4a:1725
+#, perl-format
+msgid "POT file %s already up to date."
+msgstr "POT 檔案 %s 已經是最新的。"
+
+#: ../../po4a:1766 ../../po4a:1833 ../../po4a:1939
+#, perl-format
+msgid "Cannot create directory '%s': %s"
+msgstr "無法建立目錄 '%s'：%s"
+
+#: ../../po4a:1774
+#, perl-format
+msgid ""
+"msggrep did not create '%s'. Used command:\n"
+"  %s\n"
+"Please report that bug, along the information allowing to reproduce it.\n"
+msgstr ""
+"msggrep 未建立 '%s'。使用的命令：\n"
+"  %s。\n"
+"請報告該錯誤，以及允許複製它的資訊。\n"
+
+#: ../../po4a:1805
+#, perl-format
+msgid ""
+"The translation of master file '%s' in language '%s' is missing (file: %s) "
+"-- skipping."
+msgstr "缺少主檔案 '%s'（語言為 '%s'）的翻譯（檔案 %s）-- 正在跳過。"
+
+#: ../../po4a:1858
+#, perl-format
+msgid "Updating the translation in language %s:"
+msgstr "正在更新語言 %s 中的翻譯："
+
+#: ../../po4a:1871
+#, perl-format
+msgid "Creating an empty PO file for the language %s.\n"
+msgstr ""
+
+#: ../../po4a:1873
+#, fuzzy, perl-format
+#| msgid "Cannot create a temporary PO file: %s"
+msgid "Creating an empty PO file in %s.\n"
+msgstr "無法建立臨時 PO 檔案：%s"
+
+#: ../../po4a:1977
+#, perl-format
+msgid "PO file for language %s is missing -- skipping."
+msgstr "缺少語言 %s 的 PO 檔案 -- 正在跳過。"
+
+#: ../../po4a:1979
+#, perl-format
+msgid "PO file %s for language %s is missing -- skipping."
+msgstr "缺少語言 %s 的 PO 檔案 %s -- 正在跳過。"
+
+#: ../../po4a:2003
+#, perl-format
+msgid "Skip master file %s in language %s because of --translate-only."
+msgstr ""
+
+#: ../../po4a:2023
+#, perl-format
+msgid "%s doesn't need to be updated."
+msgstr "%s 不需要更新。"
+
+#: ../../po4a:2069
+#, perl-format
+msgid "Discard %s (%s of %s strings; only %s%% translated; need %s%%)."
+msgstr "放棄 %s（第 %s 個字串，共 %s 個字串；只有 %s%% 已翻譯；需要 %s%%）。"
+
+#: ../../po4a:2077
+#, perl-format
+msgid "Timestamp %s created."
+msgstr "時間戳 %s 已建立。"
+
+#: ../../po4a:2087
+#, perl-format
+msgid "Timestamp %s removed."
+msgstr "時間戳 %s 已刪除。"
+
+#: ../../po4a:2101
+#, perl-format
+msgid "Addendum %s does NOT apply to %s (translation discarded)."
+msgstr "附錄 %s 不適用於 %s（已放棄翻譯）。"
+
+#: ../../po4a:2110
+#, perl-format
+msgid "%s is 100%% translated (%s strings)."
+msgstr "%s 是 100%% 已翻譯的（%s 字串）。"
+
+#: ../../po4a:2114 ../../po4a-translate:261
+#, perl-format
+msgid "%s is %s%% translated (%s of %s strings)."
+msgstr "%s 是已翻譯的 %s%% （第 %s 個字串，共 %s 個字串）。"
+
+#: ../../po4a-gettextize:366
+msgid ""
+"\n"
+"The gettextization failed (once again). Don't give up, gettextizing is a "
+"subtle art, but this is only needed once to convert a project to the "
+"gorgeous luxus offered by po4a to translators.\n"
+"Please refer to the po4a(7) documentation, the section \"HOWTO convert a pre-"
+"existing translation to po4a?\" contains several hints to help you in your "
+"task"
+msgstr ""
+"\n"
+"gettextization 失敗（再次）。不要放棄，gettextizing 是一種微妙的藝術，但這隻"
+"需要一次就可以將一個專案轉換為 po4a 提供給譯者的華麗的 luxus。\n"
+"請參閱 po4a（7）文件中的“如何將現有翻譯轉換為 po4a？”包含一些幫助您完成任務的"
+"提示"
+
+#: ../../po4a-gettextize:382
+#, perl-format
+msgid ""
+"Original has more strings than the translation (%d>%d). Please fix it by "
+"editing the translated version to add some dummy entry."
+msgstr ""
+"原始檔案的字串多於翻譯檔案 (%d>%d)。請透過編輯翻譯版本以新增一些虛擬條目來修"
+"復此問題。"
+
+#: ../../po4a-gettextize:395
+#, perl-format
+msgid ""
+"Original has less strings than the translation (%d<%d). Please fix it by "
+"removing the extra entry from the translated file. You may need an addendum "
+"(cf po4a(7)) to reput the chunk in place after gettextization. A possible "
+"cause is that a text duplicated in the original is not translated the same "
+"way each time. Remove one of the translations, and you're fine."
+msgstr ""
+"原始檔案的字串少於翻譯檔案 (%d<%d)。請透過從翻譯後的檔案中刪除額外條目來修復"
+"此問題。您可能需要一個附錄(參見 po4a(7))，以便在 gettexization 之後將塊重新放"
+"置到位。一個可能的原因是，在原文中複製的文字每次翻譯的方式並不相同。去掉其中"
+"一個翻譯，你就沒事了。"
+
+#: ../../po4a-gettextize:448
+#, perl-format
+msgid ""
+"po4a gettextization: Structure disparity between original and translated "
+"files:\n"
+"msgid (at %s) is of type '%s' while\n"
+"msgstr (at %s) is of type '%s'.\n"
+"Original text: %s\n"
+"Translated text: %s\n"
+"(result so far dumped to gettextization.failed.po)"
+msgstr ""
+"po4a gettexalization：原文和譯文的結構差異：\n"
+"msgid(位於 %s)的型別為 '%s'，而。\n"
+"msgstr(位於 %s)的型別為 '%s'。\n"
+"原始文字：%s。\n"
+"翻譯的文字：%s。\n"
+"(到目前為止，結果轉儲到 gettexization.ailed.po)"
+
+#: ../../po4a-gettextize:555
+msgid ""
+"You must provide the same amount of master files and localized files to "
+"synchronize them, as po4a-gettextize is intended to synchronize master files "
+"and previously existing translations. If just want to extract POT files of "
+"your master files, please use po4a-updatepo. Please note that the most "
+"convenient way of using po4a is to write a po4a.conf file and use the "
+"integrated po4a(1) program."
+msgstr ""
+
+#: ../../po4a-gettextize:570
+msgid ""
+"po4a-gettextize is only useful to convert previously existing translations "
+"to a PO based workflow. Once you successfully converted your project to "
+"po4a, you should use the po4a(1) program to maintain it and update your "
+"translations."
+msgstr ""
+
+#: ../../po4a-gettextize:601
+msgid ""
+"Temporary master and localized POT files dumped to po4atemp.master.po and "
+"po4atemp.localized.po"
+msgstr ""
+
+#: ../../po4a-normalize:185
+msgid ""
+"Both B<--blank> and B<--capitalize> can't be specified at the same time."
+msgstr ""
+
+#: ../../po4a-normalize:198
+msgid ""
+"po4a-normalize is mostly useful to debug po4a itself. Users are advised to "
+"use the po4a(1) program instead."
+msgstr ""
+
+#: ../../po4a-normalize:207
+#, perl-format
+msgid "Options %s and %s cannot be provided together"
+msgstr "選項 %s 和 %s 不能一起提供"
+
+#: ../../po4a-normalize:233
+#, perl-format
+msgid "Write the normalized document to %s."
+msgstr "將規範化文件寫入 %s。"
+
+#: ../../po4a-normalize:236
+#, perl-format
+msgid "Write the normalized PO file to %s."
+msgstr "將規範化的 PO 檔案寫入 %s。"
+
+#: ../../po4a-translate:240
+msgid ""
+"po4a-translate is deprecated. The unified po4a(1) program is more convenient "
+"and less error prone. Once configured, `po4a --no-update` can be used as a "
+"drop-in replacement to `po4a-translate`."
+msgstr ""
+
+#: ../../po4a-translate:266
+#, perl-format
+msgid "Discard the translation of %s (only %s%% translated; need %s%%)."
+msgstr "放棄 %s 的翻譯（僅 %s%% 翻譯；需要 %s%%）。"
+
+#: ../../po4a-translate:304
+#, perl-format
+msgid "Discard the translation of %s (addendum %s does not apply)."
+msgstr "放棄 %s 的翻譯（附錄 %s 不適用）。"
+
+#: ../../po4a-updatepo:278
+msgid ""
+"po4a-updatepo is deprecated. The unified po4a(1) program is more convenient "
+"and less error prone. Once configured, `po4a --no-translations` can be used "
+"as a drop-in replacement to `po4a-updatepo`."
+msgstr ""
+
+#: ../../po4a-updatepo:288
+msgid "po4a-updatepo can't take the input PO from stdin."
+msgstr "po4a updatepo 無法從 stdin 獲取輸入 PO。"
+
+#: ../../po4a-updatepo:299
+msgid "Parse input files... "
+msgstr "解析輸入檔案… "
+
+#: ../../po4a-updatepo:307
+msgid "done."
+msgstr "完成。"
+
+#: ../../po4a-updatepo:335
+#, perl-format
+msgid "Could not copy the PO file (%s -> %s): %s"
+msgstr "無法複製 PO 檔案 (%s → %s): %s"
+
+#, perl-format
+#~ msgid "Cannot find %s with kpsewhich"
+#~ msgstr "用 kpsewhich 找不到 %s"
+
+#, perl-format
+#~ msgid ""
+#~ "Couldn't determine the input document's charset. Please specify it on the "
+#~ "command line. (non-ASCII char at %s)"
+#~ msgstr "無法確定輸入文件的字符集。請在命令列中指定。(%s 處的非 ASCII 字元)"
+
+#, perl-format
+#~ msgid "Unparsable option chunk '%s' (%s)."
+#~ msgstr "不可分析的選項塊 '%s'（%s）。"
+
+#, perl-format
+#~ msgid "Skipping option chunk '%s'."
+#~ msgstr "正在跳過選項塊 '%s'。"
+
+#~ msgid ""
+#~ "This page defines a new macro with '.de'. Since po4a is not a real groff "
+#~ "parser, this is not supported."
+#~ msgstr ""
+#~ "此頁面定義了一個帶有“.de”的新宏。 由於po4a不是真正的groff解析器，因此不支"
+#~ "援。"
+
+#, perl-format
+#~ msgid ""
+#~ "This page uses conditionals with '%s'. Since po4a is not a real groff "
+#~ "parser, this is not supported."
+#~ msgstr ""
+#~ "此頁面使用帶有 '%s' 的條件。 由於po4a不是真正的groff解析器，因此不支援。"
+
+#, perl-format
+#~ msgid "The amount of entries differ between files: %d is not %d"
+#~ msgstr "檔案之間的條目數量不同：%d 不是 %d"
+
+#, perl-format
+#~ msgid "msgid declared in one file only: %s\n"
+#~ msgstr "僅在一個檔案中宣告的 msgid：%s\n"
+
+#, perl-format
+#~ msgid ""
+#~ "Your input po file %s seems outdated (%s). Please consider running po4a-"
+#~ "updatepo to refresh it."
+#~ msgstr ""
+#~ "您的輸入 po 檔案 %s 似乎已過期（%s）。請考慮執行 po4a updatepo 來重新整理"
+#~ "它。"

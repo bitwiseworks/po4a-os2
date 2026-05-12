@@ -7,7 +7,7 @@
 # This code extracts plain text from tags and attributes on Guide XML
 # documents.
 #
-# Copyright (c) 2004 by Jordi Vilalta  <jvprat@gmail.com>
+# Copyright © 2004 Jordi Vilalta  <jvprat@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -62,31 +62,30 @@ L<Locale::Po4a::TransTractor(3pm)>, L<Locale::Po4a::Xml(3pm)>, L<po4a(7)|po4a.7>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2004 by Jordi Vilalta  <jvprat@gmail.com>
+Copyright © 2004 Jordi Vilalta  <jvprat@gmail.com>
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).
 
 =cut
 
 package Locale::Po4a::Guide;
 
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
 
-use Locale::Po4a::Xml;
+use parent qw(Locale::Po4a::Xml);
 
-use vars qw(@ISA);
-@ISA = qw(Locale::Po4a::Xml);
+use Locale::Po4a::Common;
 
 sub initialize {
-    my $self = shift;
+    my $self    = shift;
     my %options = @_;
 
-#TODO: <include href="..."> includes a file
+    #TODO: <include href="..."> includes a file
     $self->SUPER::initialize(%options);
-    $self->{options}{'_default_translated'}.='
+    $self->{options}{'_default_translated'} .= '
         w<abstract>
         <author>
         <b>
@@ -121,7 +120,7 @@ sub initialize {
         <var>
         <version>
         w<warn>';
-    $self->{options}{'_default_attributes'}.='
+    $self->{options}{'_default_attributes'} .= '
         <author>title
         <figure>caption
         <figure>link
@@ -130,7 +129,7 @@ sub initialize {
         <guide>link
         <p>by
         <pre>caption';
-    $self->{options}{'_default_inline'}.='
+    $self->{options}{'_default_inline'} .= '
         <b>
         <brite>
         <c>
@@ -147,5 +146,8 @@ sub initialize {
         <sup>
         <uri>
         <var>';
+    print "Call treat_options\n" if $self->{options}{'debug'};
     $self->treat_options;
 }
+
+1;

@@ -1,0 +1,7 @@
+[PerlTidy]
+select = po4a{,-gettextize,-normalize,-translate,-updatepo}
+select = lib/**/*.pm
+select = t/*.{t,pm}
+select = *.pm
+argv = -log -noll --maximum-line-length=120 --iterations=2 --cuddled-else
+select = Build.PL

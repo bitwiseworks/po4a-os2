@@ -1,7 +1,7 @@
 # Locale::Po4a::Chooser -- Manage po4a modules
 #
 # This program is free software; you may redistribute it and/or modify it
-# under the terms of GPL (see COPYING).
+# under the terms of GPL v2.0 or later (see COPYING).
 #
 # This module converts POD to PO file, so that it becomes possible to
 # translate POD formatted documentation. See gettext documentation for
@@ -11,47 +11,49 @@
 # Modules and declarations
 ############################################################################
 
-
 package Locale::Po4a::Chooser;
 
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
-use Locale::Po4a::Common;
+use Locale::Po4a::Common qw(wrap_msg wrap_mod gettext);
 
 sub new {
-    my ($module)=shift;
-    my (%options)=@_;
+    my ($module)  = shift;
+    my (%options) = @_;
 
-    die wrap_mod("po4a::chooser", gettext("Need to provide a module name"))
+    die wrap_mod( "po4a::chooser", gettext("Please provide a module name") )
       unless defined $module;
 
     my $modname;
-    if ($module eq 'kernelhelp') {
+    if ( $module eq 'kernelhelp' ) {
         $modname = 'KernelHelp';
-    } elsif ($module eq 'newsdebian') {
+    } elsif ( $module eq 'newsdebian' ) {
         $modname = 'NewsDebian';
-    } elsif ($module eq 'latex') {
+    } elsif ( $module eq 'latex' ) {
         $modname = 'LaTeX';
-    } elsif ($module eq 'bibtex') {
+    } elsif ( $module eq 'bibtex' ) {
         $modname = 'BibTex';
-    } elsif ($module eq 'tex') {
+    } elsif ( $module eq 'tex' ) {
         $modname = 'TeX';
-    } elsif ($module eq 'asciidoc') {
+    } elsif ( $module eq 'asciidoc' ) {
         $modname = 'AsciiDoc';
-    } elsif ($module eq 'Rd' || $module eq 'rubydoc') {
+    } elsif ( $module eq 'Rd' || $module eq 'rubydoc' ) {
         $modname = 'RubyDoc';
+    } elsif ( $module eq 'vimhelp' ) {
+        $modname = 'VimHelp';
+    } elsif ( $module eq 'simplepod' ) {
+        $modname = 'SimplePod';
     } else {
         $modname = ucfirst($module);
     }
-    if (! UNIVERSAL::can("Locale::Po4a::$modname", 'new')) {
+    if ( !UNIVERSAL::can( "Locale::Po4a::$modname", 'new' ) ) {
         eval qq{use Locale::Po4a::$modname};
         if ($@) {
-            my $error=$@;
-            warn wrap_msg(gettext("Unknown format type: %s."), $module);
-            warn wrap_mod("po4a::chooser",
-                gettext("Module loading error: %s"), $error)
-              if defined $options{'verbose'} && $options{'verbose'} > 0;
+            my $error = $@;
+            warn wrap_msg( gettext("Unknown format type: %s."), $module );
+            warn wrap_mod( "po4a::chooser", gettext("Module loading error: %s"), $error )
+              unless defined $options{'quiet'};
             list(1);
         }
     }
@@ -59,26 +61,54 @@ sub new {
 }
 
 sub list {
-    warn wrap_msg(gettext("List of valid formats:")
-#       ."\n  - ".gettext("bibtex: BibTex bibliography format.")
-        ."\n  - ".gettext("asciidoc: AsciiDoc format.")
-        ."\n  - ".gettext("dia: uncompressed Dia diagrams.")
-        ."\n  - ".gettext("docbook: DocBook XML.")
-        ."\n  - ".gettext("guide: Gentoo Linux's XML documentation format.")
-#       ."\n  - ".gettext("html: HTML documents (EXPERIMENTAL).")
-        ."\n  - ".gettext("ini: INI format.")
-        ."\n  - ".gettext("kernelhelp: Help messages of each kernel compilation option.")
-        ."\n  - ".gettext("latex: LaTeX format.")
-        ."\n  - ".gettext("man: Good old manual page format.")
-        ."\n  - ".gettext("pod: Perl Online Documentation format.")
-        ."\n  - ".gettext("rubydoc: Ruby Documentation (RD) format.")
-        ."\n  - ".gettext("sgml: either DebianDoc or DocBook DTD.")
-        ."\n  - ".gettext("texinfo: The info page format.")
-        ."\n  - ".gettext("tex: generic TeX documents (see also latex).")
-        ."\n  - ".gettext("text: simple text document.")
-        ."\n  - ".gettext("wml: WML documents.")
-        ."\n  - ".gettext("xhtml: XHTML documents.")
-        ."\n  - ".gettext("xml: generic XML documents (see also docbook).")
+    warn wrap_msg(
+        gettext("List of valid formats:")
+
+          #       ."\n  - ".gettext("bibtex: BibTex bibliography format.")
+          . "\n  - "
+          . gettext("asciidoc: AsciiDoc format.")
+          . "\n  - "
+          . gettext("dia: uncompressed Dia diagrams.")
+          . "\n  - "
+          . gettext("docbook: DocBook XML.")
+          . "\n  - "
+          . gettext("gemtext: Gemini's native plain text format.")
+          . "\n  - "
+          . gettext("guide: Gentoo Linux's XML documentation format.")
+          . "\n  - "
+          . gettext("ini: INI format.")
+          . "\n  - "
+          . gettext("kernelhelp: Help messages of each kernel compilation option.")
+          . "\n  - "
+          . gettext("latex: LaTeX format.")
+          . "\n  - "
+          . gettext("man: Good old manual page format.")
+          . "\n  - "
+          . gettext("org: document format for Org mode.")
+          . "\n  - "
+          . gettext("pod: Perl Online Documentation format.")
+          . "\n  - "
+          . gettext("rubydoc: Ruby Documentation (RD) format.")
+          . "\n  - "
+          . gettext("simplepod: Perl Online Documentation format (new option).")
+          . "\n  - "
+          . gettext("sgml: either DebianDoc or DocBook DTD.")
+          . "\n  - "
+          . gettext("texinfo: The info page format.")
+          . "\n  - "
+          . gettext("tex: generic TeX documents (see also latex).")
+          . "\n  - "
+          . gettext("text: simple text document.")
+          . "\n  - "
+          . gettext("vimhelp: Vim help documents.")
+          . "\n  - "
+          . gettext("wml: WML documents.")
+          . "\n  - "
+          . gettext("xhtml: XHTML documents.")
+          . "\n  - "
+          . gettext("xml: generic XML documents (see also docbook).")
+          . "\n  - "
+          . gettext("yaml: YAML documents.")
     );
     exit shift;
 }
@@ -125,22 +155,26 @@ L<po4a(7)|po4a.7>
 
 L<Locale::Po4a::Dia(3pm)>,
 L<Locale::Po4a::Docbook(3pm)>,
+L<Locale::Po4a::Gemtext(3pm)>,
 L<Locale::Po4a::Guide(3pm)>,
 L<Locale::Po4a::Halibut(3pm)>,
 L<Locale::Po4a::Ini(3pm)>,
 L<Locale::Po4a::KernelHelp(3pm)>,
 L<Locale::Po4a::LaTeX(3pm)>,
 L<Locale::Po4a::Man(3pm)>,
+L<Locale::Po4a::Org(3pm)>,
 L<Locale::Po4a::Pod(3pm)>,
 L<Locale::Po4a::RubyDoc(3pm)>,
 L<Locale::Po4a::Sgml(3pm)>,
+L<Locale::Po4a::SimplePod(3pm)>,
 L<Locale::Po4a::TeX(3pm)>,
 L<Locale::Po4a::Texinfo(3pm)>,
 L<Locale::Po4a::Text(3pm)>,
-L<Locale::Po4a::Wml(3pm)>.
+L<Locale::Po4a::VimHelp(3pm)>,
+L<Locale::Po4a::Wml(3pm)>,
 L<Locale::Po4a::Xhtml(3pm)>,
 L<Locale::Po4a::Xml(3pm)>,
-L<Locale::Po4a::Wml(3pm)>.
+L<Locale::Po4a::Yaml(3pm)>.
 
 =back
 
@@ -151,9 +185,9 @@ L<Locale::Po4a::Wml(3pm)>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2002,2003,2004,2005,2014,2017 by SPI, inc.
+Copyright © 2002-2005, 2014, 2017 SPI, Inc.
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).
 
 =cut

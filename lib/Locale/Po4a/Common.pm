@@ -1,9 +1,9 @@
 # Locale::Po4a::Common -- Common parts of the po4a scripts and utils
 #
-# Copyright 2005 by Jordi Vilalta <jvprat@gmail.com>
+# Copyright © 2005 Jordi Vilalta <jvprat@gmail.com>
 #
 # This program is free software; you may redistribute it and/or modify it
-# under the terms of GPL (see COPYING).
+# under the terms of GPL v2.0 or later (see COPYING).
 #
 # This module has common utilities for the various scripts of po4a
 
@@ -18,8 +18,7 @@ Locale::Po4a::Common - common parts of the po4a scripts and utils
 Locale::Po4a::Common contains common parts of the po4a scripts and some useful
 functions used along the other modules.
 
-In order to use Locale::Po4a programatically, one may want to disable
-the use of Text::WrapI18N, by writing e.g.
+If needed, you can disable the use of Text::WrapI18N as such:
 
     use Locale::Po4a::Common qw(nowrapi18n);
     use Locale::Po4a::Text;
@@ -28,56 +27,55 @@ instead of:
 
     use Locale::Po4a::Text;
 
-Ordering is important here: as most Locale::Po4a modules themselves
-load Locale::Po4a::Common, the first time this module is loaded
-determines whether Text::WrapI18N is used.
+The ordering is important here: as most Locale::Po4a modules load themselves
+Locale::Po4a::Common, the first time this module is loaded determines whether Text::WrapI18N is used.
 
 =cut
 
 package Locale::Po4a::Common;
 
-require Exporter;
-use vars qw(@ISA @EXPORT);
-@ISA = qw(Exporter);
-@EXPORT = qw(wrap_msg wrap_mod wrap_ref_mod textdomain gettext dgettext);
-
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
 
-sub import {
-    my $class=shift;
+use parent qw(Exporter);
+our @EXPORT_OK = qw(wrap_msg wrap_mod wrap_ref_mod gettext dgettext);
 
-    my $wrapi18n=1;
-    if (exists $_[0] && defined $_[0] && $_[0] eq 'nowrapi18n') {
+sub import {
+    my $class = shift;
+
+    my $wrapi18n = 1;
+    if ( exists $_[0] && defined $_[0] && $_[0] eq 'nowrapi18n' ) {
         shift;
-        $wrapi18n=0;
+        $wrapi18n = 0;
     }
-    $class->export_to_level(1, $class, @_);
+    $class->export_to_level( 1, $class, @_ );
 
     return if defined &wrapi18n;
 
-    if ($wrapi18n && -t STDERR && -t STDOUT && eval { require Text::WrapI18N }) {
+    if ( $wrapi18n && -t STDERR && -t STDOUT && eval { require Text::WrapI18N } ) {
 
         # Don't bother determining the wrap column if we cannot wrap.
-        my $col=$ENV{COLUMNS};
-        if (!defined $col) {
-            my @term=eval "use Term::ReadKey; Term::ReadKey::GetTerminalSize()";
-            $col=$term[0] if (!$@);
+        my $col = $ENV{COLUMNS};
+        if ( !defined $col ) {
+            my @term = eval "use Term::ReadKey; Term::ReadKey::GetTerminalSize()";
+            $col = $term[0] if ( !$@ );
+
             # If GetTerminalSize() failed we will fallback to a safe default.
             # This can happen if Term::ReadKey is not available
             # or this is a terminal-less build or such strange condition.
         }
-        $col=76 if (!defined $col);
+        $col = 76 if ( !defined $col );
 
         eval ' use Text::WrapI18N qw($columns);
                $columns = $col;
              ';
 
-        eval ' sub wrapi18n($$$) { Text::WrapI18N::wrap($_[0],$_[1],$_[2]) } '
+        eval ' sub wrapi18n($$$) { Text::WrapI18N::wrap($_[0],$_[1],$_[2]) } ';
     } else {
+
         # If we cannot wrap, well, that's too bad. Survive anyway.
-        eval ' sub wrapi18n($$$) { $_[0].$_[2] } '
+        eval ' sub wrapi18n($$$) { $_[0].$_[2] } ';
     }
 }
 
@@ -103,31 +101,35 @@ takes the name of the script as an argument.
 sub show_version {
     my $name = shift;
 
-    print sprintf(gettext(
-        "%s version %s.\n".
-        "written by Martin Quinson and Denis Barbier.\n\n".
-        "Copyright (C) 2002, 2003, 2004 Software in the Public Interest, Inc.\n".
-        "This is free software; see source code for copying\n".
-        "conditions. There is NO warranty; not even for\n".
-        "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
-        ), $name, $Locale::Po4a::TransTractor::VERSION)."\n";
+    print sprintf(
+        gettext(
+                "%s version %s.\n"
+              . "Written by Martin Quinson and Denis Barbier.\n\n"
+              . "Copyright © 2002-2022 Software in the Public Interest, Inc.\n"
+              . "This is free software; see source code for copying\n"
+              . "conditions. There is NO warranty; not even for\n"
+              . "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+        ),
+        $name,
+        $Locale::Po4a::TransTractor::VERSION
+    ) . "\n";
 }
 
 =item
 
 wrap_msg($@)
 
-This function displays a message the same way than sprintf() does, but wraps
+This function displays a message the same way as sprintf() does, but wraps
 the result so that they look nice on the terminal.
 
 =cut
 
 sub wrap_msg($@) {
-    my $msg = shift;
+    my $msg  = shift;
     my @args = @_;
 
-#    print "'$msg' ; ".(scalar @args)." $args[0] $args[1]\n";
-    return wrapi18n("", "", sprintf($msg, @args))."\n";
+    #    print "'$msg' ; ".(scalar @args)." $args[0] $args[1]\n";
+    return wrapi18n( "", "", sprintf( $msg, @args ) ) . "\n";
 }
 
 =item
@@ -140,12 +142,12 @@ argument, and leaves a space at the left of the message.
 =cut
 
 sub wrap_mod($$@) {
-    my ($mod, $msg) = (shift, shift);
+    my ( $mod, $msg ) = ( shift, shift );
     my @args = @_;
 
     $mod .= ": ";
-    my $spaces = " " x min(length($mod), 15);
-    return wrapi18n($mod, $spaces, sprintf($msg, @args))."\n";
+    my $spaces = " " x min( length($mod), 15 );
+    return wrapi18n( $mod, $spaces, sprintf( $msg, @args ) ) . "\n";
 }
 
 =item
@@ -161,17 +163,18 @@ of the message.
 =cut
 
 sub wrap_ref_mod($$$@) {
-    my ($ref, $mod, $msg) = (shift, shift, shift);
+    my ( $ref, $mod, $msg ) = ( shift, shift, shift );
     my @args = @_;
 
-    if (!$mod) {
+    if ( !$mod ) {
+
         # If we don't get a module name, show the message like wrap_mod does
-        return wrap_mod($ref, $msg, @args);
+        return wrap_mod( $ref, $msg, @args );
     } else {
         $ref .= ": ";
-        my $spaces = " " x min(length($ref), 15);
+        my $spaces = " " x min( length($ref), 15 );
         $msg = "$ref($mod)\n$msg";
-        return wrapi18n("", $spaces, sprintf($msg, @args))."\n";
+        return wrapi18n( "", $spaces, sprintf( $msg, @args ) ) . "\n";
     }
 }
 
@@ -216,12 +219,14 @@ dgettext($$)
 =cut
 
 BEGIN {
-    if (eval { require Locale::gettext }) {
-       import Locale::gettext;
-       require POSIX;
-       POSIX::setlocale(&POSIX::LC_MESSAGES, '');
+    if ( eval { require Locale::gettext } ) {
+        import Locale::gettext;
+        require POSIX;
+
+        # This cannot be done on Windows
+        POSIX::setlocale( &POSIX::LC_MESSAGES, '' ) unless $^O eq 'MSWin32';
     } else {
-       eval '
+        eval '
            sub bindtextdomain($$) { }
            sub textdomain($) { }
            sub gettext($) { shift }
@@ -239,9 +244,9 @@ __END__
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2005 by SPI, inc.
+Copyright © 2005 SPI, Inc.
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).
 
 =cut

@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2008-10-12 19:36+0300\n"
+"PO-Revision-Date: 2008-10-12 22:52+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@LI.ORG>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: TEXT/PLAIN; CHARSET=UTF-8\n"
+"Content-Transfer-Encoding: 8BIT\n"
+
+#. type: Title =
+#: Callouts.adoc:2
+#, no-wrap
+msgid "Test Callouts"
+msgstr "TEST CALLOUTS"
+
+#. type: Block title
+#: Callouts.adoc:4
+#, no-wrap
+msgid "MS-DOS directory listing"
+msgstr "MS-DOS DIRECTORY LISTING"
+
+#. type: delimited block .
+#: Callouts.adoc:17
+#, no-wrap
+msgid ""
+"10/17/97   9:04         <DIR>    bin\n"
+"10/16/97  14:11         <DIR>    DOS            <1>\n"
+"10/16/97  14:40         <DIR>    Program Files\n"
+"10/16/97  14:46         <DIR>    TEMP\n"
+"10/17/97   9:04         <DIR>    tmp\n"
+"10/16/97  14:37         <DIR>    WINNT\n"
+"10/16/97  14:25             119  AUTOEXEC.BAT   <2>\n"
+" 2/13/94   6:21          54,619  COMMAND.COM    <2>\n"
+"10/16/97  14:25             115  CONFIG.SYS     <2>\n"
+"11/16/97  17:17      61,865,984  pagefile.sys\n"
+" 2/13/94   6:21           9,349  WINA20.386     <3>\n"
+msgstr ""
+"10/17/97   9:04         <DIR>    BIN\n"
+"10/16/97  14:11         <DIR>    DOS            <1>\n"
+"10/16/97  14:40         <DIR>    PROGRAM FILES\n"
+"10/16/97  14:46         <DIR>    TEMP\n"
+"10/17/97   9:04         <DIR>    TMP\n"
+"10/16/97  14:37         <DIR>    WINNT\n"
+"10/16/97  14:25             119  AUTOEXEC.BAT   <2>\n"
+" 2/13/94   6:21          54,619  COMMAND.COM    <2>\n"
+"10/16/97  14:25             115  CONFIG.SYS     <2>\n"
+"11/16/97  17:17      61,865,984  PAGEFILE.SYS\n"
+" 2/13/94   6:21           9,349  WINA20.386     <3>\n"
+
+#. type: Plain text
+#: Callouts.adoc:20
+msgid "This directory holds MS-DOS."
+msgstr "THIS DIRECTORY HOLDS MS-DOS."
+
+#. type: Plain text
+#: Callouts.adoc:21
+msgid "System startup code for DOS."
+msgstr "SYSTEM STARTUP CODE FOR DOS."
+
+#. type: Plain text
+#: Callouts.adoc:22
+msgid "Some sort of Windows 3.1 hack."
+msgstr "SOME SORT OF WINDOWS 3.1 HACK."
+
+#. type: delimited block .
+#: Callouts.adoc:39
+#, no-wrap
+msgid ""
+"# Generate the FreeBSD website\n"
+"#\n"
+"# Copyright (c) 2020-2021, The FreeBSD Documentation Project <.>\n"
+"#\n"
+"# Targets intended for use on the command line <.>\n"
+"#\n"
+"# all (default)\t-\tgenerate the releases.toml and compile all the website\n"
+"# run\t-\t\t\tserves the built website for local browsing\n"
+"#\n"
+"# The run target uses hugo's built-in webserver to make the built website\n"
+"# available for local browsing.  The website should have been built prior\n"
+"# to attempting to use the `run` target.  By default, hugo will start its\n"
+"# webserver on port 1313. <.>\n"
+msgstr ""
+"# GENERATE THE FREEBSD WEBSITE\n"
+"#\n"
+"# COPYRIGHT (C) 2020-2021, THE FREEBSD DOCUMENTATION PROJECT <.>\n"
+"#\n"
+"# TARGETS INTENDED FOR USE ON THE COMMAND LINE <.>\n"
+"#\n"
+"# ALL (DEFAULT)\t-\tGENERATE THE RELEASES.TOML AND COMPILE ALL THE WEBSITE\n"
+"# RUN\t-\t\t\tSERVES THE BUILT WEBSITE FOR LOCAL BROWSING\n"
+"#\n"
+"# THE RUN TARGET USES HUGO'S BUILT-IN WEBSERVER TO MAKE THE BUILT WEBSITE\n"
+"# AVAILABLE FOR LOCAL BROWSING.  THE WEBSITE SHOULD HAVE BEEN BUILT PRIOR\n"
+"# TO ATTEMPTING TO USE THE `RUN` TARGET.  BY DEFAULT, HUGO WILL START ITS\n"
+"# WEBSERVER ON PORT 1313. <.>\n"
+
+#. type: Plain text
+#: Callouts.adoc:41
+msgid "Callout 1."
+msgstr "CALLOUT 1."
+
+#. type: Plain text
+#: Callouts.adoc:42
+msgid "Callout 2."
+msgstr "CALLOUT 2."
+
+#. type: Plain text
+#: Callouts.adoc:42
+msgid "Callout 3."
+msgstr "CALLOUT 3."

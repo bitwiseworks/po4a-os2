@@ -2,264 +2,328 @@
 # Copyright (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
 # This file is distributed under the same license as the po4a: translate documents using the gettext tools package.
 # Origjigji <mirtagj@gmail.com>, 2007.
-#
+# Milo Ivir <mail@milotype.de>, 2020, 2021, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: po4a: translate documents using the gettext tools\n"
 "Report-Msgid-Bugs-To: po4a@packages.debian.org\n"
-"POT-Creation-Date: 2017-04-05 10:35+0200\n"
-"PO-Revision-Date: 2007-08-12 20:08+0200\n"
-"Last-Translator: Origjigji <mirtagj@gmail.com>\n"
-"Language-Team: Croatian\n"
+"POT-Creation-Date: 2025-06-29 14:32+0200\n"
+"PO-Revision-Date: 2025-01-06 17:01+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/po4a/po4a/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.10-dev\n"
 "X-Rosetta-Version: 0.1\n"
 "X-Rosetta-Export-Date: 2007-08-12 16:08:32+0000\n"
 
-#: ../../lib/Locale/Po4a/AsciiDoc.pm:134 ../../lib/Locale/Po4a/Man.pm:491
-#: ../../lib/Locale/Po4a/Po.pm:187 ../../lib/Locale/Po4a/Sgml.pm:251
-#: ../../lib/Locale/Po4a/TeX.pm:1636 ../../lib/Locale/Po4a/Text.pm:187
-#: ../../lib/Locale/Po4a/Xml.pm:537
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:233 ../../lib/Locale/Po4a/Man.pm:488
+#: ../../lib/Locale/Po4a/Org.pm:45 ../../lib/Locale/Po4a/Po.pm:225
+#: ../../lib/Locale/Po4a/RubyDoc.pm:72 ../../lib/Locale/Po4a/Sgml.pm:262
+#: ../../lib/Locale/Po4a/TeX.pm:1646 ../../lib/Locale/Po4a/Text.pm:238
+#: ../../lib/Locale/Po4a/Xml.pm:602 ../../lib/Locale/Po4a/Yaml.pm:104
 #, perl-format
 msgid "Unknown option: %s"
 msgstr "Nepoznata opcija: %s"
 
-#: ../../lib/Locale/Po4a/AsciiDoc.pm:194
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:240
+#, perl-format
+msgid "Invalid compatibility setting: '%s'. It must be either '%s' or '%s'."
+msgstr "Neispravna postavka kompatibilnosti: „%s”. Mora biti „%s” ili „%s”."
+
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:309
 #, perl-format
 msgid "Unable to parse macro definition: %s"
-msgstr ""
+msgstr "Nemoguće obraditi makro definiciju: %s"
 
-#: ../../lib/Locale/Po4a/AsciiDoc.pm:241 ../../lib/Locale/Po4a/TeX.pm:1032
-#: ../../po4a:823 ../../po4a:1019 ../../po4a-translate:264
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:356 ../../lib/Locale/Po4a/TeX.pm:1047
+#: ../../po4a:1087 ../../po4a:1180 ../../po4a:1449 ../../po4a-translate:284
 #, perl-format
-msgid "Can't open %s: %s"
-msgstr ""
+msgid "Cannot open %s: %s"
+msgstr "Nije moguće otvoriti %s: %s"
 
-#: ../../lib/Locale/Po4a/AsciiDoc.pm:271 ../../lib/Locale/Po4a/Text.pm:409
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:387
 #, perl-format
 msgid ""
 "Detection of two line titles failed at %s\n"
-"Install the Unicode::GCString module!"
+"Please install the Unicode::GCString module (error: %s)."
 msgstr ""
+"Otkrivanje dvorednih naslova nije uspjelo pri %s\n"
+"Instaliraj modul Unicode::GCString (greška: %s)."
 
-#: ../../lib/Locale/Po4a/AsciiDoc.pm:830
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:564
 #, perl-format
-msgid "Unable to parse attribute list: [%s]"
+msgid ""
+"'%s' seems to be a two-lines title underlined with '%s', but the underlines "
+"are too short or too long compared to the title length. You may want to fix "
+"your master document."
 msgstr ""
+"Čini se da je „%s” dvoredni naslov podcrtan s „%s”, ali podcrtavanje je "
+"prekratko ili predugo u odnosu na duljinu naslova. Predlažemo da popraviš "
+"master dokument."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:26
-msgid "Need to provide a module name"
-msgstr "Potrebno je navesti naziv modula"
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:748
+msgid ""
+"Po4a's tablecells mode only supports PSV formatted tables with '|' "
+"separators. Disabling tablecells and falling back to block mode for this "
+"table."
+msgstr ""
+"Po4a-modus ćelija tablica podržava samo PSV formatirane tablice sa znakom "
+"razdvajanja okomite crte „|”. Ćelije tablica se deaktiviraju i vraća se u "
+"modus blokova za ovu tablicu."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:49
+#: ../../lib/Locale/Po4a/AsciiDoc.pm:1063
+msgid ""
+"It seems that you are adding unindented content to an item. The standard "
+"allows this, but you may still want to change your document to use indented "
+"text to provide better visual clues to writers."
+msgstr ""
+"Čini se da stavci dodaješ sadržaj bez uvlaka. Standard to dopušta, no možda "
+"ipak želiš promijeniti dokument da koristi tekst s uvlakama, za bolje "
+"vizualno prepoznavanje."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:25
+msgid "Please provide a module name"
+msgstr "Navedi ime modula"
+
+#: ../../lib/Locale/Po4a/Chooser.pm:54
 #, perl-format
 msgid "Unknown format type: %s."
-msgstr "Format nepoznat: %s."
+msgstr "Nepoznata vrsta formata: %s."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:51
+#: ../../lib/Locale/Po4a/Chooser.pm:55
 #, perl-format
 msgid "Module loading error: %s"
 msgstr "Greška pri učitavanju modula: %s"
 
-#: ../../lib/Locale/Po4a/Chooser.pm:60
+#: ../../lib/Locale/Po4a/Chooser.pm:65
 msgid "List of valid formats:"
-msgstr "Popis prihvaćenih formata:"
+msgstr "Popis ispravnih formata:"
 
-#. ."\n  - ".gettext("bibtex: BibTex bibliography format.")
-#: ../../lib/Locale/Po4a/Chooser.pm:62
+#: ../../lib/Locale/Po4a/Chooser.pm:69
 msgid "asciidoc: AsciiDoc format."
-msgstr ""
+msgstr "asciidoc: AsciiDoc format."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:63
+#: ../../lib/Locale/Po4a/Chooser.pm:71
 msgid "dia: uncompressed Dia diagrams."
 msgstr "dia: nekomprimirani Dia dijagrami."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:64
+#: ../../lib/Locale/Po4a/Chooser.pm:73
 msgid "docbook: DocBook XML."
 msgstr "docbook: DocBook XML."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:65
+#: ../../lib/Locale/Po4a/Chooser.pm:75
+msgid "gemtext: Gemini's native plain text format."
+msgstr "gemtext: Izvorni Gemini format običnog teksta."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:77
 msgid "guide: Gentoo Linux's XML documentation format."
-msgstr "vodič (guide): dokumentacija za Gentoo Linux u XML formatu"
+msgstr "priručnik: dokumentacija za Gentoo Linux u XML formatu."
 
-#. ."\n  - ".gettext("html: HTML documents (EXPERIMENTAL).")
-#: ../../lib/Locale/Po4a/Chooser.pm:67
+#: ../../lib/Locale/Po4a/Chooser.pm:79
 msgid "ini: INI format."
-msgstr ""
+msgstr "ini: INI format."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:68
+#: ../../lib/Locale/Po4a/Chooser.pm:81
 msgid "kernelhelp: Help messages of each kernel compilation option."
-msgstr "kernelhelp: Opcija za poruke pomoći pri kompilaciji svakog kernela."
+msgstr "kernelhelp: opcija za poruke pomoći pri kompilaciji svakog kernela."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:69
+#: ../../lib/Locale/Po4a/Chooser.pm:83
 msgid "latex: LaTeX format."
 msgstr "latex: LaTeX format."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:70
+#: ../../lib/Locale/Po4a/Chooser.pm:85
 msgid "man: Good old manual page format."
-msgstr "Dobro staro ručno oblikovanje stranice."
+msgstr "man: poznati format za stranice priručnika."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:71
+#: ../../lib/Locale/Po4a/Chooser.pm:87
+msgid "org: document format for Org mode."
+msgstr "org: format dokumenata za Org modus."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:89
 msgid "pod: Perl Online Documentation format."
-msgstr "pod: format za Perl Online Dokumentaciju"
+msgstr "pod: format za Perl Online dokumentaciju."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:72
-msgid "sgml: either DebianDoc or DocBook DTD."
-msgstr "sgml: ili DebianDoc ili DocBook DTD."
+#: ../../lib/Locale/Po4a/Chooser.pm:91
+msgid "rubydoc: Ruby Documentation (RD) format."
+msgstr "rubydoc: format za Ruby dokumentaciju."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:73
+#: ../../lib/Locale/Po4a/Chooser.pm:93
 #, fuzzy
+#| msgid "pod: Perl Online Documentation format."
+msgid "simplepod: Perl Online Documentation format (new option)."
+msgstr "pod: format za Perl Online dokumentaciju."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:95
+msgid "sgml: either DebianDoc or DocBook DTD."
+msgstr "sgml: DebianDoc ili DocBook DTD."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:97
 msgid "texinfo: The info page format."
-msgstr "latex: LaTeX format."
+msgstr "texinfo: format za stranicu s informacijama."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:74
+#: ../../lib/Locale/Po4a/Chooser.pm:99
 msgid "tex: generic TeX documents (see also latex)."
-msgstr ""
+msgstr "tex: generički TeX dokument (također pogledaj latex)."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:75
+#: ../../lib/Locale/Po4a/Chooser.pm:101
 msgid "text: simple text document."
-msgstr ""
+msgstr "text: jednostavan tekstualni dokument."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:76
+#: ../../lib/Locale/Po4a/Chooser.pm:103
+msgid "vimhelp: Vim help documents."
+msgstr "vimhelp: Dokumenti Vim pomoći."
+
+#: ../../lib/Locale/Po4a/Chooser.pm:105
 msgid "wml: WML documents."
-msgstr ""
+msgstr "wml: WML dokumenti."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:77
+#: ../../lib/Locale/Po4a/Chooser.pm:107
 msgid "xhtml: XHTML documents."
-msgstr ""
+msgstr "xhtml: XHTML dokumenti."
 
-#: ../../lib/Locale/Po4a/Chooser.pm:78
+#: ../../lib/Locale/Po4a/Chooser.pm:109
 msgid "xml: generic XML documents (see also docbook)."
-msgstr ""
+msgstr "xml: generički XML dokumenti (također pogledaj docbook)."
 
-#: ../../lib/Locale/Po4a/Common.pm:107
+#: ../../lib/Locale/Po4a/Chooser.pm:111
+msgid "yaml: YAML documents."
+msgstr "yaml: YAML dokumenti."
+
+#: ../../lib/Locale/Po4a/Common.pm:106
 #, perl-format
 msgid ""
 "%s version %s.\n"
-"written by Martin Quinson and Denis Barbier.\n"
+"Written by Martin Quinson and Denis Barbier.\n"
 "\n"
-"Copyright (C) 2002, 2003, 2004 Software in the Public Interest, Inc.\n"
+"Copyright © 2002-2022 Software in the Public Interest, Inc.\n"
 "This is free software; see source code for copying\n"
 "conditions. There is NO warranty; not even for\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
 msgstr ""
-"%s version %s.\n"
-"napisali Martin Quinson i Denis Barbier.\n"
+"%s verzija %s.\n"
+"Autori: Martin Quinson i Denis Barbier.\n"
 "\n"
-"Copyright (C) 2002, 2003, 2004 Software in the Public Interest, Inc.\n"
-"Ovo je besplatni software; za uvjete kopiranja\n"
-"vidi izvorni kod (source code). NE jamčimo ništa, čak niti\n"
+"Autorsko pravo 2002. – 2022. Software in the Public Interest, Inc.\n"
+"Ovo je besplatan softver; za uvjete kopiranja\n"
+"vidi izvorni kod. NE jamčimo ništa, čak niti\n"
 "UTRŽIVOST ili PRIKLADNOST ZA ODREĐENU NAMJENU."
 
-#: ../../lib/Locale/Po4a/Debconf.pm:170
+#: ../../lib/Locale/Po4a/InProgress/Debconf.pm:172
 #, perl-format
 msgid "Translated field in master document: %s"
-msgstr "Prevedeno polje u glavnom (master) dokumentu: %s"
+msgstr "Prevedeno polje u master dokumentu: %s"
 
-#: ../../lib/Locale/Po4a/KernelHelp.pm:103
+#: ../../lib/Locale/Po4a/InProgress/NewsDebian.pm:84
+msgid "Begin of a new entry before the end of previous one"
+msgstr "Početak novog unosa prije kraja prethodnog"
+
+#: ../../lib/Locale/Po4a/KernelHelp.pm:93
 msgid "Syntax error"
 msgstr "Pogreška u sintaksi"
 
-#: ../../lib/Locale/Po4a/Man.pm:508
+#: ../../lib/Locale/Po4a/Man.pm:505
 msgid ""
 "Invalid 'groff_code' value. Must be one of 'fail', 'verbatim', 'translate'."
 msgstr ""
-"Netočna vrijednost za 'groff_code'. Mora biti 'fail' (prekini), 'verbatim', "
-"ili 'translate' (prevedi)."
+"Netočna vrijednost za „groff_code”. Mora biti „fail”, „verbatim” ili "
+"„translate”."
 
-#: ../../lib/Locale/Po4a/Man.pm:555
+#: ../../lib/Locale/Po4a/Man.pm:553
 msgid ""
 "The no_wrap parameters must be a set of comma-separated begin:end couples.\n"
 msgstr ""
-"Parametri no_wrap moraju biti prikazani kao skup parova begin:end (početak:"
-"kraj) odvojenih zarezom.\n"
+"Parametri no_wrap moraju biti postavljeni kao skup parova begin:end (početak:"
+"kraj), odvojeni zarezom.\n"
 
-#: ../../lib/Locale/Po4a/Man.pm:601
+#: ../../lib/Locale/Po4a/Man.pm:600
 msgid "Invalid 'unknown_macros' value. Must be one of:\n"
 msgstr ""
+"Neispravna vrijednost „unknown_macros” (nepoznati makro). Mora biti jedna "
+"od:\n"
 
-#: ../../lib/Locale/Po4a/Man.pm:655
-#, fuzzy
+#: ../../lib/Locale/Po4a/Man.pm:666
 msgid ""
 "This file was generated with Pod::Man. Translate the POD file with the pod "
 "module of po4a."
 msgstr ""
-"Ova datoteka stvorena je pomoću Pod::Man. Prevedite pod datoteku pomoću pod "
+"Ova je datoteka stvorena pomoću Pod::Man. Prevedi POD datoteku pomoću pod "
 "modula programa po4a."
 
-#: ../../lib/Locale/Po4a/Man.pm:658
+#: ../../lib/Locale/Po4a/Man.pm:676
 msgid ""
 "This file was generated with help2man. Translate the source file with the "
 "regular gettext."
 msgstr ""
-"Ova datoteka stvorena je pomoću help2man. Prevedite izvornu datoteku pomoću "
+"Ova je datoteka stvorena pomoću help2man. Prevedi izvornu datoteku pomoću "
 "uobičajenog gettexta."
 
-#: ../../lib/Locale/Po4a/Man.pm:660
+#: ../../lib/Locale/Po4a/Man.pm:685
 msgid ""
 "This file was generated with docbook-to-man. Translate the source file with "
 "the sgml module of po4a."
 msgstr ""
-"Ova datoteka nastala je pomoću docbook-to-man. Prevedite izvornu datoteku "
-"koristeći po4a-ov modul za sgml."
+"Ova je datoteka stvorena pomoću docbook-to-man. Prevedi izvornu datoteku "
+"pomoću sgml modula programa po4a."
 
-#: ../../lib/Locale/Po4a/Man.pm:663
+#: ../../lib/Locale/Po4a/Man.pm:695
 msgid ""
 "This file was generated with docbook2man. Translate the source file with the "
 "sgml module of po4a."
 msgstr ""
-"Ova datoteka nastala je pomoću docbook2man. Prevedite izvornu datoteku "
-"koristeći po4a-ov modul za sgml."
+"Ova je datoteka stvorena pomoću docbook2man. Prevedi izvornu datoteku pomoću "
+"sgml modula programa po4a."
 
-#: ../../lib/Locale/Po4a/Man.pm:667 ../../lib/Locale/Po4a/Man.pm:675
+#: ../../lib/Locale/Po4a/Man.pm:705 ../../lib/Locale/Po4a/Man.pm:726
 #, perl-format
 msgid ""
 "This file was generated with %s. You should translate the source file, but "
 "continuing anyway."
 msgstr ""
-"Ova datoteka nastala je pomoću %s. Trebali biste prevesti izvornu datoteku, "
-"ali sada ipak idemo na sljedeći korak."
+"Ova je datoteka stvorena pomoću %s. Trebalo bi prevesti izvornu datoteku, "
+"ali ipak prelazimo na sljedeći korak."
 
-#: ../../lib/Locale/Po4a/Man.pm:671
+#: ../../lib/Locale/Po4a/Man.pm:716
 msgid ""
 "This file was generated with db2man.xsl. Translate the source file with the "
 "xml module of po4a."
 msgstr ""
-"Ova datoteka nastala je pomoću db2man.xsl. Prevedite izvornu datoteku "
-"koristeći po4a-ov modul za xml."
+"Ova je datoteka stvorena pomoću db2man.xsl. Prevedi izvornu datoteku pomoću "
+"xml modula programa po4a."
 
-#: ../../lib/Locale/Po4a/Man.pm:681
+#: ../../lib/Locale/Po4a/Man.pm:740
 #, perl-format
 msgid ""
 "This file contains the line '%s'. You should translate the source file, but "
 "continuing anyway."
 msgstr ""
-"Ova datoteka sadrži redak: '%s'. Trebali biste prevesti izvornu datoteku, "
-"ali sada ipak idemo na sljedeći korak."
+"Ova datoteka sadrži redak „%s”. Trebalo bi prevesti izvornu datoteku, ali "
+"ipak prelazimo na sljedeći korak."
 
-#: ../../lib/Locale/Po4a/Man.pm:743
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/Man.pm:813
+#, perl-format
 msgid ""
 "Font modifiers followed by a command may disturb po4a.  You should either "
 "remove the font modifier '%s', or integrate a \\f font modifier in the "
 "following command ('%s'), but continuing anyway."
 msgstr ""
-"po4a ne podržava modifikatore fontova iza kojih slijedi naredba. Trebali "
-"biste ili ukloniti modifikator fonta, '%s', ili integrirati modifikator "
-"fonta \\f u sljedeću naredbu ('%s')"
+"po4a ne podržava modifikatore fontova iza kojih slijedi naredba. Potrebno je "
+"ukloniti modifikator fonta „%s” ili integrirati modifikator fonta \\f u "
+"sljedeću naredbu („%s”), ali ipak prelazimo na sljedeći korak."
 
-#: ../../lib/Locale/Po4a/Man.pm:848
+#: ../../lib/Locale/Po4a/Man.pm:934
 msgid ""
 "The unshiftline is not supported for the man module. Please send a bug "
 "report with the groff page that generated this error."
 msgstr ""
-"Unshiftline (prebaci redak u alternativne znakove) nije podržan za modul "
-"man. Molimo pošaljite izvješće o bugu, zajedno s groff stranicom koja je "
-"dovela do ove greške."
+"Unshiftline nije podržan za modul man. Pošalji izvještaj o grešci, zajedno s "
+"groff stranicom koja je dovela do ove greške."
 
-#: ../../lib/Locale/Po4a/Man.pm:891
+#: ../../lib/Locale/Po4a/Man.pm:994
 #, perl-format
 msgid ""
 "macro %s called without arguments. Even if placing the macro arguments on "
@@ -267,220 +331,270 @@ msgid ""
 "parser too complicate. Please simply put the macro args on the same line."
 msgstr ""
 "makro %s pozvan, nedostaju prateći argumenti. Čak i u slučaju da je "
-"smještanje makro argumentata u sljedeći redak odobreno od strane man(7), "
-"rješavanje ove situacije učinilo bi po4a parser previše složenim. Molimo "
-"jednostavno stavite makro argumente u isti redak."
+"smještanje makro argumenata u sljedeći redak odobreno od strane man(7), "
+"rješavanje ove situacije učinilo bi po4a parser previše složenim. "
+"Jednostavno stavi makro argumente u isti redak."
 
-#: ../../lib/Locale/Po4a/Man.pm:919
-msgid "Escape sequence \\c encountered. This is not completely handled yet."
+#: ../../lib/Locale/Po4a/Man.pm:1026
+#, perl-format
+msgid ""
+"Escape sequence \\c encountered. This is not completely handled yet. Faulty "
+"input: %s"
 msgstr ""
-"Uočena sekvenca za nagli izlaz (escape sequence) \\c. Ova situacija nije još "
-"do kraja programski riješena."
+"Uočena sekvenca za nagli izlaz (escape sequence) \\c. Ova situacija još nije "
+"do kraja programski riješena. Neispravni unos: %s"
 
-#: ../../lib/Locale/Po4a/Man.pm:1085
+#: ../../lib/Locale/Po4a/Man.pm:1208
 #, perl-format
 msgid "Unbalanced '<' and '>' in font modifier. Faulty message: %s"
-msgstr "Neravnoteža '<' i '>' u modifikatoru fonta. Nevaljana poruka: %s"
+msgstr ""
+"Neusklađeni znakovi „<” i „>” u modifikatoru fonta. Pogrešna poruka: %s"
 
-#: ../../lib/Locale/Po4a/Man.pm:1123
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/Man.pm:1249
+#, perl-format
 msgid "Unknown '<' or '>' sequence. Faulty message: %s"
-msgstr "Neravnoteža '<' i '>' u modifikatoru fonta. Nevaljana poruka: %s"
+msgstr "Nepoznata sekvenca „<” ili „>”. Pogrešna poruka: %s"
 
-#: ../../lib/Locale/Po4a/Man.pm:1275
+#: ../../lib/Locale/Po4a/Man.pm:1403
 #, perl-format
 msgid "Unparsable line: %s"
-msgstr "Ne mogu parsirati redak: %s"
+msgstr "Neobradiv redak: %s"
 
-#: ../../lib/Locale/Po4a/Man.pm:1348
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/Man.pm:1486
+#, perl-format
 msgid ""
 "Unknown macro '%s'. Remove it from the document, or refer to the Locale::"
 "Po4a::Man manpage to see how po4a can handle new macros."
 msgstr ""
-"Nepoznati makro '%s'. Uklonite ga iz dokumenta, ili timu za po4a pošaljite "
-"odgovarajuću zakrpu."
+"Nepoznat makro „%s”. Ukloni ga iz dokumenta ili pogledaj Locale::Po4a::Man "
+"priručnik i saznaj kako po4a barata novim makronaredbama."
 
-#: ../../lib/Locale/Po4a/Man.pm:1543
+#: ../../lib/Locale/Po4a/Man.pm:1694
 #, perl-format
 msgid "Cannot parse command arguments: %s"
-msgstr ""
+msgstr "Nije moguće obraditi argumente naredbe: %s"
 
-#: ../../lib/Locale/Po4a/Man.pm:1667
+#: ../../lib/Locale/Po4a/Man.pm:1824
 #, perl-format
 msgid "Unsupported font in: '%s'."
-msgstr ""
+msgstr "Nepodržan font u: „%s”."
 
-#: ../../lib/Locale/Po4a/Man.pm:2026
+#: ../../lib/Locale/Po4a/Man.pm:2246
+#, perl-format
 msgid ""
-"This page defines a new macro with '.de'. Since po4a is not a real groff "
-"parser, this is not supported."
+"This page defines a new macro '%s' with '%s' (inline comment: %s), but you "
+"did not specify the expected po4a behavior when '%s' is used. You will get "
+"an error if this macro is actually used in your page.\n"
+"Add your macro to one of the '%s', '%s', '%s', '%s', '%s' or '%s' parameters "
+"to avoid issues.\n"
+"For example, passing '%s' to po4a will ensure that the defined macro remains "
+"hidden from translators.\n"
+"Please refer to the manpage of Locale::Po4a::Man for more info on these "
+"parameters.\n"
 msgstr ""
 
-#: ../../lib/Locale/Po4a/Man.pm:2092
+#: ../../lib/Locale/Po4a/Man.pm:2269
+#, perl-format
+msgid ""
+"This page defines a new macro '%s' with '%s', but you did not specify the "
+"expected po4a behavior when '%s' is used. You will get an error if this "
+"macro is actually used in your page.\n"
+"Add your macro to one of the '%s', '%s', '%s', '%s', '%s' or '%s' parameters "
+"to avoid issues.\n"
+"For example, passing '%s' to po4a will ensure that the defined macro remains "
+"hidden from translators.\n"
+"Please refer to the manpage of Locale::Po4a::Man for more info on these "
+"parameters.\n"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Man.pm:2314
+#, perl-format
+msgid ""
+"This page defines a new macro with '%s'. Since po4a is not a real groff "
+"parser, this is not supported. The option '%s' gets these macros copied "
+"verbatim in the translated file, but it's not very robust. '%s' shows these "
+"macros to the translators, but groff macros are not user-friendly for "
+"translators."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Man.pm:2382
 msgid "The .ie macro must be followed by a .el macro."
-msgstr ""
+msgstr "Nakon .ie makronaredbe mora slijediti .el makronaredba."
 
-#: ../../lib/Locale/Po4a/Man.pm:2118
+#: ../../lib/Locale/Po4a/Man.pm:2410
 #, perl-format
 msgid ""
 "This page uses conditionals with '%s'. Since po4a is not a real groff "
-"parser, this is not supported."
+"parser, this is not supported by default. The option '%s' gets these macros "
+"copied verbatim in the translated file, but it's not very robust. '%s' shows "
+"these macros to the translators, but groff macros are not user-friendly for "
+"translators."
 msgstr ""
 
-#: ../../lib/Locale/Po4a/Man.pm:2159
+#: ../../lib/Locale/Po4a/Man.pm:2470
 #, perl-format
 msgid ""
 "This page includes another file with '%s'. Do not forget to translate this "
 "file ('%s')."
 msgstr ""
+"Ova stranica uključuje drugu datoteku s „%s”. Nemoj zaboraviti prevesti ovu "
+"datoteku („%s”)."
 
-#: ../../lib/Locale/Po4a/Man.pm:2323
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/Man.pm:2638
+#, perl-format
 msgid ""
 "This page uses the '%s' request with the number of lines in argument. This "
 "is not supported yet."
 msgstr ""
-"Čini se da je ova stranica formatirana kao tip mdoc(7), koji (još) nije "
-"podržan."
+"Ova stranica koristi zahtjev „%s” s brojem redaka u argumentu. To još nije "
+"podržano."
 
-#: ../../lib/Locale/Po4a/Man.pm:2338
+#: ../../lib/Locale/Po4a/Man.pm:2658
 #, perl-format
 msgid ""
 "This page uses the '%s' request. This request is only supported when no "
 "argument is provided."
 msgstr ""
+"Ova stranica koristi zahtjev „%s”. Ovaj zahtjev je podržan samo, ako nema "
+"argumenata."
 
-#: ../../lib/Locale/Po4a/NewsDebian.pm:89
-msgid "Begin of a new entry before the end of previous one"
+#: ../../lib/Locale/Po4a/Po.pm:233
+#, perl-format
+msgid ""
+"Invalid value for option 'wrap-po' ('%s' is not 'no' nor 'newlines' nor a "
+"number)"
 msgstr ""
+"Nevaljana vrijednost za opciju „wrap-po” („%s” nije „no” niti „newlines” "
+"niti broj)"
 
-#: ../../lib/Locale/Po4a/Po.pm:195
+#: ../../lib/Locale/Po4a/Po.pm:242
 #, perl-format
 msgid ""
 "Invalid value for option 'porefs' ('%s' is not one of 'full', 'counter', "
-"'file' or 'never')"
+"'noline', 'file' or 'never')"
 msgstr ""
+"Nevaljana vrijednost za opciju „porefs” („%s” nije jedna od „full”, "
+"„counter”, „noline”, „file” ili „never”)"
 
-#: ../../lib/Locale/Po4a/Po.pm:253
-#, fuzzy
+#: ../../lib/Locale/Po4a/Po.pm:310
 msgid "Please provide a non-null filename"
-msgstr "Potrebno je navesti naziv modula"
+msgstr "Navedi neprazno ime datoteke"
 
-#: ../../lib/Locale/Po4a/Po.pm:261
+#: ../../lib/Locale/Po4a/Po.pm:330
 #, perl-format
 msgid ""
 "Invalid po file %s:\n"
 "%s"
 msgstr ""
+"Neispravna po datoteka %s:\n"
+"%s"
 
-#: ../../lib/Locale/Po4a/Po.pm:270 ../../lib/Locale/Po4a/TeX.pm:929
-#: ../../lib/Locale/Po4a/TransTractor.pm:413
-#: ../../lib/Locale/Po4a/TransTractor.pm:554 ../../lib/Locale/Po4a/Xhtml.pm:132
-#: ../../lib/Locale/Po4a/Xml.pm:113
+#: ../../lib/Locale/Po4a/Po.pm:339 ../../lib/Locale/Po4a/TeX.pm:949
+#: ../../lib/Locale/Po4a/TransTractor.pm:450
+#: ../../lib/Locale/Po4a/TransTractor.pm:651 ../../lib/Locale/Po4a/Xhtml.pm:137
 #, perl-format
-msgid "Can't read from %s: %s"
-msgstr ""
+msgid "Cannot read from %s: %s"
+msgstr "Nije moguće čitati iz %s: %s"
 
-#: ../../lib/Locale/Po4a/Po.pm:345
+#: ../../lib/Locale/Po4a/Po.pm:379
+#, perl-format
+msgid ""
+"The file %s starts with a BOM char indicating that its encoding is UTF-8, "
+"but '%s' was detected."
+msgstr ""
+"Datoteka %s počinje sa BOM znakom koji ukazuje da je njezino kodiranje "
+"UTF-8, ali otkriveno je „%s”."
+
+#: ../../lib/Locale/Po4a/Po.pm:381
+#, perl-format
+msgid ""
+"The file %s starts with a BOM char indicating that its encoding is UTF-8, "
+"but you specified '%s' instead."
+msgstr ""
+"Datoteka %s počinje sa BOM znakom koji ukazuje da je njezino kodiranje "
+"UTF-8, ali umjesto toga si odredio/la „%s”."
+
+#: ../../lib/Locale/Po4a/Po.pm:404 ../../lib/Locale/Po4a/TeX.pm:1013
+#: ../../lib/Locale/Po4a/TransTractor.pm:495 ../../lib/Locale/Po4a/Xhtml.pm:144
+#, perl-format
+msgid "Cannot close %s after reading: %s"
+msgstr "Nije moguće zatvoriti %s nakon čitanja: %s"
+
+#: ../../lib/Locale/Po4a/Po.pm:469
 msgid "Messages with more than 2 plural forms are not supported."
-msgstr ""
+msgstr "Poruke s više od dva oblika množine se ne podržavaju."
 
-#: ../../lib/Locale/Po4a/Po.pm:354
+#: ../../lib/Locale/Po4a/Po.pm:477
 #, perl-format
-msgid "Strange line: -->%s<--"
-msgstr ""
+msgid "Parse error at: -->%s<--"
+msgstr "Greška u obradi pri: -->%s<--"
 
-#: ../../lib/Locale/Po4a/Po.pm:413 ../../lib/Locale/Po4a/Po.pm:576
-#: ../../lib/Locale/Po4a/TransTractor.pm:448
-msgid "Can't write to a file without filename"
-msgstr ""
+#: ../../lib/Locale/Po4a/Po.pm:542 ../../lib/Locale/Po4a/Po.pm:682
+msgid "Cannot write to a file without filename"
+msgstr "Nije moguće pisati u datoteku bez imena datoteke"
 
-#: ../../lib/Locale/Po4a/Po.pm:430 ../../lib/Locale/Po4a/TransTractor.pm:463
+#: ../../lib/Locale/Po4a/Po.pm:559 ../../lib/Locale/Po4a/TransTractor.pm:529
 #, perl-format
-msgid "Can't write to %s: %s"
-msgstr ""
+msgid "Cannot write to %s: %s"
+msgstr "Nije moguće pisati u %s: %s"
 
-#: ../../lib/Locale/Po4a/Po.pm:509
-msgid "Can't write PO files with more than two plural forms."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/Po.pm:556
-#, perl-format
-msgid "Can't unlink %s: %s."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/Po.pm:563 ../../lib/Locale/Po4a/Po.pm:568
-#: ../../po4a:1404
-#, perl-format
-msgid "Can't move %s to %s: %s."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/Po.pm:609
-msgid ""
-"\n"
-"The gettextization failed (once again). Don't give up, gettextizing is a "
-"subtle art, but this is only needed once to convert a project to the "
-"gorgeous luxus offered by po4a to translators.\n"
-"Please refer to the po4a(7) documentation, the section \"HOWTO convert a pre-"
-"existing translation to po4a?\" contains several hints to help you in your "
-"task"
-msgstr ""
-
-#: ../../lib/Locale/Po4a/Po.pm:622
+#: ../../lib/Locale/Po4a/Po.pm:576
 #, perl-format
 msgid ""
-"Original has more strings than the translation (%d>%d). Please fix it by "
-"editing the translated version to add some dummy entry."
+"msgmerge suffers some bugs when PO files are not encoded in UTF-8; Recoding "
+"%s to UTF-8 (was %s) to circumvent the issue.\n"
 msgstr ""
+"msgmerge ima neke probleme kada PO datoteke nisu kodirane u UTF-8 formatu; "
+"Kodiranje datoteke %s se mijenja u UTF-8 (bilo je %s) kako bi se zaobišao "
+"problem.\n"
 
 #: ../../lib/Locale/Po4a/Po.pm:630
-#, perl-format
-msgid ""
-"Original has less strings than the translation (%d<%d). Please fix it by "
-"removing the extra entry from the translated file. You may need an addendum "
-"(cf po4a(7)) to reput the chunk in place after gettextization. A possible "
-"cause is that a text duplicated in the original is not translated the same "
-"way each time. Remove one of the translations, and you're fine."
-msgstr ""
+msgid "Cannot write PO files with more than two plural forms."
+msgstr "Nije moguće pisati PO datoteke s više od dva oblika množine."
 
-#: ../../lib/Locale/Po4a/Po.pm:698
+#: ../../lib/Locale/Po4a/Po.pm:643
 #, perl-format
-msgid ""
-"po4a gettextization: Structure disparity between original and translated "
-"files:\n"
-"msgid (at %s) is of type '%s' while\n"
-"msgstr (at %s) is of type '%s'.\n"
-"Original text: %s\n"
-"Translated text: %s\n"
-"(result so far dumped to gettextization.failed.po)"
-msgstr ""
+msgid "Cannot close %s after writing: %s\n"
+msgstr "Nije moguće zatvoriti %s nakon zapisivanja: %s\n"
 
-#: ../../lib/Locale/Po4a/Po.pm:932
+#: ../../lib/Locale/Po4a/Po.pm:664
 #, perl-format
-msgid "Eval failure: %s"
-msgstr ""
+msgid "Cannot unlink %s: %s."
+msgstr "Nije moguće ukloniti vezu %s: %s."
 
-#: ../../lib/Locale/Po4a/Po.pm:1056
+#: ../../lib/Locale/Po4a/Po.pm:671 ../../lib/Locale/Po4a/Po.pm:675
+#: ../../po4a:1947
+#, perl-format
+msgid "Cannot move %s to %s: %s."
+msgstr "Nije moguće premjestiti %s u %s: %s."
+
+#: ../../lib/Locale/Po4a/Po.pm:897
+#, perl-format
+msgid "Evaluating the provided filter failed: %s"
+msgstr "Evaluiranje danog filtra nije uspjelo: %s"
+
+#: ../../lib/Locale/Po4a/Po.pm:1004
 #, perl-format
 msgid ""
 "'%s' is the singular form of a message, po4a will use the msgstr[0] "
 "translation (%s)."
 msgstr ""
+"„%s” je oblik jednine poruke, po4a će koristiti msgstr[0] prijevod (%s)."
 
-#: ../../lib/Locale/Po4a/Po.pm:1061
+#: ../../lib/Locale/Po4a/Po.pm:1014
 #, perl-format
 msgid ""
 "'%s' is the plural form of a message, po4a will use the msgstr[1] "
 "translation (%s)."
 msgstr ""
+"„%s” je oblik množine poruke, po4a će koristiti msgstr[0] prijevod (%s)."
 
-#: ../../lib/Locale/Po4a/Po.pm:1287
+#: ../../lib/Locale/Po4a/Po.pm:1228
 #, perl-format
 msgid "msgid defined twice: %s"
-msgstr ""
+msgstr "msgid je određen dvaput: %s"
 
-#: ../../lib/Locale/Po4a/Po.pm:1319
+#: ../../lib/Locale/Po4a/Po.pm:1265
 #, perl-format
 msgid ""
 "Translations don't match for:\n"
@@ -491,742 +605,1298 @@ msgid ""
 "%s\n"
 " Old translation discarded."
 msgstr ""
+"Prijevodi se ne poklapaju za:\n"
+"%s\n"
+"-->Prvi prijevod:\n"
+"%s\n"
+" Drugi prijevod:\n"
+"%s\n"
+" Stari prijevod odbačen."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:217
+#: ../../lib/Locale/Po4a/Pod.pm:98 ../../lib/Locale/Po4a/Xml.pm:917
+#, perl-format
+msgid ""
+"The file %s declares %s as encoding, but you provided %s as master charset. "
+"Please change either setting."
+msgstr ""
+"Datoteka %s deklarira %s kao kodiranje, ali ti si postavio/la %s kao glavni "
+"skup znakova. Promijeni jednu od ovih postavki."
+
+#: ../../lib/Locale/Po4a/Pod.pm:173
+msgid ""
+"A new SimplePod parser is now available.  Please consider using it instead "
+"of the current Pod module. If you encounter any bugs, your reports would be "
+"greatly appreciated.  To use it, add the following line at the top of your "
+"po4a configuration file: \"[po4a_alias:Pod] SimplePod\".  You can disable "
+"this message by setting the no-warn-simple option.  Sorry for the noise, and "
+"thank you!"
+msgstr ""
+
+#: ../../lib/Locale/Po4a/Sgml.pm:224
 msgid ""
 "The needed module SGMLS.pm was not found and needs to be installed. It can "
 "be found on the CPAN, in package libsgmls-perl on debian, etc."
 msgstr ""
+"Potreban modul SGMLS.pm nije pronađen i treba ga se instalirati. Može se "
+"pronaći na CPAN-u, u libsgmls-perl paketu na debianu itd."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:257
+#: ../../lib/Locale/Po4a/Sgml.pm:269
 #, perl-format
 msgid ""
 "Unknown debug category: %s. Known categories:\n"
 "%s"
 msgstr ""
+"Nepoznata debug kategorija: %s. Poznate kategorije:\n"
+"%s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:287
+#: ../../lib/Locale/Po4a/Sgml.pm:301
 msgid "msgid skipped to help translators (contains only an entity)"
-msgstr ""
+msgstr "msgid preskočen za pomoć prevodiocima (sadrži samo entitet)"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:294
+#: ../../lib/Locale/Po4a/Sgml.pm:310
 msgid "msgid skipped to help translators (contains only tags)"
-msgstr ""
+msgstr "msgid preskočen za pomoć prevodiocima (sadrži samo oznake)"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:302
+#: ../../lib/Locale/Po4a/Sgml.pm:323
 msgid ""
 "msgid skipped to help translators (contains only opening or closing tags of "
 "marked sections)"
 msgstr ""
+"msgid preskočen za pomoć prevodiocima (sadrži samo početne i završne oznake "
+"označenih sekcija)"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:386 ../../lib/Locale/Po4a/Sgml.pm:809
+#: ../../lib/Locale/Po4a/Sgml.pm:411 ../../lib/Locale/Po4a/Sgml.pm:863
 #, perl-format
-msgid "Can't close tempfile: %s"
-msgstr ""
+msgid "Cannot close tempfile: %s"
+msgstr "Nije moguće zatvoriti privremenu datoteku: %s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:390
+#: ../../lib/Locale/Po4a/Sgml.pm:417
 msgid ""
 "Error while running onsgmls -p.  Please check if onsgmls and the DTD are "
 "installed."
 msgstr ""
+"Greška tijekom pokretanja onsgmls -p. Provjeri, jesu li instalirani onsgmls "
+"i DTD."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:399
+#: ../../lib/Locale/Po4a/Sgml.pm:430
 msgid ""
 "Trying to handle a XML document as a SGML one. Feel lucky if it works, help "
 "us implementing a proper XML backend if it does not."
 msgstr ""
+"XML dokument se pokušava obraditi kao SGML. S nešto sreće će uspjeti – ako "
+"ne, pomozi nam pravilno implementirati XML."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:412
+#: ../../lib/Locale/Po4a/Sgml.pm:449
 msgid ""
 "This file is not a master SGML document (no DOCTYPE). It may be a file to be "
 "included by another one, in which case it should not be passed to po4a "
 "directly. Text from included files is extracted/translated when handling the "
 "master file including them."
 msgstr ""
+"Ova datoteka nije master SGML dokument (nema DOCTYPE). Može biti datoteka "
+"koju jedna druga datoteka uključuje, u tom se slučaju ne bi trebala "
+"proslijediti izravno na po4a. Tekst iz uključenih datoteka izdvaja/prevodi "
+"se prilikom obrade master datoteke koja ih uključuje."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:533
+#: ../../lib/Locale/Po4a/Sgml.pm:572
 msgid "DTD of this file is unknown, but proceeding as requested."
-msgstr ""
+msgstr "DTD ove datoteke je nepoznat, ali nastavlja se kao što je zatraženo."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:537
+#: ../../lib/Locale/Po4a/Sgml.pm:576
 msgid ""
 "DTD of this file is unknown. (supported: DebianDoc, DocBook). The prolog "
 "follows:"
 msgstr ""
+"DTD ove datoteke je nepoznat. (podržani: DebianDoc, DocBook). Slijedi prolog:"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:631 ../../lib/Locale/Po4a/Sgml.pm:713
+#: ../../lib/Locale/Po4a/Sgml.pm:674 ../../lib/Locale/Po4a/Sgml.pm:758
 #, perl-format
-msgid "Can't open %s (content of entity %s%s;): %s"
-msgstr ""
+msgid "Cannot open %s (content of entity %s%s;): %s"
+msgstr "Nije moguće otvoriti %s (sadržaj entiteta %s%s;): %s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:684
+#: ../../lib/Locale/Po4a/Sgml.pm:729
 #, perl-format
 msgid "unrecognized prolog inclusion entity: %%%s;"
-msgstr ""
+msgstr "neprepoznat entitet uključivanja prologa: %%%s;"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:815
+#: ../../lib/Locale/Po4a/Sgml.pm:868
 #, perl-format
-msgid "Can't run onsgmls: %s"
-msgstr ""
+msgid "Cannot run onsgmls: %s"
+msgstr "Nije moguće pokrenuti onsgmls: %s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:930
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/Sgml.pm:987
+#, perl-format
 msgid "Unknown tag %s"
-msgstr "Nepoznata opcija: %s"
+msgstr "Nepoznata oznaka %s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:964
+#: ../../lib/Locale/Po4a/Sgml.pm:1025
 #, perl-format
 msgid "bad translation '%s' for '%s' in '%s'"
-msgstr ""
+msgstr "loš prijevod „%s” za „%s” u „%s”"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:1019 ../../lib/Locale/Po4a/Sgml.pm:1097
+#: ../../lib/Locale/Po4a/Sgml.pm:1081 ../../lib/Locale/Po4a/Sgml.pm:1166
 #, perl-format
 msgid "Closing tag for a translation container missing before %s"
-msgstr ""
+msgstr "Završna oznaka za spremnik prijevoda nedostaje prije %s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:1180
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/Sgml.pm:1251
+#, perl-format
 msgid "Unknown SGML event type: %s"
-msgstr "Format nepoznat: %s."
+msgstr "Nepoznata vrsta SGML događaja: %s"
 
-#: ../../lib/Locale/Po4a/Sgml.pm:1190
+#: ../../lib/Locale/Po4a/Sgml.pm:1265
 msgid ""
 "Warning: onsgmls produced some errors.  This is usually caused by po4a, "
 "which modifies the input and restores it afterwards, causing the input of "
 "onsgmls to be invalid.  This is usually safe, but you may wish to verify the "
 "generated document with onsgmls -wno-valid."
 msgstr ""
+"Upozorenje: onsgmls je proizveo neke pogreške. Obično to uzrokuje po4a, koji "
+"mijenja unos i nakon toga ga obnavlja, čime unos od onsgmls čini nevažećim. "
+"To uglavnom nije problem, ali možda želiš provjeriti generirani dokument "
+"pomoću onsgmls -wno-valid."
 
-#: ../../lib/Locale/Po4a/Sgml.pm:1197
+#: ../../lib/Locale/Po4a/Sgml.pm:1277
 msgid ""
 "To see the error message, rerun po4a with this additional argument:\n"
 "   -o debug=onsgmls"
 msgstr ""
+"Za prikaz poruke greške, ponovo pokreni po4a s dodatnim argumentom:\n"
+"   -o debug=onsgmls"
 
-#: ../../lib/Locale/Po4a/TeX.pm:503 ../../lib/Locale/Po4a/TeX.pm:583
+#: ../../lib/Locale/Po4a/SimplePod/Parser.pm:261
+msgid ""
+"An unexpected error has occurred.  Please report this issue to the po4a "
+"project."
+msgstr ""
+
+#: ../../lib/Locale/Po4a/TeX.pm:505 ../../lib/Locale/Po4a/TeX.pm:589
 #, perl-format
 msgid "un-balanced %s in '%s'"
-msgstr ""
+msgstr "neusklađeni %s u „%s”"
 
-#: ../../lib/Locale/Po4a/TeX.pm:517 ../../lib/Locale/Po4a/TeX.pm:601
+#: ../../lib/Locale/Po4a/TeX.pm:520 ../../lib/Locale/Po4a/TeX.pm:608
 #, perl-format
 msgid "Error while checking the number of arguments of the '%s' command: %s"
-msgstr ""
+msgstr "Greška tijekom provjere broja argumenata naredbe „%s”: %s"
 
-#: ../../lib/Locale/Po4a/TeX.pm:776 ../../lib/Locale/Po4a/TeX.pm:877
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/TeX.pm:794 ../../lib/Locale/Po4a/TeX.pm:896
+#, perl-format
 msgid "Unknown command: '%s'"
-msgstr "Nepoznata opcija: %s"
+msgstr "Nepoznata naredba: „%s”"
 
-#: ../../lib/Locale/Po4a/TeX.pm:923 ../../lib/Locale/Po4a/TransTractor.pm:409
-msgid "Can't read from file without having a filename"
-msgstr ""
+#: ../../lib/Locale/Po4a/TeX.pm:942
+msgid "Cannot read from file without having a filename"
+msgstr "Nije moguće čitati iz datoteke bez navođenja imena datoteke"
 
-#: ../../lib/Locale/Po4a/TeX.pm:964
+#: ../../lib/Locale/Po4a/TeX.pm:992
 #, perl-format
-msgid "Can't find %s with kpsewhich"
+msgid ""
+"Cannot find '%s' with kpsewhich. To prevent this file to be included, add '-"
+"o exclude_include=%s' to the options, either on the command line or in your "
+"po4a.conf file."
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TeX.pm:996 ../../lib/Locale/Po4a/TransTractor.pm:435
-#: ../../lib/Locale/Po4a/Xhtml.pm:141 ../../lib/Locale/Po4a/Xml.pm:122
-#, perl-format
-msgid "Can't close %s after reading: %s"
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TeX.pm:1022
+#: ../../lib/Locale/Po4a/TeX.pm:1038
 #, perl-format
 msgid "kpsewhich cannot find %s"
-msgstr ""
+msgstr "kpsewhich ne može pronaći %s"
 
-#: ../../lib/Locale/Po4a/TeX.pm:1070
+#: ../../lib/Locale/Po4a/TeX.pm:1084
 #, perl-format
 msgid "Cannot use an alias to the unknown command '%s'"
-msgstr ""
+msgstr "Nije moguće koristiti alias za nepoznatu naredbu „%s”"
 
-#: ../../lib/Locale/Po4a/TeX.pm:1076
+#: ../../lib/Locale/Po4a/TeX.pm:1091
 #, perl-format
 msgid ""
 "You are using the old definitions format (%s).  Please update this "
 "definition line."
 msgstr ""
+"Koristiš stari format definicija (%s). Aktualiziraj ovaj redak definicija."
 
-#: ../../lib/Locale/Po4a/TeX.pm:1280 ../../lib/Locale/Po4a/TeX.pm:1542
-#, fuzzy, perl-format
+#: ../../lib/Locale/Po4a/TeX.pm:1300 ../../lib/Locale/Po4a/TeX.pm:1553
+#, perl-format
 msgid "unknown environment: '%s'"
-msgstr "Nepoznata opcija: %s"
+msgstr "nepoznato okruženje: „%s”"
 
-#: ../../lib/Locale/Po4a/TeX.pm:1303
+#. a begin may have been hidden in the middle of a translated
+#. buffer. FIXME: Just warn for now.
+#: ../../lib/Locale/Po4a/TeX.pm:1323
 #, perl-format
 msgid "unmatched end of environment '%s'"
-msgstr ""
+msgstr "neusklađen kraj okruženja „%s”"
 
-#: ../../lib/Locale/Po4a/TeX.pm:1351 ../../lib/Locale/Po4a/TeX.pm:1466
+#: ../../lib/Locale/Po4a/TeX.pm:1373 ../../lib/Locale/Po4a/TeX.pm:1482
 #, perl-format
 msgid "Wrong number of arguments for the '%s' command."
-msgstr ""
+msgstr "Krivi broj argumenata za „%s” naredbu."
 
-#: ../../lib/Locale/Po4a/TeX.pm:1364 ../../lib/Locale/Po4a/TeX.pm:1479
-#: ../../lib/Locale/Po4a/TeX.pm:1569
+#: ../../lib/Locale/Po4a/TeX.pm:1385 ../../lib/Locale/Po4a/TeX.pm:1494
+#: ../../lib/Locale/Po4a/TeX.pm:1580
 msgid "An optional argument was provided, but a mandatory one is expected."
-msgstr ""
+msgstr "Naveden je opcionalni argument, ali očekuje se obavezni."
 
-#: ../../lib/Locale/Po4a/TeX.pm:1368 ../../lib/Locale/Po4a/TeX.pm:1483
+#: ../../lib/Locale/Po4a/TeX.pm:1386 ../../lib/Locale/Po4a/TeX.pm:1495
 #, perl-format
 msgid "Command '%s': %s"
-msgstr ""
+msgstr "Naredba „%s”: %s"
 
-#: ../../lib/Locale/Po4a/TeX.pm:1424
+#: ../../lib/Locale/Po4a/TeX.pm:1442
 #, perl-format
 msgid "register_generic_command: unsupported format: '%s'."
-msgstr ""
+msgstr "register_generic_command: nepodržani format: „%s”."
 
-#: ../../lib/Locale/Po4a/TeX.pm:1536
+#: ../../lib/Locale/Po4a/TeX.pm:1548
 msgid "The first argument of \\begin is mandatory."
-msgstr ""
+msgstr "Prvi argument od \\begin je obavezan."
 
-#: ../../lib/Locale/Po4a/Text.pm:225
-msgid "asciidoc option deprecated, use asciidoc format instead of text"
-msgstr ""
+#: ../../lib/Locale/Po4a/Text.pm:269
+#, perl-format
+msgid "Option %s is only valid when parsing markdown files."
+msgstr "Opcija %s je valjana samo pri raščlanjivanju označnih datoteka."
 
-#: ../../lib/Locale/Po4a/Text.pm:336
-#, fuzzy, perl-format
-#| msgid "Unknown option: %s"
+#: ../../lib/Locale/Po4a/Text.pm:431
+#, perl-format
 msgid "Unrecognized section: %s"
-msgstr "Nepoznata opcija: %s"
+msgstr "Neprepoznata sekcija: %s"
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:470
-#, perl-format
-msgid "Can't close %s after writing: %s"
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:559
-#, perl-format
-msgid "Can't read po4a header from %s."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:564
-#, perl-format
-msgid "First line of %s does not look like a po4a header."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:569
-#, perl-format
-msgid "Syntax error in po4a header of %s, near \"%s\""
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:585
-#, perl-format
-msgid "Invalid argument in the po4a header of %s: %s"
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:591
-#, perl-format
-msgid "The po4a header of %s does not define the mode."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:595
+#: ../../lib/Locale/Po4a/Text.pm:623 ../../lib/Locale/Po4a/Yaml.pm:140
 #, perl-format
 msgid ""
-"Mode invalid in the po4a header of %s: should be 'before' or 'after' not %s."
+"Inline lists and dictionaries on a single line are not correctly handled the "
+"parser we use (YAML::Tiny): they are interpreted as regular strings. Please "
+"use multi-lines definitions instead. Offending line:\n"
+" %s"
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:600
+#: ../../lib/Locale/Po4a/Text.pm:648
 #, perl-format
-msgid "The po4a header of %s does not define the position."
+msgid ""
+"Proceeding even if the YAML Front Matter could not be parsed. Remove the "
+"'yfm_lenient' option for a stricter behavior.\n"
+"Ignored error: %s"
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:604
-msgid "No ending boundary given in the po4a header, but mode=after."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:630
-msgid "Can't apply addendum when not given the filename"
-msgstr ""
-
-#: ../../lib/Locale/Po4a/TransTractor.pm:633
+#: ../../lib/Locale/Po4a/Text.pm:665
 #, perl-format
-msgid "Addendum %s does not exist."
+msgid ""
+"Could not get the YAML Front Matter from the file. If you did not intend to "
+"add a YAML front matter but an horizontal ruler, please use '----' instead, "
+"or pass the 'yfm_lenient' option.\n"
+"Error: %s\n"
+"Content of the YFM: %s"
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:654
+#: ../../lib/Locale/Po4a/Text.pm:823
 #, perl-format
-msgid "No candidate position for the addendum %s."
+msgid ""
+"Malformed fenced div block: Block starting at %s not closed before the end "
+"of the file."
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:659
+#: ../../lib/Locale/Po4a/TransTractor.pm:475
+#: ../../lib/Locale/Po4a/TransTractor.pm:667
+#: ../../lib/Locale/Po4a/TransTractor.pm:745
 #, perl-format
-msgid "More than one candidate position found for the addendum %s."
+msgid ""
+"Malformed encoding while reading from file %s with charset %s: %s\n"
+"If %s is not the expected charset, you need to configure the right one with "
+"--master-charset or other similar flags."
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:665
-#: ../../lib/Locale/Po4a/TransTractor.pm:688
+#: ../../lib/Locale/Po4a/TransTractor.pm:487
 #, perl-format
-msgid "Addendum '%s' applied before this line: %s"
+msgid ""
+"The file %s starts with a BOM char indicating that its encoding is UTF-8, "
+"but you specified %s instead."
+msgstr ""
+"Datoteka %s počinje sa BOM znakom koji ukazuje da je njezino kodiranje "
+"UTF-8, ali umjesto toga si odredio/la %s."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:551
+#, perl-format
+msgid ""
+"Malformed encoding while writing char '%s' to file %s with charset %s: %s\n"
+"If %s is not the expected charset, you need to configure the right one with "
+"--localized-charset or other similar flags."
 msgstr ""
 
-#: ../../lib/Locale/Po4a/TransTractor.pm:695
+#: ../../lib/Locale/Po4a/TransTractor.pm:561
 #, perl-format
-msgid "Addendum '%s' applied after the line: %s."
+msgid ""
+"Malformed encoding while writing to file %s with charset %s: %s\n"
+"If %s is not the expected charset, you need to configure the right one with "
+"--localized-charset or other similar flags."
 msgstr ""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:570
+#, perl-format
+msgid "Cannot close %s after writing: %s"
+msgstr "Nije moguće zatvoriti %s nakon pisanja: %s"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:658
+#, perl-format
+msgid "Cannot read po4a header from %s."
+msgstr "Nije moguće čitati po4a zaglavlje od %s."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:675
+#, perl-format
+msgid "First line of %s does not look like a po4a header."
+msgstr "Prvi redak u %s ne sliči po4a zaglavlju."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:680
+#, perl-format
+msgid "Syntax error in po4a header of %s, near \"%s\""
+msgstr "Pogreška u sintaksi u po4a zaglavlju od %s, blizu \"%s\""
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:696
+#, perl-format
+msgid "Invalid argument in the po4a header of %s: %s"
+msgstr "Neispravni argument u po4a zaglavlju od %s: %s"
 
 #: ../../lib/Locale/Po4a/TransTractor.pm:702
 #, perl-format
-msgid "Addendum '%s' applied at the end of the file."
-msgstr ""
+msgid "The po4a header of %s does not define the mode."
+msgstr "po4a zaglavlje od %s ne određuje modus."
 
-#. FYI, the document charset have to be determined *before* we see the first
-#. string to recode.
-#: ../../lib/Locale/Po4a/TransTractor.pm:865
-#: ../../lib/Locale/Po4a/TransTractor.pm:1052
+#: ../../lib/Locale/Po4a/TransTractor.pm:709
 #, perl-format
 msgid ""
-"Couldn't determine the input document's charset. Please specify it on the "
-"command line. (non-ASCII char at %s)"
+"Mode invalid in the po4a header of %s: should be 'before', 'after' or 'eof'. "
+"Instead, it is '%s'."
 msgstr ""
+"Modus je neispravan u po4a zaglavlju od %s: trebao bi biti „before”, „after” "
+"ili „eof”. Umjesto toga, on je „%s”."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:718
+#, perl-format
+msgid "The po4a header of %s does not define the position."
+msgstr "po4a zaglavlje od %s ne određuje poziciju."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:722
+msgid "No ending boundary given in the po4a header, but mode=after."
+msgstr "U po4a zaglavlju nije zadana krajnja granica, ali mode=after."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:726
+msgid "No position needed when mode=eof."
+msgstr "Pozicija nije potrebna kad je mode=eof."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:730
+msgid "No ending boundary needed when mode=eof."
+msgstr "Krajnja granica nije potrebna kad je mode=eof."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:770
+msgid "Cannot apply addendum when not given the filename"
+msgstr "Nije moguće primijeniti nadopunu kad ime datoteke nije navedeno"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:773
+#, perl-format
+msgid "Addendum %s does not exist."
+msgstr "Nadopuna %s ne postoji."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:809
+#, perl-format
+msgid "No candidate position for the addendum %s."
+msgstr "Nema moguće pozicije za nadopunu %s."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:813
+#, perl-format
+msgid "More than one candidate position found for the addendum %s."
+msgstr "Pronađeno je više mogućih pozicija za nadopunu %s."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:824
+#: ../../lib/Locale/Po4a/TransTractor.pm:846
+#, perl-format
+msgid "Addendum '%s' applied before this line: %s"
+msgstr "Nadopuna „%s” primijenjena prije ovog retka: %s"
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:852
+#, perl-format
+msgid "Addendum '%s' applied after the line: %s."
+msgstr "Nadopuna „%s” primijenjena nakon ovog retka: %s."
+
+#: ../../lib/Locale/Po4a/TransTractor.pm:859
+#, perl-format
+msgid "Addendum '%s' applied at the end of the file."
+msgstr "Nadopuna „%s” primijenjena na kraju datoteke."
 
 #: ../../lib/Locale/Po4a/Wml.pm:89
 #, perl-format
-msgid "Can't create a temporary XML file: %s"
-msgstr ""
+msgid "Cannot create a temporary XML file: %s"
+msgstr "Nije moguće stvoriti privremenu XML datoteku: %s"
 
-#. TODO: It will be hard to identify the location.
-#. => find a way to retrieve the reference.
-#: ../../lib/Locale/Po4a/Xml.pm:211
+#: ../../lib/Locale/Po4a/Xml.pm:116
+#, perl-format
+msgid "%s: Cannot read from %s: %s"
+msgstr "%s: Nije moguće čitati iz %s: %s"
+
+#: ../../lib/Locale/Po4a/Xml.pm:125
+#, perl-format
+msgid "%s: Cannot close %s after reading: %s"
+msgstr "%s: Nije moguće zatvoriti %s nakon čitanja: %s"
+
+#: ../../lib/Locale/Po4a/Xml.pm:159
+#, perl-format
+msgid "Cannot have more than one input charset in XML files (%s and %s)"
+msgstr ""
+"Ne može imati više od jednog skupa znakova unosa u XML datotekama (%s i %s)"
+
+#: ../../lib/Locale/Po4a/Xml.pm:231
 #, perl-format
 msgid ""
 "'po4a-id=%d' in the translation does not exist in the original string (or "
 "'po4a-id=%d' used twice in the translation)."
 msgstr ""
+"„po4a-id=%d” u prijevodu ne postoji u izvornom nizu (ili se „po4a-id=%d” "
+"koristi dvaput u prijevodu)."
 
-#: ../../lib/Locale/Po4a/Xml.pm:673
+#: ../../lib/Locale/Po4a/Xml.pm:271
+#, perl-format
+msgid ">>> filename = '%s'"
+msgstr ">>> ime datoteke = „%s”"
+
+#: ../../lib/Locale/Po4a/Xml.pm:754
 #, perl-format
 msgid "Internal error: unknown type identifier '%s'."
+msgstr "Interna greška: nepoznata vrsta identifikatora „%s”."
+
+#: ../../lib/Locale/Po4a/Xml.pm:906
+#, perl-format
+msgid ""
+"The file %s declares %s as encoding, but you provided %s as master charset. "
+"Please change either setting because they really are different encoding in "
+"Perl. See https://perldoc.perl.org/Encode#UTF-8-vs.-utf8-vs.-UTF8"
 msgstr ""
 
-#: ../../lib/Locale/Po4a/Xml.pm:845
+#: ../../lib/Locale/Po4a/Xml.pm:978
 #, perl-format
 msgid ""
 "Bad document type. '%s' expected. You can fix this warning with a -o doctype "
 "option, or ignore this check with -o doctype=\"\"."
 msgstr ""
+"Loša vrsta dokumenta. Očekuje se „%s”. Ovo upozorenje možeš ispraviti pomoću "
+"opcije -o doctype ili zanemari ovu provjeru pomoću -o doctype=\"\"."
 
-#: ../../lib/Locale/Po4a/Xml.pm:923 ../../lib/Locale/Po4a/Xml.pm:1513
+#: ../../lib/Locale/Po4a/Xml.pm:1074 ../../lib/Locale/Po4a/Xml.pm:1924
 #, perl-format
 msgid ""
 "Unexpected closing tag </%s> found. The main document may be wrong.  "
-"Continuing..."
+"Continuing…"
 msgstr ""
+"Pronađena je neočekivana završna oznaka </%s>. Glavni dokument možda nije u "
+"redu. Nastavlja se …"
 
-#: ../../lib/Locale/Po4a/Xml.pm:925 ../../lib/Locale/Po4a/Xml.pm:1515
+#: ../../lib/Locale/Po4a/Xml.pm:1079 ../../lib/Locale/Po4a/Xml.pm:1929
 #, perl-format
 msgid "Unexpected closing tag </%s> found. The main document may be wrong."
 msgstr ""
+"Pronađena je neočekivana završna oznaka </%s>. Glavni dokument možda nije u "
+"redu."
 
-#: ../../lib/Locale/Po4a/Xml.pm:1264
+#: ../../lib/Locale/Po4a/Xml.pm:1460
 #, perl-format
-msgid "Content of attribute %s excluded: %s"
+msgid ""
+"%s: attribute '%s' is not defined in module option 'attributes' and\n"
+"....  is not translated for the attribute path '%s'"
 msgstr ""
+"%s: atribut „%s” nije definiran u opciji modula „attributes” i\n"
+"....  nije preveden za stazu atributa „%s”"
 
-#: ../../lib/Locale/Po4a/Xml.pm:1276
-msgid "Bad attribute syntax.  Continuing..."
-msgstr ""
-
-#: ../../lib/Locale/Po4a/Xml.pm:1278
-msgid "Bad attribute syntax"
-msgstr ""
-
-#. Inform that this tag isn't translated in debug mode
-#: ../../lib/Locale/Po4a/Xml.pm:1683
+#: ../../lib/Locale/Po4a/Xml.pm:1479
 #, perl-format
-msgid "Content of tag %s excluded: %s"
-msgstr ""
+msgid "%s: Bad attribute syntax.  Continuing…"
+msgstr "%s: Loša sintaksa atributa. Nastavlja se …"
 
-#: ../../lib/Locale/Po4a/Xml.pm:1780 ../../lib/Locale/Po4a/Xml.pm:1790
+#: ../../lib/Locale/Po4a/Xml.pm:1481
+#, perl-format
+msgid "%s: Bad attribute syntax"
+msgstr "%s: Loša sintaksa atributa"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1604
+#, perl-format
+msgid ""
+"%s: translation option='%s'.\n"
+" *** the original translation option is overridden here since parent "
+"path='%s' is untranslated,"
+msgstr ""
+"%s: opcija za prijevod=„%s”.\n"
+" *** izvorna opcija za prijevod je ovdje prepisana, jer je nadređena "
+"staza=„%s” neprevedena,"
+
+#: ../../lib/Locale/Po4a/Xml.pm:1618
+#, perl-format
+msgid "%s: foldattributes setting ignored since '%s' is not inline tag"
+msgstr "%s: foldattributes postavka zanemarena, jer „%s” nije ugrađena oznaka"
+
+#: ../../lib/Locale/Po4a/Xml.pm:2076
+#, perl-format
+msgid ""
+"Invalid placeholder in the translation (the 'type' and 'id' must be present, "
+"in this order).\n"
+"%s\n"
+"\n"
+"Please fix your translation."
+msgstr ""
+"Neispravno rezervirano mjesto u prijevodu ( „vrsta\" i „id” moraju biti "
+"prisutni, ovim redoslijedom).\n"
+"%s\n"
+"\n"
+"Ispravi prijevod."
+
+#: ../../lib/Locale/Po4a/Xml.pm:2163 ../../lib/Locale/Po4a/Xml.pm:2178
 #, perl-format
 msgid ""
 "The '%s' option is deprecated. Please use the translated/untranslated and/or "
 "break/inline/placeholder categories."
 msgstr ""
+"Opcija „%s” se više ne koristi. Koristi kategorije translated/untranslated i-"
+"ili break/inline/placeholder."
 
-#: ../../lib/Locale/Po4a/Xml.pm:1896 ../../lib/Locale/Po4a/Xml.pm:1903
-#: ../../lib/Locale/Po4a/Xml.pm:1907 ../../lib/Locale/Po4a/Xml.pm:1911
-#: ../../lib/Locale/Po4a/Xml.pm:1917 ../../lib/Locale/Po4a/Xml.pm:1921
-#: ../../lib/Locale/Po4a/Xml.pm:1927
+#: ../../lib/Locale/Po4a/Xml.pm:2341 ../../lib/Locale/Po4a/Xml.pm:2348
+#: ../../lib/Locale/Po4a/Xml.pm:2351 ../../lib/Locale/Po4a/Xml.pm:2354
+#: ../../lib/Locale/Po4a/Xml.pm:2359 ../../lib/Locale/Po4a/Xml.pm:2362
+#: ../../lib/Locale/Po4a/Xml.pm:2367
 #, perl-format
 msgid "Tag '%s' both in the %s and %s categories."
-msgstr ""
-
-#: ../../po4a:719 ../../po4a:723
-#, perl-format
-msgid "Invalid %s. Directory %s does not exist."
-msgstr ""
-
-#: ../../po4a:756 ../../po4a:1001
-#, fuzzy, perl-format
-msgid "Unparsable argument '%s' (%s)."
-msgstr "Ne mogu parsirati redak: %s"
-
-#: ../../po4a:790
-#, perl-format
-msgid "failed to execute '%s': %s."
-msgstr ""
-
-#: ../../po4a:794
-#, perl-format
-msgid "'%s' died with signal %d, with coredump."
-msgstr ""
-
-#: ../../po4a:798
-#, perl-format
-msgid "'%s' died with signal %d, without coredump."
-msgstr ""
-
-#: ../../po4a:803
-#, perl-format
-msgid "'%s' exited with value %d."
-msgstr ""
-
-#: ../../po4a:807
-#, perl-format
-msgid "Error: %s"
-msgstr ""
-
-#. Check file existence
-#: ../../po4a:813 ../../po4a-gettextize:229 ../../po4a-normalize:155
-#: ../../po4a-translate:208 ../../po4a-translate:209 ../../po4a-updatepo:253
-#: ../../scripts/msguntypot:164 ../../scripts/msguntypot:166
-#, perl-format
-msgid "File %s does not exist."
-msgstr ""
-
-#: ../../po4a:836 ../../po4a:1030
-#, fuzzy, perl-format
-msgid "Unknown variable: %s"
-msgstr "Nepoznata opcija: %s"
-
-#: ../../po4a:846
-#, fuzzy, perl-format
-msgid "Syntax error: %s"
-msgstr "Pogreška u sintaksi"
-
-#: ../../po4a:874 ../../po4a:886
-#, perl-format
-msgid "'%s' redeclared"
-msgstr ""
-
-#: ../../po4a:879
-#, fuzzy, perl-format
-msgid "Unparsable argument '%s'."
-msgstr "Ne mogu parsirati redak: %s"
-
-#: ../../po4a:892
-msgid "The list of languages cannot be set twice."
-msgstr ""
-
-#: ../../po4a:895
-msgid "The POT file cannot be set twice."
-msgstr ""
-
-#: ../../po4a:902
-#, perl-format
-msgid "'%s' is not a directory"
-msgstr ""
-
-#: ../../po4a:906
-#, perl-format
-msgid "Cannot list the '%s' directory"
-msgstr ""
-
-#: ../../po4a:917
-#, perl-format
-msgid "too many POT files: %s %s"
-msgstr ""
-
-#: ../../po4a:927
-#, perl-format
-msgid "no PO files found in %s"
-msgstr ""
-
-#: ../../po4a:938
-#, perl-format
-msgid ""
-"The '%s' master file was specified earlier in the configuration file.  This "
-"may cause problems with options."
-msgstr ""
-
-#: ../../po4a:944
-#, perl-format
-msgid "The '%s' master file does not exist."
-msgstr ""
-
-#: ../../po4a:1005
-msgid "The translated and master file are the same."
-msgstr ""
-
-#: ../../po4a:1045
-#, perl-format
-msgid "Translation of %s in %s redefined"
-msgstr ""
-
-#: ../../po4a:1073
-#, fuzzy, perl-format
-msgid "Unparsable command '%s'."
-msgstr "Ne mogu parsirati redak: %s"
-
-#. don't care about error here
-#: ../../po4a:1079
-msgid "po4a_paths not declared. Dunno where to find the POT and PO files"
-msgstr ""
-
-#: ../../po4a:1092
-#, perl-format
-msgid "Cannot parse option line (missing >%s<?): %s"
-msgstr ""
-
-#: ../../po4a:1121
-msgid "Split mode, creating a temporary POT"
-msgstr ""
-
-#: ../../po4a:1124
-msgid "Disabling --translate-only option, it is not supported in split mode"
-msgstr ""
-
-#: ../../po4a:1177 ../../po4a:1329 ../../po4a-updatepo:281
-#, perl-format
-msgid "Updating %s:"
-msgstr ""
-
-#: ../../po4a:1180 ../../po4a:1339 ../../po4a-updatepo:292
-#, perl-format
-msgid "Creating %s:"
-msgstr ""
-
-#: ../../po4a:1238 ../../po4a:1268 ../../po4a:1368 ../../po4a-updatepo:263
-#, perl-format
-msgid "Can't create a temporary POT file: %s"
-msgstr ""
-
-#: ../../po4a:1251
-#, perl-format
-msgid " (%d entries)"
-msgstr ""
-
-#: ../../po4a:1277 ../../po4a:1394
-#, perl-format
-msgid "Can't create directory '%s': %s"
-msgstr ""
-
-#: ../../po4a:1299 ../../scripts/msguntypot:203
-#, perl-format
-msgid "Can't create a temporary PO file: %s"
-msgstr ""
-
-#: ../../po4a:1459
-#, perl-format
-msgid "%s doesn't need to be updated."
-msgstr ""
-
-#: ../../po4a:1507
-#, perl-format
-msgid "Discard %s (%s of %s strings; only %s%% translated; need %s%%)."
-msgstr ""
-
-#: ../../po4a:1516
-#, perl-format
-msgid "Timestamp %s created."
-msgstr ""
-
-#: ../../po4a:1530
-#, perl-format
-msgid "Timestamp %s removed."
-msgstr ""
-
-#: ../../po4a:1543
-#, perl-format
-msgid "Addendum %s does NOT apply to %s (translation discarded)."
-msgstr ""
-
-#: ../../po4a:1558
-#, perl-format
-msgid "%s is %s%% translated (%s strings)."
-msgstr ""
-
-#: ../../po4a:1561 ../../po4a-translate:240
-#, perl-format
-msgid "%s is %s%% translated (%s of %s strings)."
-msgstr ""
-
-#: ../../po4a-translate:246
-#, perl-format
-msgid "Discard the translation of %s (only %s%% translated; need %s%%)."
-msgstr ""
-
-#: ../../po4a-translate:284
-#, perl-format
-msgid "Discard the translation of %s (addendum %s does not apply)."
-msgstr ""
-
-#: ../../po4a-translate:293
-#, perl-format
-msgid ""
-"Your input po file %s seems outdated. Please consider running po4a-updatepo "
-"to refresh it."
-msgstr ""
-
-#: ../../po4a-updatepo:254
-msgid "po4a-updatepo can't take the input PO from stdin."
-msgstr ""
-
-#: ../../po4a-updatepo:266
-msgid "Parse input files... "
-msgstr ""
-
-#: ../../po4a-updatepo:276
-msgid "done."
-msgstr ""
-
-#: ../../po4a-updatepo:287 ../../scripts/msguntypot:212
-#, perl-format
-msgid "Error while running msgmerge: %s"
-msgstr ""
-
-#: ../../po4a-updatepo:295
-#, perl-format
-msgid "Error while copying the PO file: %s"
-msgstr ""
+msgstr "Oznaka „%s” u kategoriji %s i %s."
 
 #. Argument checking
-#: ../../scripts/msguntypot:163 ../../scripts/msguntypot:165
-#, fuzzy, perl-format
+#: ../../msguntypot:163 ../../msguntypot:165
+#, perl-format
 msgid "Mandatory argument '%s' missing."
-msgstr "Ne mogu parsirati redak: %s"
+msgstr "Nedostaje obavezni argument „%s”."
 
-#: ../../scripts/msguntypot:174
+#. Check file existence
+#: ../../msguntypot:164 ../../msguntypot:166 ../../po4a:1049
+#: ../../po4a-gettextize:565 ../../po4a-normalize:206 ../../po4a-translate:216
+#: ../../po4a-translate:217 ../../po4a-updatepo:287
+#, perl-format
+msgid "File %s does not exist."
+msgstr "Datoteka %s ne postoji."
+
+#: ../../msguntypot:174
 #, perl-format
 msgid ""
 "The new and old POT files have different amount of strings (%d != %d). "
 "Something's seriously wrong here."
 msgstr ""
+"Nove i stare POT datoteke imaju različitu količinu nizova (%d !=%d). Ovdje "
+"je nešto ozbiljno pogrešno."
 
-#: ../../scripts/msguntypot:192
+#: ../../msguntypot:192
 #, perl-format
 msgid "Found %d modified entries."
-msgstr ""
+msgstr "Pronađeno je %d promijenjenih zapisa."
 
-#: ../../scripts/msguntypot:208
+#: ../../msguntypot:203 ../../po4a:1794
+#, perl-format
+msgid "Cannot create a temporary PO file: %s"
+msgstr "Nije moguće stvoriti privremenu PO datoteku: %s"
+
+#: ../../msguntypot:208
 #, perl-format
 msgid "Handling %s"
-msgstr ""
+msgstr "Obrađuje se %s"
 
-#: ../../scripts/msguntypot:233
+#: ../../msguntypot:213 ../../po4a-updatepo:326
+#, perl-format
+msgid ""
+"Could not run msgmerge: %s\n"
+"The command was: %s"
+msgstr ""
+"Nije bilo moguće pokrenuti msgmerge: %s\n"
+"Naredba je bila: %s"
+
+#: ../../msguntypot:227
+#, perl-format
+msgid "msguntypot changed msgid \"%s\" to \"%s\" in %s\n"
+msgstr "msguntypot je promijenio msgid „%s” u „%s” u %s\n"
+
+#: ../../msguntypot:234
 #, perl-format
 msgid "Modified %d entries in %d files."
-msgstr ""
+msgstr "Promijenjeno %d zapisa u %d datoteka."
 
-#. print out help message
-#: ../../share/po4a-build:91
-#, sh-format
+#: ../../po4a:864 ../../po4a:868
+#, perl-format
+msgid "Option %s invalid. Directory %s does not exist (current directory: %s)."
+msgstr "Opcija %s neispravna. Mapa %s ne postoji (trenutačni direktorij: %s)."
+
+#: ../../po4a:1030
+#, perl-format
+msgid "failed to execute '%s': %s."
+msgstr "neuspjelo izvršavanje „%s”: %s."
+
+#: ../../po4a:1033
+#, perl-format
+msgid "'%s' died with signal %d, with coredump."
+msgstr "„%s” je prekinut sa signalom %d, sa memorijskim zapisom."
+
+#: ../../po4a:1035
+#, perl-format
+msgid "'%s' died with signal %d, without coredump."
+msgstr "„%s” je prekinut sa signalom %d, bez memorijskog zapisa."
+
+#: ../../po4a:1038
+#, perl-format
+msgid "'%s' exited with value %d."
+msgstr "„%s” izašao s vrijednosti %d."
+
+#: ../../po4a:1041
+#, perl-format
+msgid "Error: %s"
+msgstr "Greška: %s"
+
+#: ../../po4a:1065
+#, perl-format
+msgid "Specified destination language '%s' not found in the list of languages."
+msgstr "Navedeni odredišni jezik „%s” nije pronađen u popisu jezika."
+
+#: ../../po4a:1101 ../../po4a:1189 ../../po4a:1459
+#, perl-format
+msgid "Unknown variable: %s"
+msgstr "Nepoznata varijabla: %s"
+
+#: ../../po4a:1110
+#, perl-format
+msgid "Syntax error: %s"
+msgstr "Pogreška u sintaksi: %s"
+
+#: ../../po4a:1143 ../../po4a:1208
+#, perl-format
+msgid "'%s' redeclared"
+msgstr "„%s” ponovo prijavljeno"
+
+#: ../../po4a:1151
+#, perl-format
+msgid ""
+"Your POT file '%s' file name does not end with the 'pot' extension. This is "
+"unusual and will trouble the translators."
+msgstr ""
+"Ime tvoje POT-datoteke „%s” ne završava s nastavkom „pot”. To je neobično i "
+"prevodiocima stvara probleme."
+
+#: ../../po4a:1158
+#, perl-format
+msgid ""
+"No PO file provided as subsequent parameters to '%s'. Your documentation "
+"will not be translated."
+msgstr ""
+"Nijedna PO datoteka nije navedena kao naknadni parametar za „%s”. Tvoja "
+"dokumentacija neće biti prevedena."
+
+#: ../../po4a:1165
+#, perl-format
+msgid "Unparsable argument '%s'."
+msgstr "Neobradiv argument „%s”."
+
+#: ../../po4a:1215
+msgid "The list of languages cannot be set twice."
+msgstr "Popis jezika se ne može postaviti dvaput."
+
+#: ../../po4a:1217
+msgid "The POT file cannot be set twice."
+msgstr "POT datoteka se ne može postaviti dvaput."
+
+#. Only display the message the first time we find the right directory
+#: ../../po4a:1232 ../../po4a:1254
+#, perl-format
+msgid "Using '%s' as a %s."
+msgstr "Koristi se „%s” kao %s."
+
+#: ../../po4a:1234
+#, perl-format
+msgid "'%s' is not a directory (current dir: %s)"
+msgstr "„%s” nije mapa (trenutačna mapa: %s)"
+
+#: ../../po4a:1239
+#, perl-format
+msgid "Cannot list the '%s' directory"
+msgstr "Nije moguće izraditi popis mapa „%s”"
+
+#: ../../po4a:1249
+#, perl-format
+msgid "Cannot list directory '%s' in '%s' "
+msgstr "Nije moguće stvoriti popis mape „%s”: %s "
+
+#: ../../po4a:1260
+#, perl-format
+msgid "Directory '%s' not found in '%s'."
+msgstr "Mapa „%s” nije pronađena u „%s”."
+
+#: ../../po4a:1263 ../../po4a:1266
+#, perl-format
+msgid "Directory '%s' not found in '%s' nor in '%s'."
+msgstr "Mapa „%s” nije pronađena u „%s”, niti u „%s”."
+
+#: ../../po4a:1270
+#, perl-format
+msgid "Directory '%s' not found in '%s' nor in '%s' nor in '%s'."
+msgstr "Mapa „%s” nije pronađena u „%s”, niti u „%s”, niti u „%s”."
+
+#: ../../po4a:1281
+#, perl-format
+msgid "Language '%s' found twice in '%s' and '%s'."
+msgstr "„%s” jezik je pronađen dvaput u „%s” i u „%s”."
+
+#: ../../po4a:1285
+#, perl-format
+msgid "Found language '%s' in the provided po_directory: %s"
+msgstr "Pronađen je „%s” jezik u navedenom po_directory: %s"
+
+#: ../../po4a:1289
+#, perl-format
+msgid "%s:%d: too many POT files: '%s' and '%s'."
+msgstr "%s:%d: previše POT datoteka: „%s” i „%s”."
+
+#: ../../po4a:1293
+#, perl-format
+msgid "Found POT file '%s' in the provided po_directory."
+msgstr "Pronađena je POT datoteka „%s” u navedenom po_directory."
+
+#: ../../po4a:1303
+#, perl-format
+msgid "No PO files found in '%s'/'%s'."
+msgstr "Nema PO datoteka u „%s”/„%s”."
+
+#: ../../po4a:1306 ../../po4a:1309
+#, perl-format
+msgid "No PO files found in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "Nema PO datoteka u „%s”/„%s”, niti u „%s”/„%s”."
+
+#: ../../po4a:1313
+#, perl-format
+msgid "No PO files found in '%s'/'%s' nor in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "Nema PO datoteka u „%s”/„%s”, niti u „%s”/„%s”, niti u „%s”/„%s”."
+
+#: ../../po4a:1317
+msgid "Your project will not be translated to any language."
+msgstr "Tvoj projekt neće biti preveden na nijedan jezik."
+
+#: ../../po4a:1323
+#, perl-format
+msgid "No POT files found in '%s'/'%s'."
+msgstr "Nema POT datoteka u „%s”/„%s”."
+
+#: ../../po4a:1326 ../../po4a:1329
+#, perl-format
+msgid "No POT files found in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "Nema POT datoteka u „%s”/„%s”, niti u „%s”/„%s”."
+
+#: ../../po4a:1333
+#, perl-format
+msgid "No POT files found in '%s'/'%s' nor in '%s'/'%s' nor in '%s'/'%s'."
+msgstr "Nema POT datoteka u „%s”/„%s”, niti u „%s”/„%s”, niti u „%s”/„%s”."
+
+#: ../../po4a:1337
+msgid ""
+"Please create an empty file with the 'pot' extension (e.g. 'myproject.pot')."
+msgstr "Stvori praznu datoteku s nastavkom „pot” (npr. „mojprojekt.pot”)."
+
+#: ../../po4a:1350
+#, perl-format
+msgid ""
+"The master file '%s' was specified earlier in the configuration file. This "
+"may cause problems with options."
+msgstr ""
+"Master datoteka „%s” je prethodno bila određena u datoteci konfiguracije. To "
+"može stvoriti probleme s opcijama."
+
+#: ../../po4a:1355
+#, perl-format
+msgid "The master file '%s' does not exist."
+msgstr "Master datoteka „%s” ne postoji."
+
+#: ../../po4a:1408
+msgid ""
+"Option 'master:file=' is deprecated. Please use 'pot=' instead for the same "
+"effect."
+msgstr ""
+"Opcija 'master:file=' je zastarjela. Za isti učinak umjesto toga koristi "
+"'pot='."
+
+#: ../../po4a:1431
+#, perl-format
+msgid "Unparsable argument '%s' (%s)."
+msgstr "Neobradiv argument „%s” (%s)."
+
+#: ../../po4a:1434
+msgid "The translated and master file are the same."
+msgstr "Prevedena datoteka i master datoteka su iste."
+
+#: ../../po4a:1476
+#, perl-format
+msgid "Translation of %s in %s redefined"
+msgstr "Prijevod od %s u %s redefiniran"
+
+#: ../../po4a:1509
+#, perl-format
+msgid "Unparsable command '%s'."
+msgstr "Neobradiva naredba „%s”."
+
+#. don't care about error here
+#: ../../po4a:1515
+msgid ""
+"'po4a_paths' is not defined in the configuration file. Where are the POT and "
+"PO files?"
+msgstr ""
+"„po4a_paths” nije definirano u datoteci konfiguracije. Gdje se nalaze POT i "
+"PO datoteke?"
+
+#: ../../po4a:1531
+#, perl-format
+msgid "Cannot parse option line (missing >%s<?): %s"
+msgstr "Nije moguće obraditi redak opcija (nedostaje >%s<?): %s"
+
+#: ../../po4a:1559
+#, perl-format
+msgid "Split mode, creating a temporary POT:"
+msgstr "Podijeljeni modus, stvara privremenu POT datoteku:"
+
+#: ../../po4a:1562
+msgid "Disabling --translate-only option, it is not supported in split mode"
+msgstr ""
+"Deaktivira se opcija --translate-only, nije podržana u podijeljenom modusu"
+
+#: ../../po4a:1576
+#, perl-format
+msgid "Document %s kept for update (--translate-only)."
+msgstr "Dokument %s je zadržan za aktualiziranje (--translate-only)."
+
+#: ../../po4a:1579
+#, perl-format
+msgid "Skip the update of %s as requested (--translate-only)."
+msgstr "Preskoči aktualiziranje za %s kao što je zatraženo (--translate-only)."
+
+#: ../../po4a:1599
+#, perl-format
+msgid "Languages skipped because of --translate-only: %s; kept languages: %s."
+msgstr "Preskočeni jezici zbog --translate-only: %s; zadržani jezici: %s."
+
+#: ../../po4a:1636
+#, perl-format
+msgid "NOT updating %s as requested (--no-update)."
+msgstr "NE aktualizira se %s kao što je zatraženo (--no-update)."
+
+#: ../../po4a:1640 ../../po4a:1860 ../../po4a-updatepo:319
+#, perl-format
+msgid "Updating %s:"
+msgstr "Aktualiza se %s:"
+
+#: ../../po4a:1644
+#, perl-format
+msgid "NOT creating %s as requested (--no-update)."
+msgstr "NE stvara se %s kao što je zatraženo (--no-update)."
+
+#: ../../po4a:1647 ../../po4a-updatepo:332
+#, perl-format
+msgid "Creating %s:"
+msgstr "Stvara se %s:"
+
+#: ../../po4a:1705 ../../po4a:1761 ../../po4a:1900 ../../po4a-updatepo:297
+#, perl-format
+msgid "Cannot create a temporary POT file: %s"
+msgstr "Nije moguće stvoriti privremenu POT datoteku: %s"
+
+#: ../../po4a:1715
+#, perl-format
+msgid " (%d entries)"
+msgstr " (%d unosa)"
+
+#: ../../po4a:1719
+#, perl-format
+msgid "NOT updating the POT file %s as requested (--no-update)."
+msgstr "NE aktualizira se POT datoteka %s kao što je zatraženo (--no-update)."
+
+#: ../../po4a:1722
+#, perl-format
+msgid "NOT updating the POT file %s because of --translate-only."
+msgstr "NE aktualizira se POT datoteka %s zbog opcije --translate-only."
+
+#: ../../po4a:1725
+#, perl-format
+msgid "POT file %s already up to date."
+msgstr "POT datoteka %s je već aktualna."
+
+#: ../../po4a:1766 ../../po4a:1833 ../../po4a:1939
+#, perl-format
+msgid "Cannot create directory '%s': %s"
+msgstr "Nije moguće stvoriti mapu „%s”: %s"
+
+#: ../../po4a:1774
+#, perl-format
+msgid ""
+"msggrep did not create '%s'. Used command:\n"
+"  %s\n"
+"Please report that bug, along the information allowing to reproduce it.\n"
+msgstr ""
+"msggrep nije stvorio „%s”. Korištena naredba:\n"
+"  %s\n"
+"Prijavi tu grešku zajedno s informacijama koje omogućuju reproducirati "
+"grešku.\n"
+
+#: ../../po4a:1805
+#, perl-format
+msgid ""
+"The translation of master file '%s' in language '%s' is missing (file: %s) "
+"-- skipping."
+msgstr ""
+"Nedostaje prijevod master datoteke „%s” za %s jezik (datoteka: %s) – "
+"preskače se."
+
+#: ../../po4a:1858
+#, perl-format
+msgid "Updating the translation in language %s:"
+msgstr "Aktualizira se prijevod za %s jezik:"
+
+#: ../../po4a:1871
+#, perl-format
+msgid "Creating an empty PO file for the language %s.\n"
+msgstr "Stvaranje prazne PO datoteke za %s jezik.\n"
+
+#: ../../po4a:1873
+#, perl-format
+msgid "Creating an empty PO file in %s.\n"
+msgstr "Izrada prazne PO datoteke u %s.\n"
+
+#: ../../po4a:1977
+#, perl-format
+msgid "PO file for language %s is missing -- skipping."
+msgstr "Nedostaje PO datoteka za %s jezik – preskače se."
+
+#: ../../po4a:1979
+#, perl-format
+msgid "PO file %s for language %s is missing -- skipping."
+msgstr "Nedostaje PO datoteka %s za %s jezik – preskače se."
+
+#: ../../po4a:2003
+#, perl-format
+msgid "Skip master file %s in language %s because of --translate-only."
+msgstr "Preskoči glavnu datoteku %s na jeziku %s zbog opcije --translate-only."
+
+#: ../../po4a:2023
+#, perl-format
+msgid "%s doesn't need to be updated."
+msgstr "%s se ne mora aktualizirati."
+
+#: ../../po4a:2069
+#, perl-format
+msgid "Discard %s (%s of %s strings; only %s%% translated; need %s%%)."
+msgstr "Odbaci %s (%s od %s nizova; samo %s %% prevedeno; potrebno je %s %%)."
+
+#: ../../po4a:2077
+#, perl-format
+msgid "Timestamp %s created."
+msgstr "Vremenska oznaka %s stvorena."
+
+#: ../../po4a:2087
+#, perl-format
+msgid "Timestamp %s removed."
+msgstr "Vremenska oznaka %s uklonjena."
+
+#: ../../po4a:2101
+#, perl-format
+msgid "Addendum %s does NOT apply to %s (translation discarded)."
+msgstr "Nadopuna %s NIJE primjenjiva na %s (prijevod odbačen)."
+
+#: ../../po4a:2110
+#, perl-format
+msgid "%s is 100%% translated (%s strings)."
+msgstr "%s je 100 %% prevedeno (%s nizova)."
+
+#: ../../po4a:2114 ../../po4a-translate:261
+#, perl-format
+msgid "%s is %s%% translated (%s of %s strings)."
+msgstr "%s je %s %% prevedeno (%s od %s nizova)."
+
+#: ../../po4a-gettextize:366
 msgid ""
 "\n"
-"po4a-build - po4a frontend\n"
+"The gettextization failed (once again). Don't give up, gettextizing is a "
+"subtle art, but this is only needed once to convert a project to the "
+"gorgeous luxus offered by po4a to translators.\n"
+"Please refer to the po4a(7) documentation, the section \"HOWTO convert a pre-"
+"existing translation to po4a?\" contains several hints to help you in your "
+"task"
+msgstr ""
 "\n"
-"Syntax: po4a-build\n"
-"        po4a-build --pot-only\n"
-"\n"
-"Commands:\n"
-"-?|-h|--help|--version:     print this help message and exit\n"
-"--pot-only:                 only create the POT file\n"
-"\n"
-"Options:\n"
-"-f|--file FILE:             po4a-build.conf config file path\n"
-"\n"
+"Gettextizacija (ponovo) nije uspjela. Ne odustaj, gettextizacija je suptilna "
+"umjetnost, ali ovo je potrebno samo jednom, za pretvaranje projekta u "
+"raskošni luksuz koji po4a nudi prevodiocima.\n"
+"Pogledaj dokumentaciju po4a(7). Odjeljak „KAKO pretvoriti postojeći prijevod "
+"u po4a?” sadrži savjete koji će ti pomoći obaviti zadatak"
+
+#: ../../po4a-gettextize:382
+#, perl-format
+msgid ""
+"Original has more strings than the translation (%d>%d). Please fix it by "
+"editing the translated version to add some dummy entry."
+msgstr ""
+"Izvor ima više nizova nego prijevod (%d > %d). Ispravi to, dodavanjem "
+"izmišljenog unosa prevedenoj verziji."
+
+#: ../../po4a-gettextize:395
+#, perl-format
+msgid ""
+"Original has less strings than the translation (%d<%d). Please fix it by "
+"removing the extra entry from the translated file. You may need an addendum "
+"(cf po4a(7)) to reput the chunk in place after gettextization. A possible "
+"cause is that a text duplicated in the original is not translated the same "
+"way each time. Remove one of the translations, and you're fine."
+msgstr ""
+"Izvor ima manje nizova nego prijevod (%d < %d). Ispravi to, uklanjanjem "
+"dodatnog unosa iz prevedene datoteke. Možda ćeš trebati nadopunu (cf "
+"po4a(7)) za ponovno postavljanje komada teksta nakon gettextizacije. Mogući "
+"uzrok tome može biti, da se duplicirani tekst u izvoru ne prevodi svaki put "
+"na isti način. Ukloni jedan od prijevoda i sve će biti u redu."
+
+#: ../../po4a-gettextize:448
+#, perl-format
+msgid ""
+"po4a gettextization: Structure disparity between original and translated "
+"files:\n"
+"msgid (at %s) is of type '%s' while\n"
+"msgstr (at %s) is of type '%s'.\n"
+"Original text: %s\n"
+"Translated text: %s\n"
+"(result so far dumped to gettextization.failed.po)"
+msgstr ""
+"po4a gettextizacija: Različita struktura između izvora i prevedenih "
+"datoteka:\n"
+"msgid (pri %s) je vrste „%s”, dok je\n"
+"msgstr (pri %s) vrste „%s”.\n"
+"Izvorni tekst: %s\n"
+"Prevedeni tekst: %s\n"
+"(nepotpuni rezultat spremljen je u gettextization.failed.po)"
+
+#: ../../po4a-gettextize:555
+msgid ""
+"You must provide the same amount of master files and localized files to "
+"synchronize them, as po4a-gettextize is intended to synchronize master files "
+"and previously existing translations. If just want to extract POT files of "
+"your master files, please use po4a-updatepo. Please note that the most "
+"convenient way of using po4a is to write a po4a.conf file and use the "
+"integrated po4a(1) program."
 msgstr ""
 
-#: ../../share/po4a-build:124
-#, sh-format
-msgid "Unrecognised command: $com"
+#: ../../po4a-gettextize:570
+msgid ""
+"po4a-gettextize is only useful to convert previously existing translations "
+"to a PO based workflow. Once you successfully converted your project to "
+"po4a, you should use the po4a(1) program to maintain it and update your "
+"translations."
 msgstr ""
 
-#. without config, there's nothing to do.
-#: ../../share/po4a-build:132
-#, sh-format
-msgid "Cannot find config file! '$FILE'"
+#: ../../po4a-gettextize:601
+msgid ""
+"Temporary master and localized POT files dumped to po4atemp.master.po and "
+"po4atemp.localized.po"
 msgstr ""
+"Privremene glavne i lokalizirane POT datoteke su ispisane u po4atemp.master."
+"po i po4atemp.localized.po"
 
-#. test
-#: ../../share/po4a-build:197 ../../share/po4a-build:247
-#, sh-format
-msgid "Internal po4a from $OURS being used instead of /usr/bin/"
-msgstr ""
+#: ../../po4a-normalize:185
+msgid ""
+"Both B<--blank> and B<--capitalize> can't be specified at the same time."
+msgstr "B<--blank> i B<--capitalize> se ne mogu navesti istovremeno."
 
-#. TRANSLATORS: $X contains the name of the manual page
-#: ../../share/po4a-build:258
-#, sh-format
-msgid "Processing untranslated files for $X (1). . ."
+#: ../../po4a-normalize:198
+msgid ""
+"po4a-normalize is mostly useful to debug po4a itself. Users are advised to "
+"use the po4a(1) program instead."
 msgstr ""
+"po4a-normalize je uglavnom koristan za otklanjanje grešaka samog programa "
+"po4a. Korisnicima se savjetuje da umjesto toga koriste program po4a(1)."
 
-#. TRANSLATORS: $X3 contains the name of the manual page
-#: ../../share/po4a-build:265
-#, sh-format
-msgid "Processing untranslated files for $X3 (3). . ."
-msgstr ""
+#: ../../po4a-normalize:207
+#, perl-format
+msgid "Options %s and %s cannot be provided together"
+msgstr "Opcije %s i %s ne smiju se zadati zajedno"
 
-#. TRANSLATORS: $file contains the basename of the POD file
-#: ../../share/po4a-build:277
-#, sh-format
-msgid "Processing untranslated files for $file (1) . . ."
-msgstr ""
+#: ../../po4a-normalize:233
+#, perl-format
+msgid "Write the normalized document to %s."
+msgstr "Zapiši normaliziran dokument u %s."
 
-#. TRANSLATORS: $name contains the Perl module name
-#: ../../share/po4a-build:285
-#, sh-format
-msgid "Processing untranslated files for $name (3) . . ."
-msgstr ""
+#: ../../po4a-normalize:236
+#, perl-format
+msgid "Write the normalized PO file to %s."
+msgstr "Zapiši normaliziranu PO datoteku u %s."
 
-#. TRANSLATORS: $file contains the basename of the POD file
-#: ../../share/po4a-build:293
-#, sh-format
-msgid "Processing untranslated files for $file (5) . . ."
+#: ../../po4a-translate:240
+msgid ""
+"po4a-translate is deprecated. The unified po4a(1) program is more convenient "
+"and less error prone. Once configured, `po4a --no-update` can be used as a "
+"drop-in replacement to `po4a-translate`."
 msgstr ""
+"po4a-translate je zastarjela opcija. Sjedinjeni po4a(1) program je "
+"praktičniji i manje sklon greškama. Nakon što se konfigurira, `po4a --no-"
+"update` se može koristiti kao zamjena za `po4a-translate`."
 
-#. TRANSLATORS: $file contains the basename of the POD file
-#: ../../share/po4a-build:307
-#, sh-format
-msgid "Processing untranslated files for $file (7) . . ."
-msgstr ""
+#: ../../po4a-translate:266
+#, perl-format
+msgid "Discard the translation of %s (only %s%% translated; need %s%%)."
+msgstr "Odbaci prijevod od %s (samo %s %% prevedeno; potrebno je %s %%)."
 
-#. TRANSLATORS: $l contains language code, $X contains the name of the manual page
-#: ../../share/po4a-build:328
-#, sh-format
-msgid "Processing $l translations for $X (1). . ."
-msgstr ""
+#: ../../po4a-translate:304
+#, perl-format
+msgid "Discard the translation of %s (addendum %s does not apply)."
+msgstr "Odbaci prijevod od %s (nadopuna %s nije primjenjiva)."
 
-#. TRANSLATORS: $l contains language code, $X3 contains the name of the manual page
-#: ../../share/po4a-build:337
-#, sh-format
-msgid "Processing $l translations for $X3 (3). . ."
+#: ../../po4a-updatepo:278
+msgid ""
+"po4a-updatepo is deprecated. The unified po4a(1) program is more convenient "
+"and less error prone. Once configured, `po4a --no-translations` can be used "
+"as a drop-in replacement to `po4a-updatepo`."
 msgstr ""
+"po4a-updatepo je zastarjela opcija. Sjedinjeni po4a(1) program je "
+"praktičniji i manje sklon greškama. Nakon što se konfigurira, `po4a --no-"
+"translations` se može koristiti kao zamjena za `po4a-updatepo`."
 
-#. TRANSLATORS: $l contains language code, $file contains the basename of the POD file
-#: ../../share/po4a-build:351
-#, sh-format
-msgid "Processing $l translations for $file (1). . ."
-msgstr ""
+#: ../../po4a-updatepo:288
+msgid "po4a-updatepo can't take the input PO from stdin."
+msgstr "po4a-updatepo ne može preuzeti unos PO iz standardnog unosa."
 
-#. TRANSLATORS: $l contains language code, $name contains the Perl module name
-#: ../../share/po4a-build:362
-#, sh-format
-msgid "Processing $l translations for $name (3). . ."
-msgstr ""
+#: ../../po4a-updatepo:299
+msgid "Parse input files... "
+msgstr "Obradi datoteke unosa … "
 
-#. TRANSLATORS: $l contains language code, $file contains the basename of the POD file
-#: ../../share/po4a-build:372
-#, sh-format
-msgid "Processing $l translations for $file (5). . ."
-msgstr ""
+#: ../../po4a-updatepo:307
+msgid "done."
+msgstr "gotovo."
 
-#. TRANSLATORS: $l contains language code, $file contains the basename of the POD file
-#: ../../share/po4a-build:388
-#, sh-format
-msgid "Processing $l translations for $file (7). . ."
-msgstr ""
+#: ../../po4a-updatepo:335
+#, perl-format
+msgid "Could not copy the PO file (%s -> %s): %s"
+msgstr "Nije bilo moguće kopirati PO datoteku (%s -> %s): %s"
+
+#, perl-format
+#~ msgid "line#%s has columns %s (> %s)"
+#~ msgstr "redak#%s ima stupce %s (> %s)"
+
+#, perl-format
+#~ msgid "Cannot find %s with kpsewhich"
+#~ msgstr "Nije moguće pronaći %s s kpsewhich"
+
+#, perl-format
+#~ msgid ""
+#~ "Couldn't determine the input document's charset. Please specify it on the "
+#~ "command line. (non-ASCII char at %s)"
+#~ msgstr ""
+#~ "Nije bilo moguće odrediti ulazno kodiranje dokumenta. Odredi ga u "
+#~ "naredbenom retku. (ne-ASCII znak pri %s)"
+
+#, perl-format
+#~ msgid "Unparsable option chunk '%s' (%s)."
+#~ msgstr "Neobradiv komad opcije „%s” (%s)."
+
+#, perl-format
+#~ msgid "Skipping option chunk '%s'."
+#~ msgstr "Preskače se komad opcije „%s”."
+
+#~ msgid ""
+#~ "This page defines a new macro with '.de'. Since po4a is not a real groff "
+#~ "parser, this is not supported."
+#~ msgstr ""
+#~ "Ova stranica definira novu makronaredbu s „.de”. Budući da po4a nije "
+#~ "pravi groff parser, to nije podržano."
+
+#, perl-format
+#~ msgid ""
+#~ "This page uses conditionals with '%s'. Since po4a is not a real groff "
+#~ "parser, this is not supported."
+#~ msgstr ""
+#~ "Ova stranica koristi uvjete s „%s”. Budući da po4a nije pravi groff "
+#~ "parser, to nije podržano."
+
+#, perl-format
+#~ msgid "The amount of entries differ between files: %d is not %d"
+#~ msgstr "Različita količina unosa u datotekama: %d nije %d"
+
+#, perl-format
+#~ msgid "msgid declared in one file only: %s\n"
+#~ msgstr "msgid je određen samo u jednoj datoteci: %s\n"
+
+#, perl-format
+#~ msgid ""
+#~ "Your input po file %s seems outdated (%s). Please consider running po4a-"
+#~ "updatepo to refresh it."
+#~ msgstr ""
+#~ "Čini se da je tvoja ulazna datoteka %s zastarjela (%s). Za aktualiziranje "
+#~ "datoteke, pokreni po4a-updatepo."
+
+#~ msgid "Error while running msgmerge: %s"
+#~ msgstr "Greška tijekom pokretanja msgmerge: %s"
+
+#~ msgid "Apply addendum: %s"
+#~ msgstr "Primijeni nadopunu: (%s)"
+
+#~ msgid "Done addendum: %s"
+#~ msgstr "Gotova nadopuna: %s"
+
+#~ msgid "Can't open %s: %s"
+#~ msgstr "Nije moguće otvoriti %s: %s"
+
+#~ msgid "Call treat_options"
+#~ msgstr "Pozovi treat_options"
+
+#~ msgid "Eval failure: %s"
+#~ msgstr "Neuspjela evaluacija: %s"
+
+#~ msgid "%s: type=%s <%s%s%s%s%s>"
+#~ msgstr "%s: vrsta=%s <%s%s%s%s%s>"
+
+#~ msgid "%s: type='%s'"
+#~ msgstr "%s: vrsta=„%s”"
+
+#~ msgid "%s: path='%s', translation option='%s'"
+#~ msgstr "%s: staza=„%s”, opcija za prijevod=„%s”"
+
+#~ msgid "%s: path='%s', translation option='%s' (no translation)"
+#~ msgstr "%s: staza=„%s”, opcija za prijevod=„%s” (bez prijevoda)"
+
+#~ msgid "%s: translation option='%s' (valid)"
+#~ msgstr "%s: opcija za prijevod=„%s” (valjana)"
+
+#~ msgid "Chdir %s (srcdir)"
+#~ msgstr "Chdir %s (srcdir)"
+
+#~ msgid "Call readpo(%s)"
+#~ msgstr "Pozovi readpo(%s)"
+
+#~ msgid "Done readpo(%s)"
+#~ msgstr "Gotov readpo(%s)"
+
+#~ msgid "Call read(%s)"
+#~ msgstr "Pozovi read(%s)"
+
+#~ msgid "Done read(%s)"
+#~ msgstr "Gotov read(%s)"
+
+#~ msgid "Call parse()"
+#~ msgstr "Pozovi parse()"
+
+#~ msgid "Done parse()"
+#~ msgstr "Gotov parse()"
+
+#~ msgid "Call addendum(%s)"
+#~ msgstr "Pozovi addendum(%s)"
+
+#~ msgid "Done addendum(%s)"
+#~ msgstr "Gotov addendum(%s)"
+
+#~ msgid "Call write(%s)"
+#~ msgstr "Pozovi write(%s)"
+
+#~ msgid "Done write(%s)"
+#~ msgstr "Gotov write(%s)"
+
+#~ msgid "Call writepo(%s)"
+#~ msgstr "Pozovi writepo(%s)"
+
+#~ msgid "Done writepo(%s)"
+#~ msgstr "Gotov writepo(%s)"
+
+#~ msgid "Chdir %s (calldir)"
+#~ msgstr "Chdir %s (calldir)"
