@@ -2,8 +2,6 @@
 * TODO *
 ********
 
- * Update README.translators
- * Add the addenda to the manpages with po4a-build
  * Update the PO files in the build/dist process
 
  Check xml2rfc
@@ -22,25 +20,23 @@ Better error handling (errno, errstr)
  - process(): $self->addendum($file) || die "An addendum failed\n";
  - poheader()
 
- >> +$parser->{TT}{utf_mode} = 1;
  >> +$parser->{TT}{file_in_charset} = $mastchar;
  > What about a function in transtractor allowing to set the mastchar ? I'd
  > prefer to leave the modification of the {TT} internals to the library code,
  > not the binaries one.
- 
+
 
 ** po-debconf:
- - change the pot header as documented in po4a(7) 
+ - change the pot header as documented in po4a(7)
 
 ** Po.pm
  - close filehandle in write (and same in TransTractor.pm).
  - verbose => type in automatic comments
 
 ** Sgml.pm
- - get ride of nsgml
  - move the tag lists to an external file
 
-** Man.pm: 
+** Man.pm:
  - handle .ce (11 pages need it)
    >>>
    Text lines can be centered by using the ce' request.  The line
@@ -48,11 +44,11 @@ Better error handling (errno, errstr)
    one line, use `.ce N' (where N is the number of lines to center),
    followed by the N lines.  To center many lines without counting them,
    type:
-   
+
         .ce 1000
 	lines to center
 	.ce 0
-		  
+
    The .ce 0' request tells groff' to center zero more lines, in other
    words, stop centering.
    <<<

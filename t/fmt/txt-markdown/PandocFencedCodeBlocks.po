@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-01-28 09:30+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@LI.ORG>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: TEXT/PLAIN; CHARSET=UTF-8\n"
+"Content-Transfer-Encoding: 8BIT\n"
+
+#. type: Fenced code block
+#: PandocFencedCodeBlocks.md:1 PandocFencedCodeBlocks.md:26
+#, no-wrap
+msgid ""
+"if (a > 3) {\n"
+"  moveShip(5 * gravity, DOWN);\n"
+"}\n"
+msgstr ""
+"IF (A > 3) {\n"
+"  MOVESHIP(5 * GRAVITY, DOWN);\n"
+"}\n"
+
+#. type: Fenced code block
+#: PandocFencedCodeBlocks.md:7
+#, no-wrap
+msgid ""
+"~~~~~~~~~~\n"
+"code including tildes\n"
+"line2\n"
+"~~~~~~~~~~\n"
+msgstr ""
+"~~~~~~~~~~\n"
+"CODE INCLUDING TILDES\n"
+"LINE2\n"
+"~~~~~~~~~~\n"
+
+#. type: Fenced code block (haskell)
+#: PandocFencedCodeBlocks.md:14 PandocFencedCodeBlocks.md:20
+#: PandocFencedCodeBlocks.md:39 PandocFencedCodeBlocks.md:45
+#, no-wrap
+msgid ""
+"qsort []     = []\n"
+"qsort (x:xs) = qsort (filter (< x) xs) ++ [x] ++\n"
+"               qsort (filter (>= x) xs)\n"
+msgstr ""
+"QSORT []     = []\n"
+"QSORT (X:XS) = QSORT (FILTER (< X) XS) ++ [X] ++\n"
+"               QSORT (FILTER (>= X) XS)\n"
+
+#. type: Fenced code block
+#: PandocFencedCodeBlocks.md:32
+#, no-wrap
+msgid ""
+"``````````\n"
+"code including backticks\n"
+"line2\n"
+"``````````\n"
+msgstr ""
+"``````````\n"
+"CODE INCLUDING BACKTICKS\n"
+"LINE2\n"
+"``````````\n"
+
+#. type: Fenced code block (diff)
+#: PandocFencedCodeBlocks.md:51
+#, no-wrap
+msgid ""
+"- Code block that includes bullet-like text.\n"
+"- Ensure that it doesn't get interpreted.\n"
+msgstr ""
+"- cODE BLOCK THAT INCLUDES BULLET-LIKE TEXT.\n"
+"- eNSURE THAT IT DOESN'T GET INTERPRETED.\n"
+
+#. type: Plain text
+#: PandocFencedCodeBlocks.md:57
+#, markdown-text
+msgid "This first pandoc fenced_div is non-nested."
+msgstr "tHIS FIRST PANDOC FENCED DIV IS NON-NESTED."
+
+#. type: Fenced div block ({#special .sidebar})
+#: PandocFencedCodeBlocks.md:58
+#, no-wrap
+msgid ""
+"Here is a paragraph.\n"
+"\n"
+"And another.\n"
+msgstr ""
+"hERE IS A PARAGRAPH.\n"
+"\n"
+"aND ANOTHER.\n"
+
+#. type: Plain text
+#: PandocFencedCodeBlocks.md:64
+#, markdown-text
+msgid "The second pandoc fenced div is nested."
+msgstr "tHE SECOND PANDOC FENCED DIV IS NESTED."
+
+#. type: Fenced div block (Warning ::::::)
+#: PandocFencedCodeBlocks.md:65
+#, no-wrap
+msgid ""
+"This is a warning.\n"
+"\n"
+msgstr ""
+"tHIS IS A WARNING.\n"
+"\n"
+
+#. type: Fenced div block (Warning ::::::|Danger)
+#: PandocFencedCodeBlocks.md:65
+#, no-wrap
+msgid "This is a warning within a warning.\n"
+msgstr "tHIS IS A WARNING WITHIN A WARNING.\n"
+
+#. type: Plain text
+#: PandocFencedCodeBlocks.md:73
+#, markdown-text
+msgid "Some extra text."
+msgstr "sOME EXTRA TEXT."

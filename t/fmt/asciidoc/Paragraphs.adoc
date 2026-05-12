@@ -1,0 +1,69 @@
+Test Paragraphs
+===============
+
+Default Paragraph
+-----------------
+
+Some paragraph text. Some paragraph text. Some paragraph text. 
+Some paragraph text. Some paragraph text. Some paragraph text. 
+
+Literal Paragraph
+-----------------
+
+    Some paragraph text. Some paragraph text. Some paragraph text. 
+    Some paragraph text. Some paragraph text. Some paragraph text. 
+
+[verse]
+Some paragraph text.
+Some paragraph text.
+Some paragraph text. 
+Some paragraph text.
+Some paragraph text.
+Some paragraph text. 
+
+Admonition Paragraphs
+---------------------
+
+NOTE: This is an example note.
+
+[NOTE]
+This is an example note.
+
+TIP: This is an example tip.
+
+[TIP]
+This is an example tip.
+
+IMPORTANT: This is an example important.
+
+[IMPORTANT]
+This is an example important.
+
+WARNING: This is an example warning.
+
+[WARNING]
+This is an example warning.
+
+CAUTION: This is an example caution.
+
+[CAUTION]
+This is an example caution.
+
+[icons=None, caption="My Special Note"]
+NOTE: This is my special note.
+
+[icon="./images/icons/wink.png"]
+NOTE: What lovely war.
+
+If --stdin was also used then this is prefixed by either "pack\t", or "keep\t" if a
+new .keep file was successfully created. This is useful to remove a
+.keep file used as a lock to prevent the race with 'git repack'
+mentioned above.
+
+TIP: we're starting a
+multi-line
+Tip box.
+
+TIP: *now bold*
+text in
+the beginning

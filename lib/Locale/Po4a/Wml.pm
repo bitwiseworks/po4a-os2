@@ -16,7 +16,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+# Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 #
 ########################################################################
 
@@ -57,102 +58,135 @@ will be added in the future releases.
 
 package Locale::Po4a::Wml;
 
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
 
-require Exporter;
-use vars qw(@ISA @EXPORT);
-@ISA = qw(Locale::Po4a::Xhtml);
-@EXPORT = qw();
+use parent qw(Locale::Po4a::Xhtml);
 
-use Locale::Po4a::Xhtml;
+use Locale::Po4a::Common qw(wrap_msg gettext);
 use File::Temp;
 
 sub initialize {
-    my $self = shift;
+    my $self    = shift;
     my %options = @_;
 
     $self->SUPER::initialize(%options);
 
+    print "Call treat_options\n" if $self->{options}{'debug'};
     $self->treat_options;
 }
 
 sub read {
-    my ($self,$filename)=@_;
+    my ( $self, $filename, $refname, $charset ) = @_;
     my $tmp_filename;
-    (undef,$tmp_filename)=File::Temp::tempfile("po4aXXXX",
-                                                DIR    => $ENV{TMPDIR} || "/tmp",
-                                                SUFFIX => ".xml",
-                                                OPEN   => 0,
-                                                UNLINK => 0)
-        or die wrap_msg(gettext("Can't create a temporary XML file: %s"), $!);
-     my $file;
-     open FILEIN,"$filename" or die "Cannot read $filename: $!\n";
-     {
-         $/ = undef;
-         $file=<FILEIN>;
-     }
-     $/ = "\n";
+    ( undef, $tmp_filename ) = File::Temp::tempfile(
+        "po4aXXXX",
+        DIR    => File::Spec->tmpdir(),
+        SUFFIX => ".xml",
+        OPEN   => 0,
+        UNLINK => 0
+    ) or die wrap_msg( gettext("Cannot create a temporary XML file: %s"), $! );
+    my $file;
+    open FILEIN, "$filename" or die "Cannot read $filename: $!\n";
+    {
+        $/    = undef;
+        $file = <FILEIN>;
+    }
+    $/ = "\n";
 
-     # Mask perl cruft out of XML sight
-     while (   ($file =~ m|^(.*?)<perl>(.*?)</perl>(.*?)$|ms)
-            or ($file =~ m|^(.*?)<:(.*?):>(.*)$|ms)) {
-         my ($pre,$in,$post) = ($1,$2,$3);
-         $in =~ s/</PO4ALT/g;
-         $in =~ s/>/PO4AGT/g;
-         $file = "${pre}<!--PO4ABEGINPERL${in}PO4AENDPERL-->$post";
-     }
+    # Mask perl cruft out of XML sight
+    while (( $file =~ m|^(.*?)<perl>(.*?)</perl>(.*?)$|ms )
+        or ( $file =~ m|^(.*?)<:(.*?):>(.*)$|ms ) )
+    {
+        my ( $pre, $in, $post ) = ( $1, $2, $3 );
+        $in =~ s/</PO4ALT/g;
+        $in =~ s/>/PO4AGT/g;
+        $file = "${pre}<!--PO4ABEGINPERL${in}PO4AENDPERL-->$post";
+    }
 
-     # Mask mp4h cruft
-     while ($file =~ s|^#(.*)$|<!--PO4ASHARPBEGIN$1PO4ASHARPEND-->|m) {
-         my $line = $1;
-         print STDERR "PROTECT HEADER: $line\n"
-             if $self->debug();
-         if ($line =~ m/title="([^"]*)"/) { #) {#"){
-             warn "FIXME: We should translate the page title: $1\n";
-         }
-     }
+    # Mask mp4h cruft
+    while ( $file =~ s|^#(.*)$|<!--PO4ASHARPBEGIN$1PO4ASHARPEND-->|m ) {
+        my $line = $1;
+        print STDERR "PROTECT HEADER: $line\n"
+          if $self->{options}{'debug'};
 
-     # Validate define-tag tag's argument
-     $file =~ s|(<define-tag\s+)([^\s>]+)|$1PO4ADUMMYATTR="$2"|g;
+        # If the wml tag has a title attribute, use a fake
+        # <title> xml tag to enable the extraction
+        # for translation in the xml parser.
+        if ( $line =~ m/title="([^"]*)"/ ) {
+            $file = "<title>$1</title>\n" . $file;
+        }
+    }
 
-     # Flush the result to disk
-     open OUTFILE,">$tmp_filename";
-     print OUTFILE $file;
-     close INFILE;
-     close OUTFILE or die "Cannot write $tmp_filename: $!\n";
+    # Validate define-tag tag's argument
+    $file =~ s|(<define-tag\s+)([^\s>]+)|$1PO4ADUMMYATTR="$2"|g;
 
-     push @{$self->{DOCXML}{infile}}, $tmp_filename;
-     $self->{DOCWML}{$tmp_filename} = $filename;
-     $self->Locale::Po4a::TransTractor::read($tmp_filename);
-     unlink "$tmp_filename";
+    # Flush the result to disk
+    open OUTFILE, ">$tmp_filename";
+    print OUTFILE $file;
+    close INFILE;
+    close OUTFILE or die "Cannot write $tmp_filename: $!\n";
+
+    push @{ $self->{DOCXML}{infile} }, $tmp_filename;
+    $self->{DOCWML}{$tmp_filename} = $filename;
+    $self->Locale::Po4a::TransTractor::read( $tmp_filename, $refname, $charset );
+    unlink "$tmp_filename";
 }
 
 sub parse {
     my $self = shift;
 
-    foreach my $filename (@{$self->{DOCXML}{infile}}) {
+    foreach my $filename ( @{ $self->{DOCXML}{infile} } ) {
         $self->Locale::Po4a::Xml::parse_file($filename);
         my $org_filename = $self->{DOCWML}{$filename};
 
         # Fix the references
-        foreach my $msgid (keys %{$self->{TT}{po_out}{po}}) {
-            $self->{TT}{po_out}{po}{$msgid}{'reference'} =~
-               s|$filename(:\d+)|$org_filename$1|o;
+        foreach my $msgid ( keys %{ $self->{TT}{po_out}{po} } ) {
+            $self->{TT}{po_out}{po}{$msgid}{'reference'} =~ s|$filename(:\d+)|$org_filename$1|o;
         }
 
         # Get the document back (undoing our WML masking)
         # FIXME: need to join the file first, and then split?
         my @doc_out;
-        foreach my $line (@{$self->{TT}{doc_out}}) {
-            $line =~ s/^<!--PO4ASHARPBEGIN(.*?)PO4ASHARPEND-->/#$1/mg;
-            $line =~ s/<!--PO4ABEGINPERL(.*?)PO4AENDPERL-->/<:$1:>/sg;
-            $line =~ s/(<define-tag\s+)PO4ADUMMYATTR="([^"]*)"/$1$2/g;
-            $line =~ s/PO4ALT/</sg;
-            $line =~ s/PO4AGT/>/sg;
-            push @doc_out, $line;
+        my $cnt = 0;
+        my $title_node;
+        my $title;
+
+        foreach my $line ( @{ $self->{TT}{doc_out} } ) {
+            if ( !$cnt ) {
+                if ( !$title_node && $line =~ m/<title>/ ) {
+                    $title_node = $line;
+                } elsif ($title_node) {
+                    $title_node .= $line;
+                    if ( $title_node =~ m/<title>(.*?)<\/title>/ ) {
+                        $title = $1;
+                        $cnt   = 1;
+                    }
+                } else {
+                    $cnt = 1;
+                }
+            } else {
+                if ( $line =~ s/^<!--PO4ASHARPBEGIN(.*?)PO4ASHARPEND-->/#$1/mg && $title ) {
+                    $line =~ s/title="[^"]*"$/title="$title"/mg;
+                }
+                $line =~ s/<!--PO4ABEGINPERL(.*?)PO4AENDPERL-->/<:$1:>/sg;
+                $line =~ s/(<define-tag\s+)PO4ADUMMYATTR="([^"]*)"/$1$2/g;
+                $line =~ s/PO4ALT/</sg;
+                $line =~ s/PO4AGT/>/sg;
+                push @doc_out, $line;
+            }
         }
+
+        # Do a simple left trim
+        foreach my $line (@doc_out) {
+            if ( $line =~ m/\s+/ ) {
+                shift @doc_out;
+            } else {
+                last;
+            }
+        }
+
         $self->{TT}{doc_out} = \@doc_out;
     }
 }
@@ -166,7 +200,7 @@ sub parse {
 
 =head1 COPYRIGHT AND LICENSE
 
- Copyright 2005 by SPI, inc.
+ Copyright © 2005 SPI, Inc.
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).

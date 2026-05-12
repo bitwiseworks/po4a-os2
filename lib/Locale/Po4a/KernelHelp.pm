@@ -1,110 +1,100 @@
 # Locale::Po4a::KernelHelp -- Convert kernel configuration help from/to PO files
 #
 # This program is free software; you may redistribute it and/or modify it
-# under the terms of GPL (see COPYING).
+# under the terms of GPL v2.0 or later (see COPYING).
 #
-# This module converts POD to PO file, so that it becomes possible to
-# translate POD formatted documentation. See gettext documentation for
-# more info about PO files.
+# See gettext documentation for more info about PO files.
 
 ############################################################################
 # Modules and declarations
 ############################################################################
 
-use Pod::Parser;
-use Locale::Po4a::TransTractor qw(process new);
-use Locale::Po4a::Common;
-
 package Locale::Po4a::KernelHelp;
 
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
 
-require Exporter;
+use parent qw(Locale::Po4a::TransTractor);
 
-use vars qw(@ISA @EXPORT $AUTOLOAD);
-@ISA = qw(Locale::Po4a::TransTractor);
-@EXPORT = qw(); # new process write read writepo readpo);
+use Pod::Parser;
+use Locale::Po4a::Common qw(wrap_ref_mod gettext);
 
-my $debug=0;
+use vars qw($AUTOLOAD);
 
-sub initialize {}
+my $debug = 0;
 
 sub parse {
-    my $self=shift;
-    my ($line,$ref);
-    my $paragraph=""; # Buffer where we put the paragraph while building
-    my ($status)=0; # Syntax of KH is:
-                    #   description<nl>variable<nl>help text<nl><nl>
-                    # Status will be:
-                    #   0             1            2        3   0
+    my $self = shift;
+    my ( $line, $ref );
+    my $paragraph = "";                     # Buffer where we put the paragraph while building
+    my ($status)  = 0;                      # Syntax of KH is:
+                                            #   description<nl>variable<nl>help text<nl><nl>
+                                            # Status will be:
+                                            #   0             1            2        3   0
 
-    my ($desc,$variable);
+    my ( $desc, $variable );
 
   LINE:
-    ($line,$ref)=$self->shiftline();
+    ( $line, $ref ) = $self->shiftline();
 
-    while (defined($line)) {
+    while ( defined($line) ) {
         chomp($line);
         print STDERR "status=$status;Seen >>$line<<:" if $debug;
 
-        if ($line =~ /^\#/) {
+        if ( $line =~ /^\#/ ) {
             print STDERR "comment.\n" if $debug;
             $self->pushline("$line\n");
-        } elsif ($status == 0) {
-            if ($line =~ /\S/) {
+        } elsif ( $status == 0 ) {
+            if ( $line =~ /\S/ ) {
                 print STDERR "short desc.\n" if $debug;
-                $desc=$line;
-                $status ++;
+                $desc = $line;
+                $status++;
             } else {
                 print STDERR "empty line.\n" if $debug;
                 $self->pushline("$line\n");
             }
-        } elsif ($status == 1) {
+        } elsif ( $status == 1 ) {
             print STDERR "var name.\n" if $debug;
-            $variable=$line;
+            $variable = $line;
             $status++;
 
-            $self->pushline($self->translate($desc,$ref,"desc_$variable").
-                            "\n$variable\n");
+            $self->pushline( $self->translate( $desc, $ref, "desc_$variable" ) . "\n$variable\n" );
 
-        } elsif ($status == 2) {
+        } elsif ( $status == 2 ) {
             $line =~ s/^  //;
-            if ($line =~ /\S/) {
+            if ( $line =~ /\S/ ) {
                 print STDERR "paragraph line.\n" if $debug;
-                $paragraph .= $line."\n";
+                $paragraph .= $line . "\n";
             } else {
                 print STDERR "end of paragraph.\n" if $debug;
                 $status++;
-                $paragraph=$self->translate($paragraph,
-                                            $ref,
-                                            "helptxt_$variable");
+                $paragraph = $self->translate( $paragraph, $ref, "helptxt_$variable" );
                 $paragraph =~ s/^/  /gm;
                 $self->pushline("$paragraph\n");
-                $paragraph ="";
+                $paragraph = "";
             }
-        } elsif ($status == 3) {
-            if ($line =~ s/^  //) {
-                if ($line =~ /\S/) {
+        } elsif ( $status == 3 ) {
+            if ( $line =~ s/^  // ) {
+                if ( $line =~ /\S/ ) {
                     print "begin of paragraph.\n" if $debug;
-                    $paragraph = $line."\n";
+                    $paragraph = $line . "\n";
                     $status--;
                 } else {
                     print "end of config option.\n" if $debug;
-                    $status=0;
+                    $status = 0;
                     $self->pushline("\n");
                 }
             } else {
-                $self->unshiftline($line,$ref);
-                $status=0;
+                $self->unshiftline( $line, $ref );
+                $status = 0;
             }
         } else {
-            die wrap_ref_mod($ref, "po4a::kernelhelp", gettext("Syntax error"));
+            die wrap_ref_mod( $ref, "po4a::kernelhelp", gettext("Syntax error") );
         }
 
         # Reinit the loop
-        ($line,$ref)=$self->shiftline();
+        ( $line, $ref ) = $self->shiftline();
     }
 }
 
@@ -112,25 +102,25 @@ sub docheader {
     return <<EOT;
 #
 #        *****************************************************
-#        *           GENERATED FILE, DO NOT EDIT             * 
+#        *           GENERATED FILE, DO NOT EDIT             *
 #        * THIS IS NO SOURCE FILE, BUT RESULT OF COMPILATION *
 #        *****************************************************
 #
 # This file was generated by po4a(7). Do not store it (in VCS, for example),
-# but store the PO file used as source file by pod-translate. 
+# but store the PO file used as source file by pod-translate.
 #
 # In fact, consider this as a binary, and the PO file as a regular .c file:
 # If the PO get lost, keeping this translation up-to-date will be harder.
 #
 EOT
 }
-1;
 
 ##############################################################################
 # Module return value and documentation
 ##############################################################################
 
 1;
+
 __END__
 
 =encoding UTF-8
@@ -167,9 +157,9 @@ L<po4a(7)|po4a.7>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2002 by SPI, inc.
+Copyright © 2002 SPI, Inc.
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).
 
 =cut

@@ -50,92 +50,80 @@ It is a very simple module, but still young.
 
 package Locale::Po4a::BibTeX;
 
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
 
-require Exporter;
-use vars qw(@ISA @EXPORT);
-@ISA = qw(Locale::Po4a::TransTractor);
-@EXPORT = qw();
+use parent qw(Locale::Po4a::TransTractor);
 
-use Locale::Po4a::TransTractor;
 use Locale::Po4a::Common;
-
-sub initialize {}
 
 sub parse {
     my $self = shift;
-    my ($line,$ref);
-    my $paragraph="";
-    my $field="";
-    my $id="";
+    my ( $line, $ref );
+    my $paragraph    = "";
+    my $field        = "";
+    my $id           = "";
     my $wrapped_mode = 1;
-    ($line,$ref)=$self->shiftline();
-    while (defined($line)) {
+    ( $line, $ref ) = $self->shiftline();
+    while ( defined($line) ) {
         chomp($line);
-#print "tutu: '$line'\n";
-        $self->{ref}="$ref";
+
+        #print "tutu: '$line'\n";
+        $self->{ref} = "$ref";
         if (    $id eq ""
-            and $line =~ m/^\@.*?\s*\{\s*(.*),\s*$/) {
+            and $line =~ m/^\@.*?\s*\{\s*(.*),\s*$/ )
+        {
             $id = $1;
-            $self->pushline( $line."\n" );
-        } elsif (    $id ne ""
-                 and $field eq ""
-                 and $line =~ m/^((.*?)\s*=\s*)([^ "{].*?)(\s*,?\s*)$/) {
-            my $end=(defined $4)?$4:"";
-            $self->pushline( $1.$self->translate($3,
-                                                 $self->{ref},
-                                                 "$2 ($id)",
-                                                 "wrap" => 1).$end."\n" );
-            $field = "";
+            $self->pushline( $line . "\n" );
+        } elsif ( $id ne ""
+            and $field eq ""
+            and $line =~ m/^((.*?)\s*=\s*)([^ "{].*?)(\s*,?\s*)$/ )
+        {
+            my $end = ( defined $4 ) ? $4 : "";
+            $self->pushline( $1 . $self->translate( $3, $self->{ref}, "$2 ($id)", "wrap" => 1 ) . $end . "\n" );
+            $field     = "";
             $paragraph = "";
-        } elsif (    $id ne ""
-                 and $field eq ""
-                 and $line =~ m/^((.*?)\s*=\s*)(.*)$/) {
-            $field = $2;
-            $paragraph = $3."\n";
-            $self->pushline( $1 );
-        } elsif ($field ne "") {
-            $paragraph.="$line\n";
-        } elsif ($line =~ m/^\s*(\%.*)?$/) {
-            $self->pushline( $line."\n" );
-        } elsif ($line =~ m/^\s*\}\s*$/) {
-            $self->pushline( $line."\n" );
-            $id="";
+        } elsif ( $id ne ""
+            and $field eq ""
+            and $line =~ m/^((.*?)\s*=\s*)(.*)$/ )
+        {
+            $field     = $2;
+            $paragraph = $3 . "\n";
+            $self->pushline($1);
+        } elsif ( $field ne "" ) {
+            $paragraph .= "$line\n";
+        } elsif ( $line =~ m/^\s*(\%.*)?$/ ) {
+            $self->pushline( $line . "\n" );
+        } elsif ( $line =~ m/^\s*\}\s*$/ ) {
+            $self->pushline( $line . "\n" );
+            $id = "";
         } else {
             print "unsupported line: '$line'\n";
         }
         if (   $paragraph =~ m/^(\s*\{)(.*)(\}\s*,?\s*)$/s
             or $paragraph =~ m/^(\s*")(.*)("\s*,?\s*)$/s
-            or $paragraph =~ m/^(\s*)([^ "{].*)(\s*,?\s*)$/s) {
-            $self->pushline( $1.$self->translate($2,
-                                                 $self->{ref},
-                                                 "$field ($id)",
-                                                 "wrap" => 1).$3);
-            $field="";
-            $paragraph="";
+            or $paragraph =~ m/^(\s*)([^ "{].*)(\s*,?\s*)$/s )
+        {
+            $self->pushline( $1 . $self->translate( $2, $self->{ref}, "$field ($id)", "wrap" => 1 ) . $3 );
+            $field     = "";
+            $paragraph = "";
         }
-        ($line,$ref)=$self->shiftline();
+        ( $line, $ref ) = $self->shiftline();
     }
-        if (   $paragraph =~ m/^(\s*\{)(.*)(\}\s*,?\s*)$/s
-            or $paragraph =~ m/^(\s*")(.*)("\s*,?\s*)$/s
-            or $paragraph =~ m/^(\s*)(.*)(\s*,?\s*)$/s) {
-            $self->pushline( $self->translate($1,
-                                              $self->{ref},
-                                              "$field ($id)",
-                                              "wrap" => 1).$2);
-            $field="";
-            $paragraph="";
-        }
+    if (   $paragraph =~ m/^(\s*\{)(.*)(\}\s*,?\s*)$/s
+        or $paragraph =~ m/^(\s*")(.*)("\s*,?\s*)$/s
+        or $paragraph =~ m/^(\s*)(.*)(\s*,?\s*)$/s )
+    {
+        $self->pushline( $self->translate( $1, $self->{ref}, "$field ($id)", "wrap" => 1 ) . $2 );
+        $field     = "";
+        $paragraph = "";
+    }
 }
 
 sub do_paragraph {
-    my ($self, $paragraph, $wrap) = (shift, shift, shift);
-    $self->pushline( $self->translate($paragraph,
-                                      $self->{ref},
-                                      "Plain text",
-                                      "wrap" => $wrap) );
+    my ( $self, $paragraph, $wrap ) = ( shift, shift, shift );
+    $self->pushline( $self->translate( $paragraph, $self->{ref}, "Plain text", "wrap" => $wrap ) );
 }
 
 1;
@@ -146,7 +134,7 @@ sub do_paragraph {
 
 =head1 COPYRIGHT AND LICENSE
 
- Copyright 2006 by Nicolas FRANÇOIS <nicolas.francois@centraliens.net>.
+ Copyright © 2006 Nicolas FRANÇOIS <nicolas.francois@centraliens.net>.
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).

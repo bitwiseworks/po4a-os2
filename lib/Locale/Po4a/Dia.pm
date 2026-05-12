@@ -7,7 +7,7 @@
 # This code extracts plain text from string tags on uncompressed Dia
 # diagrams.
 #
-# Copyright (c) 2004 by Jordi Vilalta  <jvprat@gmail.com>
+# Copyright © 2004 Jordi Vilalta  <jvprat@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -70,44 +70,45 @@ L<Locale::Po4a::TransTractor(3pm)>, L<Locale::Po4a::Xml(3pm)>, L<po4a(7)|po4a.7>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2004 by Jordi Vilalta  <jvprat@gmail.com>
+Copyright © 2004 Jordi Vilalta  <jvprat@gmail.com>
 
 This program is free software; you may redistribute it and/or modify it
-under the terms of GPL (see the COPYING file).
+under the terms of GPL v2.0 or later (see the COPYING file).
 
 =cut
 
 package Locale::Po4a::Dia;
 
-use 5.006;
+use 5.16.0;
 use strict;
 use warnings;
 
-use Locale::Po4a::Xml;
+use parent qw(Locale::Po4a::Xml);
 
-use vars qw(@ISA);
-@ISA = qw(Locale::Po4a::Xml);
+use Locale::Po4a::Common;
 
 sub initialize {
-    my $self = shift;
+    my $self    = shift;
     my %options = @_;
 
     $self->SUPER::initialize(%options);
-    $self->{options}{'nostrip'}=1;
-    $self->{options}{'_default_translated'}.=' <dia:string>';
+    $self->{options}{'nostrip'} = 1;
+    $self->{options}{'_default_translated'} .= ' <dia:string>';
+    print "Call treat_options\n" if $self->{options}{'debug'};
     $self->treat_options;
 }
 
 sub found_string {
-    my ($self,$text,$ref,$options)=@_;
+    my ( $self, $text, $ref, $options ) = @_;
     return $text if $text =~ m/^\s*$/s;
 
     #We skip the paper type string
     if ( $self->get_path() !~ /<dia:diagramdata>/ ) {
         $text =~ /^#(.*)#$/s;
-        $text = "#".$self->translate($1,$ref,"String",
-            'wrap'=>$self->{options}{'wrap'})."#";
+        $text = "#" . $self->translate( $1, $ref, "String", 'wrap' => $self->{options}{'wrap'} ) . "#";
     }
 
     return $text;
 }
+
+1;
